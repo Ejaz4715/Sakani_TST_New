@@ -22,7 +22,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -39,7 +39,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -59,7 +59,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -83,7 +83,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -104,7 +104,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -128,7 +128,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -152,7 +152,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -178,7 +178,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -201,7 +201,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -225,7 +225,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -252,7 +252,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -273,7 +273,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -295,7 +295,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -319,7 +319,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -344,7 +344,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -368,7 +368,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -394,7 +394,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -418,7 +418,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -444,7 +444,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -468,7 +468,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -493,7 +493,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -517,7 +517,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -541,7 +541,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -565,7 +565,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -598,7 +598,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -627,7 +627,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -656,7 +656,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -685,7 +685,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -714,7 +714,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -743,7 +743,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -772,7 +772,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -801,7 +801,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -827,7 +827,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -853,7 +853,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -879,7 +879,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -905,7 +905,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -933,7 +933,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -959,7 +959,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -990,7 +990,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1018,7 +1018,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1046,7 +1046,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1072,7 +1072,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1098,7 +1098,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1127,7 +1127,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1152,7 +1152,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1177,7 +1177,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1202,7 +1202,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1227,7 +1227,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1253,7 +1253,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1281,7 +1281,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1306,7 +1306,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1332,7 +1332,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1404,7 +1404,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1415,7 +1415,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Units tab");
         app.fullBookingJourneyPage.clickOnUnitsTab();
         CommonUtilityPage.verifyValueIsDisplayed("رمز الوحدة السكنية التعريفي", "Unit Code", FullBookingJourneyPageObjects.UnitCodeLabel());
@@ -1427,7 +1427,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1438,7 +1438,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Units tab");
         app.fullBookingJourneyPage.clickOnUnitsTab();
         logger.info("Step 07: Click on New Import Unit button");
@@ -1452,7 +1452,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1463,7 +1463,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Units tab");
         app.fullBookingJourneyPage.clickOnUnitsTab();
         logger.info("Step 07: Click on New Import Unit button");
@@ -1481,7 +1481,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1492,7 +1492,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Units tab");
         app.fullBookingJourneyPage.clickOnUnitsTab();
         logger.info("Step 07: Click on New Import Unit button");
@@ -1508,7 +1508,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1519,7 +1519,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Units tab");
         app.fullBookingJourneyPage.clickOnUnitsTab();
         logger.info("Step 07: Click on New Import Unit button");
@@ -1534,7 +1534,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1545,7 +1545,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Units tab");
         app.fullBookingJourneyPage.clickOnUnitsTab();
         logger.info("Step 07: Click on New Import Unit button");
@@ -1565,7 +1565,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1576,7 +1576,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Units tab");
         app.fullBookingJourneyPage.clickOnUnitsTab();
         logger.info("Step 07: Click on New Import Unit button");
@@ -1597,7 +1597,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1608,7 +1608,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Units tab");
         app.fullBookingJourneyPage.clickOnUnitsTab();
         logger.info("Step 07: Click on New Import Unit button");
@@ -1634,7 +1634,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1645,7 +1645,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Media tab");
         app.fullBookingJourneyPage.clickOnMediaTab();
         logger.info("Step 07: Attach file for Banner image");
@@ -1659,7 +1659,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1670,7 +1670,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Media tab");
         app.fullBookingJourneyPage.clickOnMediaTab();
         logger.info("Step 07: Attach file for Banner image");
@@ -1686,7 +1686,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1697,7 +1697,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Media tab");
         app.fullBookingJourneyPage.clickOnMediaTab();
         logger.info("Step 07: Attach file for Video Media (wrong format)");
@@ -1711,7 +1711,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1722,7 +1722,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Media tab");
         app.fullBookingJourneyPage.clickOnMediaTab();
         logger.info("Step 07: Attach file for Video Media");
@@ -1738,7 +1738,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1749,7 +1749,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Media tab");
         app.fullBookingJourneyPage.clickOnMediaTab();
         logger.info("Step 07: Attach file for Master plan Media");
@@ -1765,7 +1765,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1776,7 +1776,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Media tab");
         app.fullBookingJourneyPage.clickOnMediaTab();
         logger.info("Step 07: Attach file for Videos uploaded");
@@ -1792,7 +1792,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1803,7 +1803,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Media tab");
         app.fullBookingJourneyPage.clickOnMediaTab();
         logger.info("Step 07: Attach file for Photos uploaded");
@@ -1819,7 +1819,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1830,7 +1830,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Media tab");
         app.fullBookingJourneyPage.clickOnMediaTab();
         logger.info("Step 07: Attach file for Image Gallery");
@@ -1844,7 +1844,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1855,7 +1855,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Media tab");
         app.fullBookingJourneyPage.clickOnMediaTab();
         logger.info("Step 07: Attach file for Image Gallery");
@@ -1871,7 +1871,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1882,7 +1882,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Media tab");
         app.fullBookingJourneyPage.clickOnMediaTab();
         logger.info("Step 07: Attach file for Brochure Media (format except PDF file)");
@@ -1896,7 +1896,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1907,7 +1907,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Media tab");
         app.fullBookingJourneyPage.clickOnMediaTab();
         logger.info("Step 07: Attach file for Brochure Media (PDF file)");
@@ -1923,7 +1923,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1934,7 +1934,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Media tab");
         app.fullBookingJourneyPage.clickOnMediaTab();
         logger.info("Step 07: Attach file for GEO Map (Except Json format)");
@@ -1948,7 +1948,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1959,7 +1959,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Media tab");
         app.fullBookingJourneyPage.clickOnMediaTab();
         logger.info("Step 07: Attach file for GEO Map (Json format)");
@@ -1975,7 +1975,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1986,7 +1986,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Media tab");
         app.fullBookingJourneyPage.clickOnMediaTab();
         logger.info("Step 07: Click on Display method dropdown");
@@ -2002,7 +2002,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2013,7 +2013,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Media tab");
         app.fullBookingJourneyPage.clickOnMediaTab();
         logger.info("Step 07: Enter title of details page");
@@ -2027,7 +2027,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2038,7 +2038,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Media tab");
         app.fullBookingJourneyPage.clickOnMediaTab();
         logger.info("Step 07: Enter date in First unit delivery date input");
@@ -2052,7 +2052,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2063,7 +2063,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Media tab");
         app.fullBookingJourneyPage.clickOnMediaTab();
         logger.info("Step 07: Enter text in Name input");
@@ -2077,7 +2077,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2088,7 +2088,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Media tab");
         app.fullBookingJourneyPage.clickOnMediaTab();
         logger.info("Step 07: Enter text in Summary input");
@@ -2102,7 +2102,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2113,7 +2113,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Media tab");
         app.fullBookingJourneyPage.clickOnMediaTab();
         logger.info("Step 07: Enter text in Description input");
@@ -2127,7 +2127,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2138,7 +2138,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Media tab");
         app.fullBookingJourneyPage.clickOnMediaTab();
         logger.info("Step 07: Enter text in 'Price starting at' input");
@@ -2152,7 +2152,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2163,7 +2163,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Media tab");
         app.fullBookingJourneyPage.clickOnMediaTab();
         logger.info("Step 07: Enter Latitude value");
@@ -2180,7 +2180,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2191,7 +2191,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Media tab");
         app.fullBookingJourneyPage.clickOnMediaTab();
         logger.info("Step 07: Click on Promoted radio button");
@@ -2205,7 +2205,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2216,7 +2216,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Media tab");
         app.fullBookingJourneyPage.clickOnMediaTab();
         logger.info("Step 07: Enter text in Nearest airport distance input field");
@@ -2236,7 +2236,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2247,7 +2247,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Media tab");
         app.fullBookingJourneyPage.clickOnMediaTab();
         logger.info("Step 07: Click on Market day flag radio button");
@@ -2261,7 +2261,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2272,7 +2272,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Media tab");
         app.fullBookingJourneyPage.clickOnMediaTab();
         logger.info("Step 07: Verify Save button is disabled");
@@ -2285,7 +2285,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2296,7 +2296,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Media tab");
         app.fullBookingJourneyPage.clickOnMediaTab();
         logger.info("Step 07: Attach file for Banner image");
@@ -2327,7 +2327,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2338,7 +2338,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Media Approval button in the bottom of the Project Details page");
         app.fullBookingJourneyPage.clickOnMediaTab();
         app.fullBookingJourneyPage.clickOnSaveButtonOnMediaPage();
@@ -2354,7 +2354,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2365,7 +2365,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Reject media button in the bottom of the Project Details page");
         app.fullBookingJourneyPage.clickOnRejectMediaButton();
         CommonUtilityPage.verifyPopupMessageIsDisplayed("Rejected", "تم رفض طلب الموافقة على المحتوى المرئي", FullBookingJourneyPageObjects.SystemPopupMessage());
@@ -2377,7 +2377,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2388,7 +2388,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         app.fullBookingJourneyPage.clickOnMediaTab();
         app.fullBookingJourneyPage.clickOnSaveButton();
         app.fullBookingJourneyPage.clickOnProjectDetailsTab();
@@ -2404,7 +2404,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2415,7 +2415,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         app.fullBookingJourneyPage.verifyMediaIsApproved();
     }
 
@@ -2425,7 +2425,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2436,7 +2436,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Project financial institutions tab ");
         app.fullBookingJourneyPage.clickOnProjectFinancialInstitutionTab();
         logger.info("Step 07: Click Save button");
@@ -2449,7 +2449,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2460,7 +2460,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Project financial institutions tab ");
         app.fullBookingJourneyPage.clickOnProjectFinancialInstitutionTab();
         logger.info("Step 07: Select all the banks");
@@ -2476,7 +2476,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2487,7 +2487,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on  Booking document templates tab ");
         app.fullBookingJourneyPage.clickOnBookingDocumentTemplateTab();
         logger.info("Step 07: Attach an invalid file (format except docx)");
@@ -2501,7 +2501,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2512,7 +2512,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on  Booking document templates tab ");
         app.fullBookingJourneyPage.clickOnBookingDocumentTemplateTab();
         logger.info("Step 07: Attach an valid file");
@@ -2530,7 +2530,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2541,7 +2541,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Unit Models tab ");
         app.fullBookingJourneyPage.clickOnUnitModelTab();
         logger.info("Step 07: Click on the unit model name");
@@ -2557,7 +2557,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2568,7 +2568,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Unit Models tab ");
         app.fullBookingJourneyPage.clickOnUnitModelTab();
         logger.info("Step 07: Click on the unit model name");
@@ -2591,7 +2591,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2602,7 +2602,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Unit Models tab ");
         app.fullBookingJourneyPage.clickOnUnitModelTab();
         logger.info("Step 07: Click on the unit model name");
@@ -2630,7 +2630,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2641,7 +2641,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Unit Models tab ");
         app.fullBookingJourneyPage.clickOnUnitModelTab();
         logger.info("Step 07: Verify the Status of unit model");
@@ -2654,7 +2654,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2665,7 +2665,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Project sales contracts tab  ");
         app.fullBookingJourneyPage.clickOnScrollArrowEnd();
         app.fullBookingJourneyPage.clickOnProjectSalesContractTab();
@@ -2679,7 +2679,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2690,7 +2690,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Project sales contracts tab  ");
         app.fullBookingJourneyPage.clickOnScrollArrowEnd();
         app.fullBookingJourneyPage.clickOnProjectSalesContractTab();
@@ -2706,7 +2706,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2717,7 +2717,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Project sales contracts tab");
         app.fullBookingJourneyPage.clickOnScrollArrowEnd();
         app.fullBookingJourneyPage.clickOnProjectSalesContractTab();
@@ -2732,7 +2732,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2743,7 +2743,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Verify No Approved Sales Contract label is displayed ");
         CommonUtilityPage.verifyErrorMessageIsDisplayed("No Approved Sales Contract", "لا يوجد عقد بيع معتمد", FullBookingJourneyPageObjects.SaleContractApprovalErrorMessage());
     }
@@ -2754,7 +2754,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2765,7 +2765,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Click on Sales contract approval records tab ");
         app.fullBookingJourneyPage.clickOnScrollArrowEnd();
         app.fullBookingJourneyPage.clickOnSaleContractApprovalRecordsTab();
@@ -2780,7 +2780,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2812,7 +2812,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.salesContractPage.changeUILanguagePartners();
         app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
@@ -2849,7 +2849,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -2860,7 +2860,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Search previously created project and click on it");
         app.fullBookingJourneyPage.adminSearchProject(data.get("ProjectName"));
-        //app.fullBookingJourneyPage.navigateToSearchedProject();
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Navigate to unit model page");
         app.fullBookingJourneyPage.clickOnUnitModelTab();
         logger.info("Step 07: Navigate to unpublished unit model");
@@ -2894,7 +2894,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -2923,7 +2923,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -2954,7 +2954,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -2989,7 +2989,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -3026,7 +3026,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -3067,7 +3067,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -3109,7 +3109,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -3148,7 +3148,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -3190,7 +3190,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -3232,7 +3232,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -3274,7 +3274,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -3313,7 +3313,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -3352,7 +3352,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -3390,7 +3390,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -3429,7 +3429,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -3482,7 +3482,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -3535,7 +3535,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -3590,7 +3590,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -3628,7 +3628,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -3690,7 +3690,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -3724,7 +3724,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -3761,7 +3761,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -3800,7 +3800,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -3841,7 +3841,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -3882,7 +3882,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -3925,7 +3925,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -3971,7 +3971,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -4028,7 +4028,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -4053,7 +4053,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -4078,7 +4078,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -4106,7 +4106,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -4135,7 +4135,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -4164,7 +4164,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -4198,7 +4198,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -4228,7 +4228,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -4260,7 +4260,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -4294,7 +4294,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -4328,7 +4328,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -4364,7 +4364,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -4401,7 +4401,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -4439,7 +4439,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -4471,7 +4471,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -4528,7 +4528,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -4558,7 +4558,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -4590,7 +4590,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -4623,7 +4623,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -4659,7 +4659,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -4687,7 +4687,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-      //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");

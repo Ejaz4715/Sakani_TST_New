@@ -24,7 +24,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -41,7 +41,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -62,7 +62,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -83,7 +83,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -104,8 +104,8 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -126,8 +126,8 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -148,8 +148,8 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -170,8 +170,8 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -193,8 +193,8 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -214,8 +214,8 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -235,7 +235,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -256,7 +256,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -277,7 +277,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -298,7 +298,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -319,7 +319,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -339,7 +339,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -360,7 +360,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -381,7 +381,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -402,7 +402,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -422,7 +422,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -443,7 +443,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -466,7 +466,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -487,7 +487,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -509,7 +509,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -530,7 +530,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -551,7 +551,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -572,7 +572,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -594,7 +594,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -616,7 +616,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -637,7 +637,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -658,7 +658,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -679,7 +679,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -700,7 +700,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -721,7 +721,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -742,7 +742,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -763,7 +763,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -784,7 +784,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -806,7 +806,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -827,7 +827,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP number");
@@ -862,7 +862,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -884,7 +884,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -905,7 +905,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP Number");
@@ -936,7 +936,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -955,7 +955,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -975,7 +975,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -998,7 +998,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1021,7 +1021,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1046,7 +1046,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1073,7 +1073,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1101,7 +1101,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1121,8 +1121,7 @@ public class FullAuctionJourney extends NHCWebTest {
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 06: Verify user is able to view auction status");
         app.fullAuctionJourneyPage.verifyAvailableUnitsAreDisplayed();
-        app.fullAuctionJourneyPage.navigateToExpiredOrClosedUnit();
-        app.fullAuctionJourneyPage.verifyAuctionStatus("Auction expired", "انتهى المزاد");
+        CommonUtilityPage.verifyElementIsDisplayed("Auction status",FullAuctionJourneyPageObjects.getCurrentAuctionStatus());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1131,7 +1130,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1150,7 +1149,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 05: Navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 06: Verify user is able to click on available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         app.fullAuctionJourneyPage.verifyCountDownIsDisplayed();
     }
 
@@ -1160,7 +1159,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1189,7 +1188,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1209,10 +1208,9 @@ public class FullAuctionJourney extends NHCWebTest {
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 06: Click on unit filter");
         app.fullAuctionJourneyPage.clickOnAvailableUnitsFilter();
-//        app.fullAuctionJourneyPage.enterMaximumArea("710");
         app.fullAuctionJourneyPage.selectMaximumArea();
         app.fullAuctionJourneyPage.selectMinimumArea();
-        app.fullAuctionJourneyPage.clickOnSearchButton();
+        CommonUtilityPage.clickOnElement(FullAuctionJourneyPageObjects.filterSearchButton());
         logger.info("Step 07: Verify no result found");
         app.fullAuctionJourneyPage.verifyNoResultFound();
     }
@@ -1223,7 +1221,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1243,9 +1241,8 @@ public class FullAuctionJourney extends NHCWebTest {
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 06: Click on unit filter");
         app.fullAuctionJourneyPage.clickOnAvailableUnitsFilter();
-        app.fullAuctionJourneyPage.selectMaximumArea();
-        //app.fullAuctionJourneyPage.enterMaximumArea("710");
-        app.fullAuctionJourneyPage.clickOnSearchButton();
+        app.fullAuctionJourneyPage.selectMinimumArea();
+        CommonUtilityPage.clickOnElement(FullAuctionJourneyPageObjects.filterSearchButton());
         logger.info("Step 07: Verify user is able to see available unit");
         app.fullAuctionJourneyPage.verifyResultFound();
     }
@@ -1256,7 +1253,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1290,7 +1287,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1319,7 +1316,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1348,7 +1345,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1380,7 +1377,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1401,7 +1398,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 06: Verify user is able to navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 07: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 08: Verify end time is visible");
         CommonUtilityPage.verifyValueIsDisplayed("ينتهي", "Ends", FullAuctionJourneyPageObjects.UnitAuctionEndTimeText());
     }
@@ -1416,7 +1413,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1437,7 +1434,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 06: Verify user is able to navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 07: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 08: Click on Apply for this auction button");
         app.fullAuctionJourneyPage.clickOnApplyForThisAuctionButton();
         CommonUtilityPage.verifyValueIsDisplayed("تطبق الرسوم على هذا المزاد", "Fees apply for this bid", FullAuctionJourneyPageObjects.FeesApplyForTheBidPopupTitle());
@@ -1449,7 +1446,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1472,7 +1469,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 07: Verify user is able to navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 08: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on Apply for this auction button");
         app.fullAuctionJourneyPage.clickOnApplyForThisAuctionButton();
         CommonUtilityPage.verifyValueIsDisplayed("رسوم المزاد", "Auction fees", FullAuctionJourneyPageObjects.AuctionFeesText());
@@ -1484,7 +1481,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1507,7 +1504,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 07: Verify user is able to navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 08: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on Apply for this auction button");
         app.fullAuctionJourneyPage.clickOnApplyForThisAuctionButton();
         logger.info("Step 10: Select mada payment method");
@@ -1522,7 +1519,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1545,7 +1542,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 07: Verify user is able to navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 08: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on Apply for this auction button");
         app.fullAuctionJourneyPage.clickOnApplyForThisAuctionButton();
         logger.info("Step 10: Verify confirm button is disabled/not clickable");
@@ -1558,7 +1555,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1581,7 +1578,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 07: Verify user is able to navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 08: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on Apply for this auction button");
         app.fullAuctionJourneyPage.clickOnApplyForThisAuctionButton();
         logger.info("Step 10: Select mada payment method");
@@ -1599,7 +1596,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1623,7 +1620,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1649,7 +1646,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1678,7 +1675,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1718,7 +1715,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP number");
@@ -1751,7 +1748,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1774,7 +1771,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 07: Navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 08: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Verify 'Join this auction' button is clickable");
         app.fullAuctionJourneyPage.verifyJoinThisAuctionButtonIsEnabled();
     }
@@ -1785,7 +1782,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1808,7 +1805,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 07: Navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 08: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on 'Join this auction' button");
         app.fullAuctionJourneyPage.clickOnJoinThisAuctionButton();
         logger.info("Step 10: Click on 'Agree to terms' checkbox");
@@ -1822,7 +1819,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1845,7 +1842,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 07: Navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 08: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on 'Join this auction' button");
         app.fullAuctionJourneyPage.clickOnJoinThisAuctionButton();
         logger.info("Step 10: Click on 'Cancel' button");
@@ -1859,7 +1856,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1882,7 +1879,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 07: Navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 08: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on 'Join this auction' button");
         app.fullAuctionJourneyPage.clickOnJoinThisAuctionButton();
         logger.info("Step 10: Verify Start bidding button is disabled/not clickable");
@@ -1895,7 +1892,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1918,7 +1915,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 07: Navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 08: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on 'Join this auction' button");
         app.fullAuctionJourneyPage.clickOnJoinThisAuctionButton();
         logger.info("Step 10: Click on 'Agree to terms' checkbox");
@@ -1936,7 +1933,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1959,9 +1956,9 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 07: Navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 08: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
-        logger.info("Step 09: Click on Start Bidding button");
-        app.fullAuctionJourneyPage.clickOnStartBiddingButton();
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
+        logger.info("Step 09: Verify Increase/decrease the price buttons are enabled");
+//        app.fullAuctionJourneyPage.clickOnStartBiddingButton();
         app.fullAuctionJourneyPage.verifyIncreaseBidPriceButtonIsEnabled();
         app.fullAuctionJourneyPage.verifyDecreaseBidPriceButtonIsEnabled();
     }
@@ -1972,7 +1969,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -1995,7 +1992,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 07: Navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 08: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Verify Fixed increase number button is clickable");
         app.fullAuctionJourneyPage.fixedIncreaseNumberButtonIsEnabled();
     }
@@ -2006,7 +2003,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -2029,7 +2026,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 07: Navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 08: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Verify Place bid button is clickable");
         app.fullAuctionJourneyPage.verifyPlaceBidButtonIsEnabled();
     }
@@ -2040,7 +2037,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -2063,7 +2060,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 07: Navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 08: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on 'Place bid' button");
         app.fullAuctionJourneyPage.clickOnPlaceBidButton();
         logger.info("Step 10: Click on 'Agree to terms' checkbox");
@@ -2077,7 +2074,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -2100,7 +2097,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 07: Navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 08: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on 'Place bid' button");
         app.fullAuctionJourneyPage.clickOnPlaceBidButton();
         logger.info("Step 10: Verify Submit bid is disabled/not clickable");
@@ -2113,7 +2110,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -2136,7 +2133,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 07: Navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 08: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on 'Place bid' button");
         app.fullAuctionJourneyPage.clickOnPlaceBidButton();
         logger.info("Step 10: Click on cancel button ");
@@ -2150,7 +2147,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -2173,14 +2170,14 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 07: Navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 08: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on 'Place bid' button");
         app.fullAuctionJourneyPage.clickOnPlaceBidButton();
         logger.info("Step 10: Click on 'Agree to terms' checkbox");
         app.fullAuctionJourneyPage.clickOnAgreeCheckbox();
         logger.info("Step 11: Click on 'Submit bid' button");
         app.fullAuctionJourneyPage.clickOnSubmitBidButton();
-        CommonUtilityPage.verifyValueIsDisplayed("تهانينا", "Congratulation", FullAuctionJourneyPageObjects.AuctionBidSuccessPopupTitle());
+        CommonUtilityPage.verifyValueIsDisplayed("بنجاح", "بنجاح", FullAuctionJourneyPageObjects.AuctionBidSuccessPopupTitle());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -2189,7 +2186,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -2212,7 +2209,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 07: Navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 08: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         CommonUtilityPage.verifyValueIsDisplayed("تهانينا", "Congratulation", FullAuctionJourneyPageObjects.CongratulationMessageForHighestBid());
     }
 
@@ -2222,7 +2219,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -2245,7 +2242,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 07: Navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 08: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         app.fullAuctionJourneyPage.verifyPlaceBidButtonIsNotDisplayed();
     }
 
@@ -2255,7 +2252,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -2281,7 +2278,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -2307,7 +2304,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -2330,7 +2327,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 07: Navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 08: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on Continue link text");
         app.fullAuctionJourneyPage.clickOnContinueButton();
         CommonUtilityPage.verifyValueIsDisplayed("توقيع العقد", "Sign contract", FullAuctionJourneyPageObjects.SignContractPageHeading());
@@ -2342,7 +2339,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -2365,7 +2362,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 07: Navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 08: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on Continue link text");
         app.fullAuctionJourneyPage.clickOnContinueButton();
         logger.info("Step 10: Click on 'Download Contract' link text");
@@ -2380,7 +2377,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -2403,7 +2400,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 07: Navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 08: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on Continue link text");
         app.fullAuctionJourneyPage.clickOnContinueButton();
         logger.info("Step 10: Click on 'Reject' button on Sign contract page");
@@ -2417,7 +2414,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -2440,7 +2437,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 07: Navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 08: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on Continue link text");
         app.fullAuctionJourneyPage.clickOnContinueButton();
         logger.info("Step 10: Click on 'Reject' button on Sign contract page");
@@ -2456,7 +2453,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -2479,7 +2476,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 07: Navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 08: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on Continue link text");
         app.fullAuctionJourneyPage.clickOnContinueButton();
         logger.info("Step 10: Click on 'Reject' button on Sign contract page");
@@ -2518,7 +2515,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 07: Navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 08: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on Continue link text");
         app.fullAuctionJourneyPage.clickOnContinueButton();
         logger.info("Step 10: Click on 'Reject' button on Sign contract page");
@@ -2556,7 +2553,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 07: Navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 08: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on Continue link text");
         app.fullAuctionJourneyPage.clickOnContinueButton();
         logger.info("Step 10: Click on 'Reject' button on Sign contract page");
@@ -2599,34 +2596,6 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_94(Map<String, String> data) throws Exception {
         //Verify admin is able to click on save button
-        logger.info("Step 00: Test Data : " + data.toString());
-        app.openApplication(data);
-        logger.info("Step 01: Navigate to sakani admin site");
-        app.loginPage.alertBoxLogin();
-        logger.info("Step 02: Login to the portal with admin credentials");
-        app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
-        logger.info("Step 03: Enter OTP number");
-        app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
-        app.loginPage.changeLanguageAdmin(data);
-        logger.info("Step 04: Admin able to access auction (المزاد) page");
-        app.fullAuctionJourneyPage.navigateToAuctionPage();
-        logger.info("Step 05: Click on add new auctions ( أضافة مزاد جديد ) button");
-        app.fullAuctionJourneyPage.clickOnAddNewAuctionsButton();
-        logger.info("Step 06: Fill all input fields ");
-        app.fullAuctionJourneyPage.enterValidUnitCode(data.get("Unit_Code"));
-        app.fullAuctionJourneyPage.enterStartingBidPrice(data.get("Starting_Bid_Price"));
-        app.fullAuctionJourneyPage.enterTargetedPrice(data.get("Targeted_Price"));
-        app.fullAuctionJourneyPage.selectAuctionStartDateFromCalendar(0);
-        app.fullAuctionJourneyPage.enterStartTimeOfAuction(0, 1, 0);
-        app.fullAuctionJourneyPage.selectAuctionEndDateFromCalendar(0);
-        app.fullAuctionJourneyPage.enterEndTimeOfAuction(0, 3, 0);
-        logger.info("Step 07: Disable General Setting");
-        app.fullAuctionJourneyPage.disableApplyGeneralSettingToggle();
-        logger.info("Step 07: Disable Auction Fee");
-        app.fullAuctionJourneyPage.disableApplyAuctionFeeToggle();
-        logger.info("Step 21: Click on save button");
-        app.fullAuctionJourneyPage.clickOnSaveButton();
-        CommonUtilityPage.verifyValueIsDisplayed("تم إنشاء المزاد بنجاح", "Create auctions successfully", FullBookingJourneyPageObjects.SystemPopupMessage());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -2658,7 +2627,11 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 07: Navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 08: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
+//        if (Browser.isElementPresent(FullAuctionJourneyPageObjects.JoinThisAuctionButton())){
+//            app.fullAuctionJourneyPage.clickOnJoinThisAuctionButton();
+//            app.fullAuctionJourneyPage.clickOnAgreeCheckbox();
+//        }
         logger.info("Step 09: Click on 'Join this auction' button");
         app.fullAuctionJourneyPage.clickOnJoinThisAuctionButton();
         logger.info("Step 10: Click on 'Agree to terms' checkbox");
@@ -2675,7 +2648,7 @@ public class FullAuctionJourney extends NHCWebTest {
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void Full_Auction_Journey_TC_96(Map<String, String> data) throws Exception {
+    public void Full_Auction_Journey_TC_97(Map<String, String> data) throws Exception {
         //Verify user is able to Approve the sign contract
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
@@ -2703,13 +2676,13 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 07: Navigate to searched Auction project page");
         app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
         logger.info("Step 08: Select from Available unit");
-        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction(data.get("Unit_Code"));
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on Continue link text");
         app.fullAuctionJourneyPage.clickOnContinueButton();
         logger.info("Step 10: Click on 'Approve' button on Sign contract page");
+        app.fullAuctionJourneyPage.clickOnSignContractBanner();
         app.fullAuctionJourneyPage.clickOnApproveButton();
-//        CommonUtilityPage.verifyValueIsDisplayed("", "", FullAuctionJourneyPageObjects.());
-        //Incomplete (Defect --> SCR-4274)
+        CommonUtilityPage.verifyValueIsDisplayed("نجاح", "Success", FullAuctionJourneyPageObjects.SignContractApproveMessage());
     }
 
     /**
@@ -2723,7 +2696,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP number");
@@ -2742,7 +2715,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP number");
@@ -2764,7 +2737,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP number");
@@ -2787,7 +2760,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP number");
@@ -2810,7 +2783,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP number");
@@ -2833,7 +2806,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP number");
@@ -2856,7 +2829,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP number");
@@ -2879,7 +2852,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP number");
@@ -2902,7 +2875,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         logger.info("Step 03: Enter OTP number");

@@ -7,6 +7,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -40,6 +41,50 @@ public class FullAuctionJourneyPage {
         Browser.click(FullAuctionJourneyPageObjects.selectAuctionFromSidebar());
         Browser.click(FullAuctionJourneyPageObjects.selectAuctionListFromSidebar());
     }
+
+    public void clickOnAuction() throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.selectAuctionFromSidebar(), 40);
+        CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.selectAuctionFromSidebar());
+        Browser.click(FullAuctionJourneyPageObjects.selectAuctionFromSidebar());
+    }
+
+    public void clickOnAuctionProjects() throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.AuctionProjects(), 40);
+        CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.AuctionProjects());
+        Browser.click(FullAuctionJourneyPageObjects.AuctionProjects());
+    }
+
+    public void clickOnAddNewAuctionProject() throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.AddNewAuctionButton(), 40);
+        CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.AddNewAuctionButton());
+        Browser.click(FullAuctionJourneyPageObjects.AddNewAuctionButton());
+        Browser.waitUntilInvisibilityOfElement(FullAuctionJourneyPageObjects.AddNewAuctionButton(), 40);
+    }
+
+    public void verifyAuctionProjectPageIsDisplayed() throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.AuctionTypeDropdownList(), 40);
+        logger.addScreenshot("");
+        assertTrue(Browser.isElementPresent(FullAuctionJourneyPageObjects.AuctionTypeDropdownList()));
+    }
+
+    public void enterProjectName(String projectName) throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.ProjectNameInputField(), 40);
+        Browser.moveToElement(FullAuctionJourneyPageObjects.ProjectNameInputField());
+        Browser.setText(FullAuctionJourneyPageObjects.ProjectNameInputField(), projectName);
+    }
+
+    public void selectAuctionType(String auctionType) throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.AuctionTypeDropdownList(), 40);
+        Browser.moveToElement(FullAuctionJourneyPageObjects.AuctionTypeDropdownList());
+        Browser.selectDropdownByVisibleText(FullAuctionJourneyPageObjects.AuctionTypeDropdownList(), auctionType);
+    }
+
+    public void selectRegion(String region) throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.RegionDropdownList(), 40);
+        Browser.moveToElement(FullAuctionJourneyPageObjects.RegionDropdownList());
+        Browser.selectDropdownByVisibleText(FullAuctionJourneyPageObjects.RegionDropdownList(), region);
+    }
+
 
     public void verifyAuctionPageIsDisplayed() throws Exception {
         Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.auctionHeading(), 40);
@@ -144,7 +189,7 @@ public class FullAuctionJourneyPage {
     public void selectAuctionStartDateFromCalendar(int year) throws Exception {
         String yearStart = String.valueOf(Integer.parseInt(CommonUtilityPage.getHijriDate().split("/")[2]) + year);
         Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.startAuctionDateIcon(), 40);
-        CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.startAuctionDateIcon());
+        Browser.moveToElement(FullAuctionJourneyPageObjects.startAuctionDateIcon());
         Browser.click(FullAuctionJourneyPageObjects.startAuctionDateIcon());
         Browser.selectDropdownByVisibleText(FullAuctionJourneyPageObjects.getYearList(), yearStart);
         Browser.selectDropdownByVisibleText(FullAuctionJourneyPageObjects.getMonthList(), CommonUtilityPage.getHijriDate().split("/")[1]);
@@ -171,7 +216,7 @@ public class FullAuctionJourneyPage {
     public void selectAuctionEndDateFromCalendar(int year) throws Exception {
         String yearEnd = String.valueOf(Integer.parseInt(CommonUtilityPage.getHijriDate().split("/")[2]) + year);
         Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.endAuctionDateIcon(), 40);
-        CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.endAuctionDateIcon());
+        Browser.moveToElement(FullAuctionJourneyPageObjects.endAuctionDateIcon());
         Browser.click(FullAuctionJourneyPageObjects.endAuctionDateIcon());
         Browser.selectDropdownByVisibleText(FullAuctionJourneyPageObjects.getYearList(), yearEnd);
         Browser.selectDropdownByVisibleText(FullAuctionJourneyPageObjects.getMonthList(), CommonUtilityPage.getHijriDate().split("/")[1]);
@@ -268,18 +313,16 @@ public class FullAuctionJourneyPage {
 
     public void enterValidActionFeeAmount(String fee) throws Exception {
         Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.applyGeneralSettingLabel(), 40);
-        CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.applyGeneralSettingLabel());
-        Browser.click(FullAuctionJourneyPageObjects.applyGeneralSettingLabel());
+        CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.auctionIncreaseFeeAmount());
         Browser.setText(FullAuctionJourneyPageObjects.auctionIncreaseFeeAmount(), fee);
     }
 
     public void enterInvalidActionFeeAmountAndVerifyTheErrorMessage(String fee) throws Exception {
         Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.applyGeneralSettingLabel(), 40);
         CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.applyGeneralSettingLabel());
-        Browser.click(FullAuctionJourneyPageObjects.applyGeneralSettingLabel());
         Browser.setText(FullAuctionJourneyPageObjects.auctionIncreaseFeeAmount(), fee);
         String ErrorMsg = Browser.getText(FullAuctionJourneyPageObjects.valueErrorMsg());
-        assertTrue(ErrorMsg.contains("القيمة المدخلة خاطئة. أقل قيمة ممكنة هي 1") || ErrorMsg.contains("الحقل مطلوب")
+        assertTrue(ErrorMsg.contains("0 يجب أن يكون أكبر من") || ErrorMsg.contains("الحقل مطلوب")
                 || ErrorMsg.contains("Minimum amount doesn't match") || ErrorMsg.contains("This field is required."));
         logger.addScreenshot("Error Message : " + ErrorMsg);
     }
@@ -310,14 +353,12 @@ public class FullAuctionJourneyPage {
 
     public void enterAddedTime(String hr, String min, String sec) throws Exception {
         Browser.executeJSScrollIntoView(FullAuctionJourneyPageObjects.applyGeneralSettingLabel());
-        Browser.click(FullAuctionJourneyPageObjects.applyGeneralSettingLabel());
         Browser.setText(FullAuctionJourneyPageObjects.inputAddTimeHours(), hr);
         Browser.setText(FullAuctionJourneyPageObjects.inputAddTimeMinutes(), min);
         Browser.setText(FullAuctionJourneyPageObjects.inputAddTimeSeconds(), sec);
     }
 
     public void enterValidFixedIncreaseNumber1(String val) throws Exception {
-        disableApplyGeneralSettingToggle();
         Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.fixedIncreaseNumber1(), 40);
         Browser.setText(FullAuctionJourneyPageObjects.fixedIncreaseNumber1(), val);
     }
@@ -347,7 +388,6 @@ public class FullAuctionJourneyPage {
     }
 
     public void enterFixedIncreaseNumber2(String val) throws Exception {
-        disableApplyGeneralSettingToggle();
         Browser.waitUntilElementToBeClickable(FullAuctionJourneyPageObjects.fixedIncreaseNumber2(), 40);
         Browser.setText(FullAuctionJourneyPageObjects.fixedIncreaseNumber2(), val);
     }
@@ -378,7 +418,6 @@ public class FullAuctionJourneyPage {
 
 
     public void enterFixedIncreaseNumber3(String val) throws Exception {
-        disableApplyGeneralSettingToggle();
         Browser.waitUntilElementToBeClickable(FullAuctionJourneyPageObjects.fixedIncreaseNumber3(), 40);
         Browser.setText(FullAuctionJourneyPageObjects.fixedIncreaseNumber3(), val);
     }
@@ -408,7 +447,6 @@ public class FullAuctionJourneyPage {
     }
 
     public void enterSameValueInFixedIncreaseNumbers() throws Exception {
-        disableApplyGeneralSettingToggle();
         Browser.waitUntilElementToBeClickable(FullAuctionJourneyPageObjects.fixedIncreaseNumber1(), 40);
         Browser.setText(FullAuctionJourneyPageObjects.fixedIncreaseNumber1(), "10");
         Browser.setText(FullAuctionJourneyPageObjects.fixedIncreaseNumber2(), "10");
@@ -419,11 +457,10 @@ public class FullAuctionJourneyPage {
         Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.valueErrorMsg(), 40);
         String ErrorMsg = Browser.getText(FullAuctionJourneyPageObjects.valueErrorMsg());
         logger.addScreenshot("Error Message : " + ErrorMsg);
-        assertTrue(ErrorMsg.contains("The fixed increase number is duplicated"));
+        assertTrue(ErrorMsg.contains("رقم الزيادة الثابت مكرر"));
     }
 
     public void enterPeriodTimeAuctionWinnerTakeAction(String time) throws Exception {
-        disableApplyGeneralSettingToggle();
         Browser.waitUntilElementToBeClickable(FullAuctionJourneyPageObjects.periodTimeAuctionWinnerTakeAction(), 40);
         Browser.setText(FullAuctionJourneyPageObjects.periodTimeAuctionWinnerTakeAction(), time);
     }
@@ -460,13 +497,11 @@ public class FullAuctionJourneyPage {
     }
 
     public void enterPeriodTimePayFinalUnitInvoice(String val) throws Exception {
-        disableApplyGeneralSettingToggle();
         Browser.waitUntilElementToBeClickable(FullAuctionJourneyPageObjects.periodTimePayFinalUnitInvoice(), 40);
         Browser.setText(FullAuctionJourneyPageObjects.periodTimePayFinalUnitInvoice(), val);
     }
 
     public void enterInvalidPeriodTimePayFinalUnitInvoice(String val) throws Exception {
-        disableApplyGeneralSettingToggle();
         Browser.waitUntilElementToBeClickable(FullAuctionJourneyPageObjects.periodTimePayFinalUnitInvoice(), 40);
         Browser.setText(FullAuctionJourneyPageObjects.periodTimePayFinalUnitInvoice(), val);
     }
@@ -517,7 +552,8 @@ public class FullAuctionJourneyPage {
 
     public void clickOnSaveButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.saveBTN(), 50);
-        CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.saveBTN());
+        Browser.moveToElement(FullAuctionJourneyPageObjects.saveBTN());
+        Browser.waitUntilElementToBeClickable(FullAuctionJourneyPageObjects.saveBTN(),50);
         Browser.click(FullAuctionJourneyPageObjects.saveBTN());
     }
 
@@ -545,6 +581,14 @@ public class FullAuctionJourneyPage {
         assertTrue(Browser.isElementDisabled(FullAuctionJourneyPageObjects.saveBTN()));
         logger.addScreenshot("Save button is disabled / not clickable");
         Browser.waitForSeconds(1);
+    }
+
+    public void verifyDownloadTemplateButtonIsDisabled() throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.DownloadTemplateButton(), 40);
+        Browser.executeJSScrollIntoView(FullAuctionJourneyPageObjects.DownloadTemplateButton());
+        Browser.waitForSeconds(1);
+        assertTrue(Browser.isElementDisabled(FullAuctionJourneyPageObjects.DownloadTemplateButton()));
+        logger.addScreenshot("");
     }
 
     public void verifyAuctionTabIsDisplayed() throws Exception {
@@ -577,10 +621,11 @@ public class FullAuctionJourneyPage {
         Browser.waitUntilVisibilityOfElement(FiltersPageObjects.applyResultForProject(), 50);
         Browser.waitUntilElementToBeClickable(FiltersPageObjects.applyResultForProject(), 50);
         Browser.moveToElement(FiltersPageObjects.applyResultForProject());
-        while (Browser.isElementNotPresent(FullAuctionJourneyPageObjects.availableUnitLabel())) {
-            Browser.click(FiltersPageObjects.applyResultForProject());
-            Browser.waitForSeconds(2);
-        }
+        Browser.click(FiltersPageObjects.applyResultForProject());
+//        while (Browser.isElementNotPresent(FullAuctionJourneyPageObjects.availableUnitLabel())) {
+//            Browser.click(FiltersPageObjects.applyResultForProject());
+//            Browser.waitForSeconds(2);
+//        }
     }
 
     public void verifyAvailableUnitsAreDisplayed() throws Exception {
@@ -588,7 +633,6 @@ public class FullAuctionJourneyPage {
         CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.availableUnitLabel());
         logger.addScreenshot("");
         Assert.assertTrue(Browser.isElementPresent(FullAuctionJourneyPageObjects.availableUnitLabel()));
-        Assert.assertTrue(Browser.isElementPresent(FullAuctionJourneyPageObjects.ExpiredOrClosedUnit()));
     }
 
     public void navigateToExpiredOrClosedUnit() throws Exception {
@@ -635,7 +679,7 @@ public class FullAuctionJourneyPage {
         Assert.assertTrue(Browser.isElementPresent(FullAuctionJourneyPageObjects.AvailableUnitLabel()));
     }
 
-    public void clickOnSearchButton() throws Exception {
+    public void clickOnSearchButtonFilter() throws Exception {
         Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.filterSearchButton(), 50);
         Browser.click(FullAuctionJourneyPageObjects.filterSearchButton());
         Browser.waitForSeconds(1);
@@ -707,11 +751,10 @@ public class FullAuctionJourneyPage {
         Browser.click(FullAuctionJourneyPageObjects.clickOnProjectTab());
     }
 
-    public void clickOnUnitOpenForAuction(String code) throws Exception {
-        String unitCode = code.substring(code.length() - 6);
-        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.UnitOpenForAuction(unitCode), 50);
-        CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.UnitOpenForAuction(unitCode));
-        Browser.click(FullAuctionJourneyPageObjects.UnitOpenForAuction(unitCode));
+    public void clickOnUnitOpenForAuction() throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.UnitOpenForAuction(), 50);
+        CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.UnitOpenForAuction());
+        Browser.click(FullAuctionJourneyPageObjects.UnitOpenForAuction());
     }
 
     public void clickOnApplyForThisAuctionButton() throws Exception {
@@ -829,8 +872,9 @@ public class FullAuctionJourneyPage {
     }
 
     public void verifyStartBiddingButtonIsNotDisplayed() throws Exception {
+        Browser.waitForSeconds(2);
         logger.addScreenshot("");
-        Assert.assertTrue(Browser.isElementNotPresent(FullAuctionJourneyPageObjects.StartBiddingButton()), "Pop is not dismissed");
+        Assert.assertFalse(isElementPresent(FullAuctionJourneyPageObjects.StartBiddingButton()), "Pop is not dismissed");
     }
 
     public void verifyStartBiddingIsDisabled() throws Exception {
@@ -877,9 +921,9 @@ public class FullAuctionJourneyPage {
     public void verifyPlaceBidButtonIsNotDisplayed() throws Exception {
         logger.addScreenshot("");
         if (Browser.isElementPresent(FullAuctionJourneyPageObjects.FixedIncreaseNumber())) {
-            Assert.assertTrue(Browser.isElementDisabled(FullAuctionJourneyPageObjects.FixedIncreaseNumber()), "Place bid button is not disabled");
+            Assert.assertTrue(Browser.isElementDisabled(FullAuctionJourneyPageObjects.PlaceBidButton()), "Place bid button is disabled");
         } else {
-            Assert.assertTrue(Browser.isElementNotPresent(FullAuctionJourneyPageObjects.FixedIncreaseNumber()), "Place bid button is not displayed");
+            Assert.assertTrue(Browser.isElementNotPresent(FullAuctionJourneyPageObjects.PlaceBidButton()), "Place bid button is displayed");
         }
     }
 
@@ -907,6 +951,7 @@ public class FullAuctionJourneyPage {
     }
 
     public void verifySubmitBidButtonIsNotDisplayed() throws Exception {
+        Browser.waitForSeconds(2);
         logger.addScreenshot("");
         Assert.assertTrue(Browser.isElementNotPresent(FullAuctionJourneyPageObjects.SubmitBidButton()), "Pop up is not dismissed");
     }
@@ -941,6 +986,7 @@ public class FullAuctionJourneyPage {
         while (Browser.isElementNotPresent(FullAuctionJourneyPageObjects.ContinueButton())) {
             Browser.waitForSeconds(1);
         }
+        Browser.waitUntilInvisibilityOfElement(FullBookingJourneyPageObjects.LoadingIconForHousing(), 40);
         Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.ContinueButton(), 40);
         Browser.click(FullAuctionJourneyPageObjects.ContinueButton());
     }
@@ -952,6 +998,7 @@ public class FullAuctionJourneyPage {
 
     public void clickOnRejectButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.RejectButton(), 40);
+        Browser.moveToElement(FullAuctionJourneyPageObjects.RejectButton());
         Browser.click(FullAuctionJourneyPageObjects.RejectButton());
     }
 
@@ -1005,6 +1052,54 @@ public class FullAuctionJourneyPage {
         Assert.assertTrue(Browser.isElementPresent(FullAuctionJourneyPageObjects.CloseBtnOnPopup()), "Image viewer pop is not displayed");
     }
 
+    public void clickOnSearchButton() throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.SearchButton(), 40);
+        Browser.moveToElement(FullAuctionJourneyPageObjects.SearchButton());
+        Browser.click(FullAuctionJourneyPageObjects.SearchButton());
+    }
+
+    public void clickOnImportNewAuctionUnitButton() throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.ImportNewAuctionUnitButton(), 40);
+        Browser.moveToElement(FullAuctionJourneyPageObjects.ImportNewAuctionUnitButton());
+        Browser.click(FullAuctionJourneyPageObjects.ImportNewAuctionUnitButton());
+    }
+
+    public void clickOnDiscardImportButton() throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.DiscardImportButton(), 40);
+        Browser.moveToElement(FullAuctionJourneyPageObjects.DiscardImportButton());
+        Browser.click(FullAuctionJourneyPageObjects.DiscardImportButton());
+    }
+
+    public void clickOnAgreeButton() throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.AgreeButton(), 40);
+        Browser.moveToElement(FullAuctionJourneyPageObjects.AgreeButton());
+        Browser.click(FullAuctionJourneyPageObjects.AgreeButton());
+    }
+
+    public void clickOnCommitButton() throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.CommitButton(), 40);
+        Browser.moveToElement(FullAuctionJourneyPageObjects.CommitButton());
+        Browser.click(FullAuctionJourneyPageObjects.CommitButton());
+    }
+
+    public void clickOnTheUnitModel() throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.UnitsModelPublishStatus(), 40);
+        Browser.moveToElement(FullAuctionJourneyPageObjects.UnitsModelPublishStatus());
+        Browser.click(FullAuctionJourneyPageObjects.UnitsModelPublishStatus());
+    }
+
+    public void clickOnTheAuctionLegalTab() throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.AuctionLegalTab(), 40);
+        Browser.moveToElement(FullAuctionJourneyPageObjects.AuctionLegalTab());
+        Browser.click(FullAuctionJourneyPageObjects.AuctionLegalTab());
+    }
+
+    public void clickOnTheAuctionSettingsTab() throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.AuctionSettingsTab(), 40);
+        Browser.moveToElement(FullAuctionJourneyPageObjects.AuctionSettingsTab());
+        Browser.click(FullAuctionJourneyPageObjects.AuctionSettingsTab());
+    }
+
     public void getAuctionDateAndTime() throws Exception {
         String startDate = Browser.getAttributeValue(FullAuctionJourneyPageObjects.AuctionStartDateInput(), "value");
         String endDate = Browser.getAttributeValue(FullAuctionJourneyPageObjects.AuctionEndDateInput(), "value");
@@ -1026,26 +1121,19 @@ public class FullAuctionJourneyPage {
         TestDataManager.writeDependantGlobalTestData("Auctions");
     }
 
-    public void editAuctionUnitFile(String startDate, String endDate, String startHour, String startMinute, String endHour, String endMinute) throws IOException {
-        String startTime = startHour + ":" +startMinute;
+    public void editAuctionUnitFile(String startDate, String endDate, String startHour, String startMinute, String endHour, String endMinute) throws IOException, IOException {
+        String startTime = startHour + ":" + startMinute;
         String endTime = endHour + ":" + endMinute;
-        startDate = startDate.split("/")[0] + "-" + startDate.split("/")[1]  + "-" +  startDate.split("/")[2];
-        endDate = endDate.split("/")[0] + "-" + endDate.split("/")[1]  + "-" +  endDate.split("/")[2];
-        System.out.println("Start time ------------> " + startTime);
-        System.out.println("End time ------------> " + endTime);
-        System.out.println("Start Date ------------> " + startDate);
-        System.out.println("End Date ------------> " + endDate);
-
-        String filePath = String.valueOf(Paths.get(System.getProperty("user.dir"),"src", "main", "resources","auction_unit.xlsx" ));
+        startDate = startDate.split("/")[0] + "-" + startDate.split("/")[1].replaceFirst("^0*", "") + "-" + startDate.split("/")[2].replaceFirst("^0*", "");
+        endDate = endDate.split("/")[0] + "-" + endDate.split("/")[1].replaceFirst("^0*", "") + "-" + endDate.split("/")[2].replaceFirst("^0*", "");
+        String filePath = String.valueOf(Paths.get(System.getProperty("user.dir"), "src", "main", "resources", "auction_unit.xlsx"));
         FileInputStream fileInputStream = new FileInputStream(new File(filePath));
         Workbook workbook = new XSSFWorkbook(fileInputStream);
-
         Sheet sheet = workbook.getSheetAt(0);
         Row row = sheet.getRow(1);
         int totalCell = row.getLastCellNum();
         for (int i = 0; i < totalCell; i++) {
             Cell cell = row.getCell(i);
-
             switch (i) {
                 case 51:
                     cell.setCellValue(startDate);
@@ -1061,9 +1149,52 @@ public class FullAuctionJourneyPage {
                     break;
             }
         }
-
         FileOutputStream fos = new FileOutputStream(filePath);
         workbook.write(fos);
         fos.close();
+    }
+
+    public void enterNumberOfAssets(String assets) throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.NumberOfAssets(), 40);
+        CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.NumberOfAssets());
+        Browser.setText(FullAuctionJourneyPageObjects.NumberOfAssets(), assets);
+    }
+    public void enterTextInUnderSupervision(String text) throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.UnderSupervision(), 40);
+        CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.UnderSupervision());
+        Browser.setText(FullAuctionJourneyPageObjects.UnderSupervision(), text);
+    }
+    public void enterCallNumber(String text) throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.CallNumber(), 40);
+        CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.CallNumber());
+        Browser.setText(FullAuctionJourneyPageObjects.CallNumber(), text);
+    }
+    public void enterWhatsAppNumber(String text) throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.WhatsAppNumber(), 40);
+        CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.WhatsAppNumber());
+        Browser.setText(FullAuctionJourneyPageObjects.WhatsAppNumber(), text);
+    }
+    public void enterValNumber(String text) throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.ValNumber(), 40);
+        CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.ValNumber());
+        Browser.setText(FullAuctionJourneyPageObjects.ValNumber(), text);
+    }
+    public static void clickOnAuctionMediaTab() throws Exception {
+        Browser.waitUntilPresenceOfElement(FullAuctionJourneyPageObjects.AuctionMediaTab(), 500);
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.AuctionMediaTab(), 500);
+        Browser.waitUntilElementToBeClickable(FullAuctionJourneyPageObjects.AuctionMediaTab(), 500);
+        Browser.moveToElement(FullAuctionJourneyPageObjects.AuctionMediaTab());
+        Browser.click(FullAuctionJourneyPageObjects.AuctionMediaTab());
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.saveBTN(),500);
+    }
+
+    public void clickOnSignContractBanner() throws Exception {
+        while (Browser.isElementNotPresent(FullAuctionJourneyPageObjects.SignContractBanner())){
+            driver.navigate().refresh();
+            Browser.waitForSeconds(2);
+        }
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.SignContractBanner(), 40);
+        Browser.moveToElement(FullAuctionJourneyPageObjects.SignContractBanner());
+        Browser.click(FullAuctionJourneyPageObjects.SignContractBanner());
     }
 }

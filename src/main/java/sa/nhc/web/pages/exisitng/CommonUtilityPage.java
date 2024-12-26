@@ -13,10 +13,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.chrono.HijrahDate;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
-import java.util.Locale;
-import java.util.Set;
-import java.util.TimeZone;
+import java.util.*;
 
 import static com.testcrew.web.Browser.*;
 
@@ -132,6 +129,20 @@ public class CommonUtilityPage {
         }
     }
 
+    public static void selectFromLists(String option, By element1, By element2) {
+        Browser.waitUntilVisibilityOfElement(element1, 40);
+        Browser.moveToElement(element1);
+        Browser.click(element1);
+        List<WebElement> selectList = Browser.getWebElements(element2);
+        for (WebElement listName : selectList) {
+            String getListName = listName.getText();
+            if (getListName.contains(option)) {
+                listName.click();
+                break;
+            }
+        }
+    }
+
     /**
      * Validate the selected option is same as expected
      *
@@ -187,14 +198,6 @@ public class CommonUtilityPage {
         }
         logger.addScreenshot("");
         Assert.assertTrue(status, "Actual displayed value is (" + valueTXT + "). Expected should be (" + valueAR + ") OR (" + valueEN + ")");
-    }
-
-    public static void clickOnElement(By element) {
-        Browser.waitUntilPresenceOfElement(element, 60);
-        Browser.waitUntilVisibilityOfElement(element, 60);
-        Browser.waitUntilElementToBeClickable(element, 60);
-        Browser.moveToElement(element);
-        Browser.click(element);
     }
 
     /**
@@ -348,6 +351,7 @@ public class CommonUtilityPage {
 
     /**
      * Method to move the pointer to the element with a delay
+     *
      * @param element - Element locator
      */
     public static void moveToObject(By element) {
@@ -361,7 +365,6 @@ public class CommonUtilityPage {
         Browser.waitUntilVisibilityOfElement(HomePageObjects.FilterBTN(), 50);
         Browser.waitUntilElementToBeClickable(HomePageObjects.FilterBTN(), 50);
         Browser.click(HomePageObjects.FilterBTN());
-        logger.addScreenshot("Click On Filter");
     }
 
     public static void MarketPlace() throws Exception {
@@ -369,6 +372,52 @@ public class CommonUtilityPage {
         Browser.click(HomePageObjects.MarketPlaceBTN());
         Browser.waitUntilVisibilityOfElement(HomePageObjects.awareness_marketplace_closeBtn(), 50);
         Browser.click(HomePageObjects.awareness_marketplace_closeBtn());
-        logger.addScreenshot("Click On MarketPlace");
+    }
+
+    public static void verifyTheListsIsDisplayed(String labelAR, String labelEN, By element) throws Exception {
+        Browser.waitUntilPresenceOfElement(element, 50);
+        List<WebElement> list = Browser.getWebElements(element);
+        boolean status = true;
+        ArrayList<String> arr = new ArrayList<>();
+        for (WebElement listElement : list) {
+            String text = listElement.getText();
+            arr.add(text);
+        }
+        String lbl_en = labelAR;
+        String lbl_ar = labelEN;
+        int count = 0;
+        for (String s : arr) {
+            if (s.contains(lbl_en) || s.contains(lbl_ar)) {
+                count++;
+            }
+        }
+        for (int i = 0; i < count; i++) {
+            if (!(arr.get(i).contains(lbl_en) || arr.get(i).contains(lbl_ar))) {
+                status = false;
+            }
+        }
+        Assert.assertTrue(status, "Expected label is not displayed at the top");
+    }
+
+    public static void verifyElementIsDisplayed(String elementName, By element) throws Exception {
+        boolean status = false;
+        Browser.waitUntilVisibilityOfElement(element, 60);
+        if (Browser.isElementPresent(element)) {
+            status = true;
+            Browser.waitUntilVisibilityOfElement(element, 60);
+            Browser.moveToElement(element);
+            logger.addScreenshot(elementName + " is displayed");
+        } else {
+            logger.addScreenshot(elementName + " is not displayed");
+        }
+        Assert.assertTrue(status, elementName + " is not displayed");
+    }
+
+    public static void clickOnElement(By element) {
+        Browser.waitUntilPresenceOfElement(element, 60);
+        Browser.waitUntilVisibilityOfElement(element, 60);
+        Browser.waitUntilElementToBeClickable(element, 60);
+        Browser.moveToElement(element);
+        Browser.click(element);
     }
 }

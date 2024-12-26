@@ -9,10 +9,53 @@ import java.util.Map;
 public class FullAuctionJourneyPageObjects {
     static Map<String, Map<String, String>> objects = new HashMap<>() {
         {
+            /////////////////////////////////////////////////////////////////////
             put("Select-Auction-From-Sidebar", new HashMap<>() {{
                 put("en", "//div[@class='nav-text'][text()='Auction']");
                 put("ar", "//div[@class='nav-text'][text()='المزادات']");
             }});
+            put("Auction_Projects", new HashMap<>() {{
+                put("en", "//div[@class='nav-text'][text()='Auction']");
+                put("ar", "//div[text()=' مشاريع المزاد ']");
+            }});
+            put("Auction_Projects_Page", new HashMap<>() {{
+                put("en", "//div[@class='nav-text'][text()='Auction']");
+                put("ar", "//app-page-header[@pagetitle=\"MENU.AUCTION_PROJECTS\"]");
+            }});
+            put("Add_New_Auction_Button", new HashMap<>() {{
+                put("en", "//div[@class='nav-text'][text()='Auction']");
+                put("ar", "//button/span[contains(text(),'مشروع مزاد جديد')]");
+            }});
+            put("Auction_Type_Dropdown_List", new HashMap<>() {{
+                put("en", "//div[@class='nav-text'][text()='Auction']");
+                put("ar", "//mat-select[@formcontrolname=\"auction_type\"]/div");
+            }});
+            put("Selected_Auction_Type", new HashMap<>() {{
+                put("en", "//div[@class='nav-text'][text()='Auction']");
+                put("ar", "//mat-option");
+            }});
+            put("Project_Name_InputField", new HashMap<>() {{
+                put("en", "//div[@class='nav-text'][text()='Auction']");
+                put("ar", "//input[@formcontrolname=\"name\"]");
+            }});
+            put("Region_Dropdown_List", new HashMap<>() {{
+                put("en", "//div[@class='nav-text'][text()='Auction']");
+                put("ar", "//ng-select[@id=\"selectRegion\"]/div");
+            }});
+            put("Selected_Region", new HashMap<>() {{
+                put("en", "//div[@class='nav-text'][text()='Auction']");
+                put("ar", "//div[@role=\"option\"]");
+            }});
+            put("City_Dropdown_List", new HashMap<>() {{
+                put("en", "//div[@class='nav-text'][text()='Auction']");
+                put("ar", "//input[@id=\"inputCity\"]");
+            }});
+            put("Selected_City", new HashMap<>() {{
+                put("en", "//div[@class='nav-text'][text()='Auction']");
+                put("ar", "//mat-option/span");
+            }});
+
+
             put("Select-Auction-List-From-Sidebar", new HashMap<>() {{
                 put("en", "//div[contains (text(), 'Auctions')]");
                 put("ar", "//div[contains (text(), 'قائمة المزادات')]");
@@ -91,15 +134,15 @@ public class FullAuctionJourneyPageObjects {
             }});
             put("Add-Time-Hours", new HashMap<>() {{
                 put("en", "(//div[@class='ngb-tp-input-container ngb-tp-hour']//input[@type='text'][@aria-label='Hours'])[3]");
-                put("ar", "(//div[@class='ngb-tp-input-container ngb-tp-hour']//input[@type='text'][@aria-label='Hours'])[3]");
+                put("ar", "//input[@aria-label=\"Hours\"]");
             }});
             put("Add-Time-Minutes", new HashMap<>() {{
                 put("en", "(//div[@class='ngb-tp-input-container ngb-tp-minute']//input[@type='text'][@aria-label='Minutes'])[3]");
-                put("ar", "(//div[@class='ngb-tp-input-container ngb-tp-minute']//input[@type='text'][@aria-label='Minutes'])[3]");
+                put("ar", "//input[@aria-label=\"Minutes\"]");
             }});
             put("Add-Time-Seconds", new HashMap<>() {{
                 put("en", "(//div[@class='ngb-tp-input-container ngb-tp-second ng-star-inserted']//input[@type='text'][@aria-label='Seconds'])[1]");
-                put("ar", "(//div[@class='ngb-tp-input-container ngb-tp-second ng-star-inserted']//input[@type='text'][@aria-label='Seconds'])[1]");
+                put("ar", "//input[@aria-label=\"Seconds\"]");
             }});
             put("Apply-General-Setting-Label", new HashMap<>() {{
                 put("en", "//ui-switch[@formcontrolname='apply_general_setting']/child::button");
@@ -111,31 +154,31 @@ public class FullAuctionJourneyPageObjects {
             }});
             put("Save-Button", new HashMap<>() {{
                 put("en", "//button[contains (text(),'Save')]");
-                put("ar", "//button[contains (text(),'حفظ')]");
+                put("ar", "//button[contains (text(),'حفظ')] | //span[contains (text(),'حفظ')]");
             }});
             put("Cancel-Button", new HashMap<>() {{
                 put("en", "//button[contains (text(), 'Cancel')]");
                 put("ar", "//button[contains (text(),'إلغاء')]");
             }});
             put("Fixed-Increase-Number-1", new HashMap<>() {{
+                put("en", "(//input[@type='number'])[2]");
+                put("ar", "(//input[@type='number'])[2]");
+            }});
+            put("Fixed-Increase-Number-2", new HashMap<>() {{
+                put("en", "(//input[@type='number'])[3]");
+                put("ar", "(//input[@type='number'])[3]");
+            }});
+            put("Fixed-Increase-Number-3", new HashMap<>() {{
                 put("en", "(//input[@type='number'])[4]");
                 put("ar", "(//input[@type='number'])[4]");
             }});
-            put("Fixed-Increase-Number-2", new HashMap<>() {{
+            put("Period-Time-Auction-Winner-Take-Action", new HashMap<>() {{
                 put("en", "(//input[@type='number'])[5]");
                 put("ar", "(//input[@type='number'])[5]");
             }});
-            put("Fixed-Increase-Number-3", new HashMap<>() {{
+            put("Period-Time-Pay-Final-Unit-Invoice", new HashMap<>() {{
                 put("en", "(//input[@type='number'])[6]");
                 put("ar", "(//input[@type='number'])[6]");
-            }});
-            put("Period-Time-Auction-Winner-Take-Action", new HashMap<>() {{
-                put("en", "(//input[@type='number'])[7]");
-                put("ar", "(//input[@type='number'])[7]");
-            }});
-            put("Period-Time-Pay-Final-Unit-Invoice", new HashMap<>() {{
-                put("en", "(//input[@type='number'])[8]");
-                put("ar", "(//input[@type='number'])[8]");
             }});
             put("Add-More-Section", new HashMap<>() {{
                 put("en", "//span[contains (text(), 'Add more auction')]");
@@ -167,12 +210,12 @@ public class FullAuctionJourneyPageObjects {
 
             }});
             put("Get-Current-Auction-Status", new HashMap<>() {{
-                put("en", "//div//span[text()='Auction expired']");
-                put("ar", "//div//span[text()='انتهى المزاد']");
+                put("en", "//app-project-bookable-channel/descendant::p[2]");
+                put("ar", "//app-project-bookable-channel/descendant::p[2]");
             }});
             put("View-Auction-Location", new HashMap<>() {{
-                put("en", "//button//span[text()='Show on map']");
-                put("ar", "//button//span[text()='عرض الخريطة']");
+                put("en", "//app-project-location//span[text()='Show on map']");
+                put("ar", "//app-project-location//span[text()='عرض الخريطة']");
             }});
             put("Available-Units-Filter", new HashMap<>() {{
                 put("en", "//div[text()=' results ']");
@@ -215,8 +258,8 @@ public class FullAuctionJourneyPageObjects {
                 put("ar", "//span[contains (@class, 'close')]");
             }});
             put("Unit_Open_For_Auction", new HashMap<>() {{
-                put("en", "//app-project-unit-card/descendant::h5[contains (text(), 'replaceText')]");
-                put("ar", "//app-project-unit-card/descendant::h5[contains (text(), 'replaceText')]");
+                put("en", "//app-project-unit-card/descendant::h5[1]");
+                put("ar", "//app-project-unit-card/descendant::h5[1]");
             }});
             put("Unit_Auction_End_Time_Text", new HashMap<>() {{
                 put("en", "//span[contains (text(), 'Ends')]");
@@ -288,7 +331,7 @@ public class FullAuctionJourneyPageObjects {
             }});
             put("Join_This_Auction_Button", new HashMap<>() {{
                 put("en", "//span[contains (text(), 'Join this auction')]");
-                put("ar", "//span[contains (text(), 'انضم إلى هذا المزاد')]");
+                put("ar", "//span[contains (text(), 'شارك في المزاد')]");
             }});
             put("Total_Price_Of_Auction", new HashMap<>() {{
                 put("en", "//span[contains (text(), ' Total')]");
@@ -324,7 +367,7 @@ public class FullAuctionJourneyPageObjects {
             }});
             put("Auction_Bid_Success_Popup_Title", new HashMap<>() {{
                 put("en", "//h2[contains (text(),'Congratulation')]");
-                put("ar", "//h2[contains (text(),'تهانينا')]");
+                put("ar", "//h2[contains (text(),'بنجاح')]");
             }});
             put("Congratulation_Message_For_Highest_Bid", new HashMap<>() {{
                 put("en", "//b[contains (text(),'Congratulation')]");
@@ -438,6 +481,18 @@ public class FullAuctionJourneyPageObjects {
                 put("en", "(//app-thumbs-gallery-slider)[2]");
                 put("ar", "(//app-thumbs-gallery-slider)[2]");
             }});
+            put("Auction_Legal_Files", new HashMap<>() {{
+                put("en", "(//input[@type = 'file'])[replaceText]");
+                put("ar", "(//input[@type = 'file'])[replaceText]");
+            }});
+            put("Sign_Contract_Banner", new HashMap<>() {{
+                put("en", "//h5[contains (text(), 'Sign contract')]");
+                put("ar", "//h5[contains (text(), 'توقيع العقد')]");
+            }});
+            put("Sign_Contract_Approve_Message", new HashMap<>() {{
+                put("en", "//span[contains (text(), 'Success')]");
+                put("ar", "//span[contains (text(), 'نجاح')]");
+            }});
         }
     };
 
@@ -450,9 +505,51 @@ public class FullAuctionJourneyPageObjects {
         return objects.get(locator).get(language);
     }
 
+    /////////////////////////////////////////////////////////////////////
     public static By selectAuctionFromSidebar() throws Exception {
         return By.xpath(get("Select-Auction-From-Sidebar"));
     }
+
+    public static By AuctionProjects() throws Exception {
+        return By.xpath(get("Auction_Projects"));
+    }
+
+    public static By AuctionProjectsPage() throws Exception {
+        return By.xpath(get("Auction_Projects_Page"));
+    }
+
+    public static By AddNewAuctionButton() throws Exception {
+        return By.xpath(get("Add_New_Auction_Button"));
+    }
+
+    public static By AuctionTypeDropdownList() throws Exception {
+        return By.xpath(get("Auction_Type_Dropdown_List"));
+    }
+
+    public static By SelectedAuctionType() throws Exception {
+        return By.xpath(get("Selected_Auction_Type"));
+    }
+
+    public static By ProjectNameInputField() throws Exception {
+        return By.xpath(get("Project_Name_InputField"));
+    }
+
+    public static By RegionDropdownList() throws Exception {
+        return By.xpath(get("Region_Dropdown_List"));
+    }
+
+    public static By SelectedRegion() throws Exception {
+        return By.xpath(get("Selected_Region"));
+    }
+
+    public static By CityDropdownList() throws Exception {
+        return By.xpath(get("City_Dropdown_List"));
+    }
+
+    public static By SelectedCity() throws Exception {
+        return By.xpath(get("Selected_City"));
+    }
+
 
     public static By selectAuctionListFromSidebar() throws Exception {
         return By.xpath(get("Select-Auction-List-From-Sidebar"));
@@ -603,7 +700,7 @@ public class FullAuctionJourneyPageObjects {
     }
 
     public static By ExpiredOrClosedUnit() throws Exception {
-        return By.xpath(get("First-Expired_Or_Closed_Unit-Unit-Label"));
+        return By.xpath(get("Expired_Or_Closed_Unit"));
     }
 
     public static By getCurrentAuctionStatus() throws Exception {
@@ -654,8 +751,8 @@ public class FullAuctionJourneyPageObjects {
         return By.xpath(get("Close_Btn_On_Popup"));
     }
 
-    public static By UnitOpenForAuction(String unitCode) throws Exception {
-        return By.xpath(get("Unit_Open_For_Auction").replaceAll("replaceText", unitCode));
+    public static By UnitOpenForAuction() throws Exception {
+        return By.xpath(get("Unit_Open_For_Auction"));
     }
 
     public static By UnitAuctionEndTimeText() throws Exception {
@@ -875,20 +972,126 @@ public class FullAuctionJourneyPageObjects {
         return By.xpath(get("Maximize_Image"));
     }
 
-    public static By UnderSupervision() throws Exception {
-        return By.xpath("//input[@formcontrolname=\"under_supervision\"]");
+    public static By SearchButton() throws Exception {
+        return By.xpath(("//button/span[contains(text(),'بحث')]"));
+    }
+
+    public static By AuctionStatusNew() throws Exception {
+        return By.xpath("//mat-select[@formcontrolname=\"auction_status\"]/descendant::span[2]");
+    }
+
+    public static By ErrorMessage() throws Exception {
+        return By.xpath("//mat-error[contains (@id, 'error')]");
+    }
+
+    public static By ProjectInformationLogs() throws Exception {
+        return By.xpath("//span[contains (text(), 'سجل عمليات تحديث المشروع')]");
+    }
+
+    public static By ImportNewAuctionUnitButton() throws Exception {
+        return By.xpath("//span[contains (text(), 'وحدة مزاد جديدة للاستيراد')]");
+    }
+
+    public static By UnitTypeDropdown() throws Exception {
+        return By.xpath("//mat-select[@formcontrolname=\"unit_type\"]");
+    }
+
+    public static By UploadFile() throws Exception {
+        return By.xpath("//input[@type = 'file']");
+    }
+
+    public static By AuctionLegalFiles(String text) throws Exception {
+        return By.xpath(get("Auction_Legal_Files").replace("replaceText", text));
     }
 
 
+    public static By DownloadTemplateButton() throws Exception {
+        return By.xpath("//button[contains (text(), 'تنزيل النموذج المعتمد')]");
+    }
+
+    public static By DiscardImportButton() throws Exception {
+        return By.xpath("//button [contains (text(), 'الغاء الاستيراد')]");
+    }
+
+    public static By AgreeButton() throws Exception {
+        return By.xpath("//button[contains (text(), 'موافق')]");
+    }
+
+    public static By CommitButton() throws Exception {
+        return By.xpath("//button[contains(text(),' اعتماد')]");
+    }
+
+    public static By ImportedUnit() throws Exception {
+        return By.xpath("(//datatable-body-cell/descendant::div)[6]");
+    }
+
+    public static By UnitsModelPage() throws Exception {
+        return By.xpath("//span[text() = 'حالة اعتماد نشر التصانيف']");
+    }
+
+    public static By UnitsModelPublishStatus() throws Exception {
+        return By.xpath("//datatable-body-cell[2]/descendant::span");
+    }
+
+    public static By BasicInformationPage() throws Exception {
+        return By.xpath("//span[contains (text(), 'المعلومات الأساسية')]");
+    }
+
+    public static By AuctionLegalTab() throws Exception {
+        return By.xpath("//span[contains (text(), 'المزاد قانوني')]");
+    }
+
+    public static By DeleteIconFile() throws Exception {
+        return By.xpath("//app-icon-delete-circle");
+    }
+
+    public static By AuctionSettingsTab() throws Exception {
+        return By.xpath("//span[contains (text(), 'إعدادات المزاد')]");
+    }
+
+    public static By EditButton() throws Exception {
+        return By.xpath("//button[contains (text(), 'تعديل')]");
+    }
+
+    public static By UpdateButton() throws Exception {
+        return By.xpath("//span[contains (text(), 'تحديث')]");
+    }
+
+    public static By AuctionMediaTab() throws Exception {
+        return By.xpath("//span[@class='mdc-tab__text-label']/child::span[contains(text(), 'وسائل الإعلام مشروع المزاد')]");
+    }
+
+    public static By LogoImage() throws Exception {
+        return By.xpath("//h1[contains (text(), 'صورة الشعار')]/parent::div/following-sibling::div/child::input");
+    }
+
+    public static By NumberOfAssets() throws Exception {
+        return By.xpath("//input[@formcontrolname=\"number_of_assets\"]");
+    }
+
+    public static By UnderSupervision() throws Exception {
+        return By.xpath("//input[@formcontrolname=\"under_supervision\"]");
+    }
     public static By CallNumber() throws Exception {
         return By.xpath("//input[@placeholder=\"رقم الاتصال\"]");
     }
 
+
+    public static By CallNumberErrorMessage() throws Exception {
+        return By.xpath("//label[contains (@class, 'invalid')]");
+    }
     public static By WhatsAppNumber() throws Exception {
         return By.xpath("//input[@placeholder=\"المراسلة واتساب\"]");
     }
-
     public static By ValNumber() throws Exception {
         return By.xpath("//input[@formcontrolname=\"val_license\"]");
+    }
+
+    public static By SignContractBanner() throws Exception {
+        return By.xpath(get("Sign_Contract_Banner"));
+    }
+
+    public static By SignContractApproveMessage() throws Exception {
+        return By.xpath(get("Sign_Contract_Approve_Message"));
     }
 }

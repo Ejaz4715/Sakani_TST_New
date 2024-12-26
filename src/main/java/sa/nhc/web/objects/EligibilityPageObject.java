@@ -17,6 +17,10 @@ public class EligibilityPageObject {
                 put("en", "//a[@href='/app/user-profile']");
                 put("ar", "//a[@href='/app/user-profile']");
             }});
+            put("Check_Eligibility_From_Profile", new HashMap<>() {{
+                put("en", "//a[@href=\"/app/eligibility/check\"]");
+                put("ar", "//a[@href=\"/app/eligibility/check\"]");
+            }});
             put("Not_Check_Eligibility_Yet_Text", new HashMap<>() {{
                 put("en", "//p[contains(text(),'You have not checked your eligibility yet')]");
                 put("ar", "//p[contains(text(),'لم يتم التحقق من أهلية استحقاق السكن بعد')]");
@@ -34,8 +38,8 @@ public class EligibilityPageObject {
                 put("ar", "//div[contains(@id, \"service_intro\")]");
             }});
             put("Check_Eligibility_Button", new HashMap<>() {{
-                put("en", "//a/div[normalize-space()='التحقق من حالة الاستحقاق']");
-                put("ar", "//a/div[normalize-space()='التحقق من حالة الاستحقاق']");
+                put("en", "//a/div[normalize-space()='التحقق من حالة الاستحقاق'] | //a[@href=\"/app/eligibility/check\"]/div");
+                put("ar", "//a/div[normalize-space()='التحقق من حالة الاستحقاق'] | //a[@href=\"/app/eligibility/check\"]/div");
             }});
             put("Check_Eligibility_Steps_Page", new HashMap<>() {{
                 put("en", "//h2[normalize-space()='Eligibility Check']");
@@ -58,8 +62,8 @@ public class EligibilityPageObject {
                 put("ar", "//div[contains(@class,\"text-danger\")]");
             }});
             put("Continue_To_Confirm_Acknowledge_Button", new HashMap<>() {{
-                put("en", "//app-acknowledgement/descendant::button");
-                put("ar", "//app-acknowledgement/descendant::button");
+                put("en", "//app-acknowledgement/descendant::button[@type=\"submit\"]");
+                put("ar", "//app-acknowledgement/descendant::button[@type=\"submit\"]");
             }});
             put("No_Radio_Button", new HashMap<>() {{
                 put("en", "//span[normalize-space()='No']");
@@ -127,6 +131,9 @@ public class EligibilityPageObject {
 
     public static By myProfileButton() throws Exception {
         return By.xpath(get("My_Profile_Button"));
+    }
+    public static By checkEligibilityFromProfile() throws Exception {
+        return By.xpath(get("Check_Eligibility_From_Profile"));
     }
 
     public static By notCheckEligibilityYetText() throws Exception {

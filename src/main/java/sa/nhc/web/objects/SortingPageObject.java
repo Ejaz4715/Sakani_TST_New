@@ -69,13 +69,18 @@ public class SortingPageObject {
                 put("en", "//span[contains(text(),'Price: Low to high')]");
                 put("ar", "//span[contains(text(),'السعر من الارخص للاعلى')]");
             }});
+            put("promotedLabel", new HashMap<>() {{
+                put("en", "//div[contains(text(),'Promoted')]");
+                put("ar", "//div[contains(text(),'مميز')]");
+            }});
+
             put("promotedLabel_1", new HashMap<>() {{
                 put("en", "(//div[contains(text(),' Promoted ')])[1]");
                 put("ar", "(//div[contains(text(),' مميز ')])[1]");
             }});
             put("promotedLabel_2", new HashMap<>() {{
-                put("en", "(//div[contains(text(),' Promoted ')])[2]");
-                put("ar", "(//div[contains(text(),' مميز ')])[2]");
+                put("en", "(//div[contains(text(),'Promoted')])[2]");
+                put("ar", "(//div[contains(text(),' مميز')])[2]");
             }});
             put("promotedLabel_3", new HashMap<>() {{
                 put("en", "(//div[contains(text(),' Promoted ')])[3]");
@@ -246,4 +251,8 @@ public class SortingPageObject {
     public static By marketplace_price_2() throws Exception {
         return By.xpath(get("marketplace_price_2"));
     }
+    public static By promotedLabel() throws Exception {
+        return By.xpath(get("promotedLabel"));
+    }
+
 }

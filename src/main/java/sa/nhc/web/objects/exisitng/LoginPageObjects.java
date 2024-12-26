@@ -39,7 +39,7 @@ public class LoginPageObjects {
             }});
             put("Cancel-Button-OfPopup", new HashMap<>() {{
                 put("en", "//button[contains(text(),'Cancel')] | //mat-dialog-actions/button/span[contains(text(),'Cancel')]");
-                put("ar", "//button[contains(text(),'لغاء')] | //mat-dialog-actions/button/span[contains(text(),'لغاء')]");
+                put("ar", "//button[contains(text(),'لغ')] | //mat-dialog-actions/button/span[contains(text(),'لغ')]");
             }});
             put("Login_Register_Button", new HashMap<>() {{
                 put("en", "//span[contains (text(), 'Login / Register')]");

@@ -62,9 +62,6 @@ public class LoginPage {
     }
 
     public void loginAsAdmin(String username, String password) throws Exception {
-        if(!Browser.isElementPresent(LoginPageObjects.Email())){
-            Browser.driver.navigate().refresh();
-        }
         Browser.waitUntilInvisibilityOfElement(CommonUtilityPageObjects.SpinnerIconAdminLoginPage(), 40);
         Browser.waitUntilPresenceOfElement(LoginPageObjects.Email(), 40);
         Browser.waitUntilVisibilityOfElement(LoginPageObjects.Email(), 40);
@@ -74,11 +71,12 @@ public class LoginPage {
     }
 
     public void enterOTPForAdminLogin(String OTP) throws Exception {
+        Browser.waitUntilInvisibilityOfElement(CommonUtilityPageObjects.SpinnerIconAdminLoginPage(), 40);
         Browser.waitUntilPresenceOfElement(CommonUtilityPageObjects.AdminOTP(), 40);
         Browser.waitUntilElementToBeClickable(CommonUtilityPageObjects.AdminOTP(), 40);
         Browser.waitUntilVisibilityOfElement(CommonUtilityPageObjects.AdminOTP(), 40);
-        Browser.waitUntilInvisibilityOfElement(CommonUtilityPageObjects.SpinnerIconAdminLoginPage(), 40);
-        Browser.moveToElement(CommonUtilityPageObjects.AdminOTP());
+        CommonUtilityPage.moveToObject(CommonUtilityPageObjects.AdminOTP());
+        Browser.waitForSeconds(1);
         Browser.setText(CommonUtilityPageObjects.AdminOTP(), OTP);
         Browser.click(CommonUtilityPageObjects.OTPVerify());
     }
@@ -86,7 +84,7 @@ public class LoginPage {
     public void changeLanguageAdmin(Map<String, String> data) throws Exception {
         Browser.waitUntilVisibilityOfElement(CommonUtilityPageObjects.Hover(), 30);
         if (TestConfigManager.getSettingsApplicationLanguage().contains("en")) {
-            Browser.openUrl(data.get("URL")+"?lang=en");
+            Browser.openUrl(data.get("URL_En"));
             Browser.waitForSeconds(1);
         }
     }

@@ -23,6 +23,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.testcrew.web.Browser.driver;
 import static com.testcrew.web.Browser.logger;
 
 public class FullBookingJourneyPage {
@@ -310,10 +311,7 @@ public class FullBookingJourneyPage {
      */
     public void clickOnIsBookableToggle() throws Exception {
         Browser.waitUntilVisibilityOfElement(RegisterOfInterestPageObjects.bookableCheckerClicker(), 40);
-        boolean b = Boolean.parseBoolean(Browser.getAttributeValue(RegisterOfInterestPageObjects.bookableCheckerClicker(), "aria-checked"));
-        if (!b){
-            Browser.click(RegisterOfInterestPageObjects.bookableCheckerClicker());
-        }
+        Browser.click(RegisterOfInterestPageObjects.bookableCheckerClicker());
     }
 
     /**
@@ -811,7 +809,7 @@ public class FullBookingJourneyPage {
     }
 
     /**
-     * Click on 'Using General Booking Fee' Toggle to turn it ON
+     * Click on 'Using General Booking Fee' Toggle to turn it on
      */
     public void clickOnUsingGeneralBookingFeeToggle() throws Exception {
         Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.UsingGeneralBookingFeeToggle(), 40);
@@ -827,47 +825,6 @@ public class FullBookingJourneyPage {
         boolean result = Boolean.parseBoolean(element.getAttribute("aria-checked"));
         logger.addScreenshot("");
         Assert.assertTrue(result, "Using general fee toggle is OFF");
-    }
-
-    /**
-     * Click on 'Using General Booking Fee' Toggle to turn it OFF
-     */
-    public void turnOffUsingGeneralBookingFeeToggle() throws Exception {
-        Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.UsingGeneralBookingFeeToggle(), 40);
-        CommonUtilityPage.moveToObject(FullBookingJourneyPageObjects.UsingGeneralBookingFeeToggle());
-        WebElement element = Browser.getWebElement(FullBookingJourneyPageObjects.UsingGeneralBookingFeeToggleInput());
-        boolean result = Boolean.parseBoolean(element.getAttribute("aria-checked"));
-        if (result) {
-            Browser.click(FullBookingJourneyPageObjects.UsingGeneralBookingFeeToggleInput());
-        }
-    }
-
-    /**
-     * Click on 'Using General Booking Fee' Toggle to turn it OFF
-     */
-    public void turnOffUsingThisFeeInSakaniAndPartnersToggles() throws Exception {
-        Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.UseBookingFeeFlagOnSakani(), 40);
-        CommonUtilityPage.moveToObject(FullBookingJourneyPageObjects.UseBookingFeeFlagOnSakani());
-        WebElement element_1 = Browser.getWebElement(FullBookingJourneyPageObjects.UseBookingFeeFlagOnSakani());
-        boolean result_1 = Boolean.parseBoolean(element_1.getAttribute("aria-checked"));
-        if (result_1) {
-            Browser.click(FullBookingJourneyPageObjects.UseBookingFeeFlagOnSakani());
-        }
-        WebElement element_2 = Browser.getWebElement(FullBookingJourneyPageObjects.UseBookingFeeFlagOnSakani());
-        boolean result_2 = Boolean.parseBoolean(element_2.getAttribute("aria-checked"));
-        if (result_2) {
-            Browser.click(FullBookingJourneyPageObjects.UseBookingFeeFlagOnSakani());
-        }
-    }
-
-    /**
-     * Validate 'Using General Booking' Fee toggle is OFF
-     */
-    public void verifyUsingGeneralBookingFeeToggleIsOFF() throws Exception {
-        WebElement element = Browser.getWebElement(FullBookingJourneyPageObjects.UsingGeneralBookingFeeToggleInput());
-        boolean result = Boolean.parseBoolean(element.getAttribute("aria-checked"));
-        logger.addScreenshot("");
-        Assert.assertFalse(result, "Using general fee toggle is ON");
     }
 
     /**
@@ -1402,8 +1359,13 @@ public class FullBookingJourneyPage {
     }
 
     public void verifyMediaIsApproved() throws Exception {
-        Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.MediaTabLabel(), 40);
-        String status = Browser.getText(FullBookingJourneyPageObjects.MediaTabLabel());
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.AuctionMediaTab(), 40);
+        String status = Browser.getText(FullAuctionJourneyPageObjects.AuctionMediaTab());
+        while (!status.contains("تمت الموافقة وتم النشر")){
+            Browser.waitForSeconds(10);
+            driver.navigate().refresh();
+            status = Browser.getText(FullAuctionJourneyPageObjects.AuctionMediaTab());
+        }
         logger.addScreenshot("Media status is: " + status);
         Assert.assertTrue(status.contains("Approved") || status.contains("تمت الموافقة وتم النشر"), "Actual media approval status is (" + status + ") and expected should be (Approved) OR (تمت الموافقة وتم النشر)");
     }
@@ -1724,6 +1686,7 @@ public class FullBookingJourneyPage {
         Browser.waitUntilPresenceOfElement(FullBookingJourneyPageObjects.UnitsListButton(), 40);
         Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.UnitsListButton(), 40);
         CommonUtilityPage.moveToObject(FullBookingJourneyPageObjects.UnitsListButton());
+        Browser.waitUntilElementToBeClickable(FullBookingJourneyPageObjects.UnitsListButton(), 50);
         Browser.click(FullBookingJourneyPageObjects.UnitsListButton());
     }
 
@@ -1855,11 +1818,6 @@ public class FullBookingJourneyPage {
      * @param type - type of the product to be selected
      */
     public void selectProductType(String type) throws Exception {
-        if(TestConfigManager.getSettingsApplicationLanguage().equalsIgnoreCase("ar")){
-            type = type.split("/")[1];
-        }else {
-            type = type.split("/")[0];
-        }
         Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.ProductType(type), 40);
         CommonUtilityPage.moveToObject(FullBookingJourneyPageObjects.ProductType(type));
         Browser.click(FullBookingJourneyPageObjects.ProductType(type));
@@ -1923,19 +1881,19 @@ public class FullBookingJourneyPage {
     /**
      * Method to select the unit to book on 'Units' page based on the UI language (Sakani housing)
      *
-     * @param typeAR - type of unit to be selected (مستفيد, غير مستفيد, للجميع) in Arabic
+     * @param typeAR - type of unit to be selected (bene, non-bene, for all) in Arabic
      * @param typeEN - type of unit to be selected (bene, non-bene, for all) in English
      */
     public void selectUnitForBooking(String typeAR, String typeEN) throws Exception {
         if (TestConfigManager.getSettingsApplicationLanguage().contains("en")) {
-            while (Browser.isElementNotPresent(FullBookingJourneyPageObjects.UnitForBooking(typeEN)) && Browser.isElementPresent(FullBookingJourneyPageObjects.LoadMoreUnitsButton())) {
+            while (Browser.isElementNotPresent(FullBookingJourneyPageObjects.UnitForBooking(typeEN))) {
                 Browser.click(FullBookingJourneyPageObjects.LoadMoreUnitsButton());
             }
             Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.UnitForBooking(typeEN), 40);
             CommonUtilityPage.moveToObject(FullBookingJourneyPageObjects.UnitForBooking(typeEN));
             Browser.click(FullBookingJourneyPageObjects.UnitForBooking(typeEN));
         } else if (TestConfigManager.getSettingsApplicationLanguage().contains("ar")) {
-            while (Browser.isElementNotPresent(FullBookingJourneyPageObjects.UnitForBooking(typeEN)) && Browser.isElementPresent(FullBookingJourneyPageObjects.LoadMoreUnitsButton())) {
+            while (Browser.isElementNotPresent(FullBookingJourneyPageObjects.UnitForBooking(typeEN))) {
                 Browser.click(FullBookingJourneyPageObjects.LoadMoreUnitsButton());
             }
             Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.UnitForBooking(typeAR), 40);
@@ -1959,10 +1917,13 @@ public class FullBookingJourneyPage {
      */
     public void cancelTheExistingBookingProcess() throws Exception {
         if (Browser.isElementPresent(FullBookingJourneyPageObjects.ExistingBookingBanner())) {
+            Browser.waitUntilElementToBeClickable(FullBookingJourneyPageObjects.ExistingBookingBanner(), 50);
             Browser.click(FullBookingJourneyPageObjects.ExistingBookingBanner());
             if (Browser.isElementPresent(MOHLandBookingJourneyPageObjects.cancelBookingButton())) {
+                Browser.waitUntilElementToBeClickable(MOHLandBookingJourneyPageObjects.cancelBookingButton(), 50);
                 Browser.click(MOHLandBookingJourneyPageObjects.cancelBookingButton());
                 Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.CancelButtonOnPopup(), 40);
+                Browser.waitUntilElementToBeClickable(FullBookingJourneyPageObjects.CancelButtonOnPopup(), 50);
                 Browser.click(FullBookingJourneyPageObjects.CancelButtonOnPopup());
             }
         }
@@ -2074,6 +2035,7 @@ public class FullBookingJourneyPage {
     public void clickOnCancelButtonOnPopup() throws Exception {
         Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.CancelButtonOnPopup(), 40);
         CommonUtilityPage.moveToObject(FullBookingJourneyPageObjects.CancelButtonOnPopup());
+        Browser.waitUntilElementToBeClickable(FullBookingJourneyPageObjects.CancelButtonOnPopup(), 50);
         Browser.click(FullBookingJourneyPageObjects.CancelButtonOnPopup());
     }
 
@@ -2162,6 +2124,7 @@ public class FullBookingJourneyPage {
     public void clickOnRejectButton() throws Exception {
         Browser.waitUntilInvisibilityOfElement(FullBookingJourneyPageObjects.LoadingIconForHousing(), 40);
         Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.RejectButtonForSignSaleContract(), 40);
+        Browser.executeJSScroll(-500);
         CommonUtilityPage.moveToObject(FullBookingJourneyPageObjects.RejectButtonForSignSaleContract());
         Browser.click(FullBookingJourneyPageObjects.RejectButtonForSignSaleContract());
     }
@@ -2180,7 +2143,7 @@ public class FullBookingJourneyPage {
      */
     public void verifyConfirmationPopupIsNotDisplayed() throws Exception {
         logger.addScreenshot("");
-        Assert.assertFalse(Browser.isElementPresent(FullBookingJourneyPageObjects.YesButtonPopup()), "Pop is displayed");
+        Assert.assertTrue(Browser.isElementNotDisplayed(FullBookingJourneyPageObjects.YesButtonPopup()), "Pop is displayed");
     }
 
     /**
@@ -2203,7 +2166,7 @@ public class FullBookingJourneyPage {
     }
 
     /**
-     * Verify the Booking Cancellation d ate is same as the current date (Sakani housing)
+     * Verify the Booking Cancellation date is same as the current date (Sakani housing)
      */
     public void verifyBookingCancellationDate() throws Exception {
         Browser.waitUntilPresenceOfElement(FullBookingJourneyPageObjects.CancellationDate(), 40);
@@ -2226,7 +2189,8 @@ public class FullBookingJourneyPage {
      */
     public void clickOnApproveButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.ApproveButtonForSignSaleContract(), 40);
-        CommonUtilityPage.moveToObject(FullBookingJourneyPageObjects.ApproveButtonForSignSaleContract());
+        Browser.executeJSScroll(-500);
+        Browser.waitForSeconds(1);
         Browser.click(FullBookingJourneyPageObjects.ApproveButtonForSignSaleContract());
     }
 
@@ -2351,35 +2315,9 @@ public class FullBookingJourneyPage {
     }
 
     public void clickOnUpdateFinancialInformationButton() throws Exception {
-        Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.UpdateMyFinancialInformationButton(), 40);
-        CommonUtilityPage.moveToObject(FullBookingJourneyPageObjects.UpdateMyFinancialInformationButton());
-        Browser.click(FullBookingJourneyPageObjects.UpdateMyFinancialInformationButton());
+        Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.UpdateFinancialInformationButton(), 40);
+        CommonUtilityPage.moveToObject(FullBookingJourneyPageObjects.UpdateFinancialInformationButton());
+        Browser.click(FullBookingJourneyPageObjects.UpdateFinancialInformationButton());
     }
-
-    public void enterTextInUnderSupervision(String text) throws Exception {
-        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.UnderSupervision(), 40);
-        CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.UnderSupervision());
-        Browser.setText(FullAuctionJourneyPageObjects.UnderSupervision(), text);
-    }
-
-    public void enterCallNumber(String text) throws Exception {
-        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.CallNumber(), 40);
-        CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.CallNumber());
-        Browser.setText(FullAuctionJourneyPageObjects.CallNumber(), text);
-    }
-
-    public void enterWhatsAppNumber(String text) throws Exception {
-        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.WhatsAppNumber(), 40);
-        CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.WhatsAppNumber());
-        Browser.setText(FullAuctionJourneyPageObjects.WhatsAppNumber(), text);
-    }
-
-    public void enterValNumber(String text) throws Exception {
-        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.ValNumber(), 40);
-        CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.ValNumber());
-        Browser.setText(FullAuctionJourneyPageObjects.ValNumber(), text);
-    }
-
-
 }
 

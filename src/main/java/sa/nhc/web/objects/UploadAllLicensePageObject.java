@@ -54,8 +54,8 @@ public class UploadAllLicensePageObject {
                 put("ar", "//app-land-booking-action/descendant::h4");
             }});
             put("Building_Permit_Dropdown_Button", new HashMap<>() {{
-                put("en", "//button/span[contains(text(),'Building permit')]");
-                put("ar", "//button/span[contains(text(),'تصريح البناء')]");
+                put("en", "(//div[@cardclass=\"build-permit-section\"]/div)[1]");
+                put("ar", "(//div[@cardclass=\"build-permit-section\"]/div)[1]");
             }});
             put("Building_Permit_Details", new HashMap<>() {{
                 put("en", "//app-booking-building-permit-list");
@@ -79,8 +79,8 @@ public class UploadAllLicensePageObject {
             }});
 
             put("Construction_Completion_Dropdown_Button", new HashMap<>() {{
-                put("en", "//button/span[contains(text(),'Construction completion')]");
-                put("ar", "//button/span[contains(text(),'إتمام البناء')]");
+                put("en", "(//div[@cardclass=\"build-permit-section\"]/div)[3]");
+                put("ar", "(//div[@cardclass=\"build-permit-section\"]/div)[3]");
             }});
             put("Conveyance_Request_Button", new HashMap<>() {{
                 put("en", "//h6[contains(text(),'Conveyance Request')]/parent::div");

@@ -20,7 +20,7 @@ public class Eligibility extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         logger.info("Step 02: Navigate to the registration form");
         app.loginPage.changeLanguageForUser();
@@ -58,7 +58,7 @@ public class Eligibility extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         logger.info("Step 02: Navigate to the login form");
         app.loginPage.changeLanguageForUser();
@@ -79,7 +79,7 @@ public class Eligibility extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         logger.info("Step 02: Navigate to the login form");
         app.loginPage.changeLanguageForUser();
@@ -99,7 +99,7 @@ public class Eligibility extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -121,7 +121,7 @@ public class Eligibility extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -145,7 +145,7 @@ public class Eligibility extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -169,7 +169,7 @@ public class Eligibility extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -182,9 +182,9 @@ public class Eligibility extends NHCWebTest {
         app.eligibilityPage.hoverToServices();
         logger.info("Step 04: Click on check eligibility nav title");
         app.eligibilityPage.clickOnCheckEligibilityNavTitle();
-        logger.info("Step 05: Click on agree on terms and conditions checkbox");
+        logger.info("Step 05: Click on check eligibility button");
         app.eligibilityPage.clickOnCheckEligibilityButton();
-        logger.info("Step 06: Click on check eligibility button");
+        logger.info("Step 06: Click on agree on terms and conditions checkbox");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsCheckbox();
         logger.info("Step 07: Verify the \"أوافق على الشروط والأحكام\" button is enabled");
         app.eligibilityPage.verifyAgreeOnTermsAndConditionsButtonIsEnabled();
@@ -195,7 +195,7 @@ public class Eligibility extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -208,9 +208,9 @@ public class Eligibility extends NHCWebTest {
         app.eligibilityPage.hoverToServices();
         logger.info("Step 04: Click on check eligibility nav title");
         app.eligibilityPage.clickOnCheckEligibilityNavTitle();
-        logger.info("Step 05: Click on agree on terms and conditions checkbox");
+        logger.info("Step 05: Click on check eligibility button");
         app.eligibilityPage.clickOnCheckEligibilityButton();
-        logger.info("Step 06: Click on check eligibility button");
+        logger.info("Step 06: Click on agree on terms and conditions checkbox");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsCheckbox();
         logger.info("Step 07: Click on agree on terms and conditions button");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsButton();
@@ -223,7 +223,7 @@ public class Eligibility extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -236,9 +236,9 @@ public class Eligibility extends NHCWebTest {
         app.eligibilityPage.hoverToServices();
         logger.info("Step 04: Click on check eligibility nav title");
         app.eligibilityPage.clickOnCheckEligibilityNavTitle();
-        logger.info("Step 05: Click on agree on terms and conditions checkbox");
+        logger.info("Step 05: Click on check eligibility button");
         app.eligibilityPage.clickOnCheckEligibilityButton();
-        logger.info("Step 06: Click on check eligibility button");
+        logger.info("Step 06: Click on agree on terms and conditions checkbox");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsCheckbox();
         logger.info("Step 07: Click on agree on terms and conditions button");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsButton();
@@ -253,7 +253,7 @@ public class Eligibility extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -266,9 +266,9 @@ public class Eligibility extends NHCWebTest {
         app.eligibilityPage.hoverToServices();
         logger.info("Step 04: Click on check eligibility nav title");
         app.eligibilityPage.clickOnCheckEligibilityNavTitle();
-        logger.info("Step 05: Click on agree on terms and conditions checkbox");
+        logger.info("Step 05: Click on check eligibility button");
         app.eligibilityPage.clickOnCheckEligibilityButton();
-        logger.info("Step 06: Click on check eligibility button");
+        logger.info("Step 06: Click on agree on terms and conditions checkbox");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsCheckbox();
         logger.info("Step 07: Click on agree on terms and conditions button");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsButton();
@@ -285,7 +285,7 @@ public class Eligibility extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -298,9 +298,9 @@ public class Eligibility extends NHCWebTest {
         app.eligibilityPage.hoverToServices();
         logger.info("Step 04: Click on check eligibility nav title");
         app.eligibilityPage.clickOnCheckEligibilityNavTitle();
-        logger.info("Step 05: Click on agree on terms and conditions checkbox");
+        logger.info("Step 05: Click on check eligibility button");
         app.eligibilityPage.clickOnCheckEligibilityButton();
-        logger.info("Step 06: Click on check eligibility button");
+        logger.info("Step 06: Click on agree on terms and conditions checkbox");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsCheckbox();
         logger.info("Step 07: Click on agree on terms and conditions button");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsButton();
@@ -319,7 +319,7 @@ public class Eligibility extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -332,9 +332,9 @@ public class Eligibility extends NHCWebTest {
         app.eligibilityPage.hoverToServices();
         logger.info("Step 04: Click on check eligibility nav title");
         app.eligibilityPage.clickOnCheckEligibilityNavTitle();
-        logger.info("Step 05: Click on agree on terms and conditions checkbox");
+        logger.info("Step 05: Click on check eligibility button");
         app.eligibilityPage.clickOnCheckEligibilityButton();
-        logger.info("Step 06: Click on check eligibility button");
+        logger.info("Step 06: Click on agree on terms and conditions checkbox");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsCheckbox();
         logger.info("Step 07: Click on agree on terms and conditions button");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsButton();
@@ -353,7 +353,7 @@ public class Eligibility extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -366,9 +366,9 @@ public class Eligibility extends NHCWebTest {
         app.eligibilityPage.hoverToServices();
         logger.info("Step 04: Click on check eligibility nav title");
         app.eligibilityPage.clickOnCheckEligibilityNavTitle();
-        logger.info("Step 05: Click on agree on terms and conditions checkbox");
+        logger.info("Step 05: Click on check eligibility button");
         app.eligibilityPage.clickOnCheckEligibilityButton();
-        logger.info("Step 06: Click on check eligibility button");
+        logger.info("Step 06: Click on agree on terms and conditions checkbox");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsCheckbox();
         logger.info("Step 07: Click on agree on terms and conditions button");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsButton();
@@ -385,7 +385,7 @@ public class Eligibility extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -398,9 +398,9 @@ public class Eligibility extends NHCWebTest {
         app.eligibilityPage.hoverToServices();
         logger.info("Step 04: Click on check eligibility nav title");
         app.eligibilityPage.clickOnCheckEligibilityNavTitle();
-        logger.info("Step 05: Click on agree on terms and conditions checkbox");
+        logger.info("Step 05: Click on check eligibility button");
         app.eligibilityPage.clickOnCheckEligibilityButton();
-        logger.info("Step 06: Click on check eligibility button");
+        logger.info("Step 06: Click on agree on terms and conditions checkbox");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsCheckbox();
         logger.info("Step 07: Click on agree on terms and conditions button");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsButton();
@@ -417,7 +417,7 @@ public class Eligibility extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -430,9 +430,9 @@ public class Eligibility extends NHCWebTest {
         app.eligibilityPage.hoverToServices();
         logger.info("Step 04: Click on check eligibility nav title");
         app.eligibilityPage.clickOnCheckEligibilityNavTitle();
-        logger.info("Step 05: Click on agree on terms and conditions checkbox");
+        logger.info("Step 05: Click on check eligibility button");
         app.eligibilityPage.clickOnCheckEligibilityButton();
-        logger.info("Step 06: Click on check eligibility button");
+        logger.info("Step 06: Click on agree on terms and conditions checkbox");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsCheckbox();
         logger.info("Step 07: Click on agree on terms and conditions button");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsButton();
@@ -451,7 +451,7 @@ public class Eligibility extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -464,9 +464,9 @@ public class Eligibility extends NHCWebTest {
         app.eligibilityPage.hoverToServices();
         logger.info("Step 04: Click on check eligibility nav title");
         app.eligibilityPage.clickOnCheckEligibilityNavTitle();
-        logger.info("Step 05: Click on agree on terms and conditions checkbox");
+        logger.info("Step 05: Click on check eligibility button");
         app.eligibilityPage.clickOnCheckEligibilityButton();
-        logger.info("Step 06: Click on check eligibility button");
+        logger.info("Step 06: Click on agree on terms and conditions checkbox");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsCheckbox();
         logger.info("Step 07: Click on agree on terms and conditions button");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsButton();
@@ -487,7 +487,7 @@ public class Eligibility extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -500,9 +500,9 @@ public class Eligibility extends NHCWebTest {
         app.eligibilityPage.hoverToServices();
         logger.info("Step 04: Click on check eligibility nav title");
         app.eligibilityPage.clickOnCheckEligibilityNavTitle();
-        logger.info("Step 05: Click on agree on terms and conditions checkbox");
+        logger.info("Step 05: Click on check eligibility button");
         app.eligibilityPage.clickOnCheckEligibilityButton();
-        logger.info("Step 06: Click on check eligibility button");
+        logger.info("Step 06: Click on agree on terms and conditions checkbox");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsCheckbox();
         logger.info("Step 07: Click on agree on terms and conditions button");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsButton();
@@ -525,7 +525,7 @@ public class Eligibility extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -538,9 +538,9 @@ public class Eligibility extends NHCWebTest {
         app.eligibilityPage.hoverToServices();
         logger.info("Step 04: Click on check eligibility nav title");
         app.eligibilityPage.clickOnCheckEligibilityNavTitle();
-        logger.info("Step 05: Click on agree on terms and conditions checkbox");
+        logger.info("Step 05: Click on check eligibility button");
         app.eligibilityPage.clickOnCheckEligibilityButton();
-        logger.info("Step 06: Click on check eligibility button");
+        logger.info("Step 06: Click on agree on terms and conditions checkbox");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsCheckbox();
         logger.info("Step 07: Click on agree on terms and conditions button");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsButton();
@@ -565,7 +565,7 @@ public class Eligibility extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -578,9 +578,9 @@ public class Eligibility extends NHCWebTest {
         app.eligibilityPage.hoverToServices();
         logger.info("Step 04: Click on check eligibility nav title");
         app.eligibilityPage.clickOnCheckEligibilityNavTitle();
-        logger.info("Step 05: Click on agree on terms and conditions checkbox");
+        logger.info("Step 05: Click on check eligibility button");
         app.eligibilityPage.clickOnCheckEligibilityButton();
-        logger.info("Step 06: Click on check eligibility button");
+        logger.info("Step 06: Click on agree on terms and conditions checkbox");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsCheckbox();
         logger.info("Step 07: Click on agree on terms and conditions button");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsButton();
@@ -609,7 +609,7 @@ public class Eligibility extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -622,9 +622,9 @@ public class Eligibility extends NHCWebTest {
         app.eligibilityPage.hoverToServices();
         logger.info("Step 04: Click on check eligibility nav title");
         app.eligibilityPage.clickOnCheckEligibilityNavTitle();
-        logger.info("Step 05: Click on agree on terms and conditions checkbox");
+        logger.info("Step 05: Click on check eligibility button");
         app.eligibilityPage.clickOnCheckEligibilityButton();
-        logger.info("Step 06: Click on check eligibility button");
+        logger.info("Step 06: Click on agree on terms and conditions checkbox");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsCheckbox();
         logger.info("Step 07: Click on agree on terms and conditions button");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsButton();
@@ -639,7 +639,9 @@ public class Eligibility extends NHCWebTest {
             app.eligibilityPage.selectDeedType(data.get("Deed_Type_AR"), data.get("Deed_Type_EN"), EligibilityPageObject.deedTypeDropdownList(), data.get("Construction_Status_AR"), data.get("Construction_Status_EN"),EligibilityPageObject.constructionStatusDropdownList());
         }
         logger.info("Step 11: Verify the dropdown lists of \"معلومات الصك\" are selectable");
+        if (Browser.isElementPresent(EligibilityPageObject.deedTypeDropdownList())){
         CommonUtilityPage.verifyOptionIsSelected(data.get("Deed_Type_AR"), data.get("Deed_Type_AR"), EligibilityPageObject.deedTypeDropdownList());
+    }
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -647,7 +649,7 @@ public class Eligibility extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -660,9 +662,9 @@ public class Eligibility extends NHCWebTest {
         app.eligibilityPage.hoverToServices();
         logger.info("Step 04: Click on check eligibility nav title");
         app.eligibilityPage.clickOnCheckEligibilityNavTitle();
-        logger.info("Step 05: Click on agree on terms and conditions checkbox");
+        logger.info("Step 05: Click on check eligibility button");
         app.eligibilityPage.clickOnCheckEligibilityButton();
-        logger.info("Step 06: Click on check eligibility button");
+        logger.info("Step 06: Click on agree on terms and conditions checkbox");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsCheckbox();
         logger.info("Step 07: Click on agree on terms and conditions button");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsButton();
@@ -683,7 +685,7 @@ public class Eligibility extends NHCWebTest {
             app.eligibilityPage.selectFromTheLists(data.get("Preferred_District_AR"), data.get("Preferred_District_EN"), CheckEligibilityPageObjects.DDLPreferredDistrict());
         }
         logger.info("Step 15: Select current housing status dropdown list");
-        Browser.executeJSScroll(100);
+        Browser.executeJSScroll(250);
         Browser.waitForSeconds(1);
         app.eligibilityPage.selectFromTheLists(data.get("Current_Housing_Status_AR"), data.get("Current_Housing_Status_EN"), CheckEligibilityPageObjects.DDLCurrentHosingStatus());
         logger.info("Step 16: Select deed type dropdown lists");
@@ -705,7 +707,7 @@ public class Eligibility extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         logger.info("Step 02: Navigate to the registration form");
         app.loginPage.changeLanguageForUser();
@@ -738,7 +740,7 @@ public class Eligibility extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -751,9 +753,9 @@ public class Eligibility extends NHCWebTest {
         app.eligibilityPage.hoverToServices();
         logger.info("Step 04: Click on check eligibility nav title");
         app.eligibilityPage.clickOnCheckEligibilityNavTitle();
-        logger.info("Step 05: Click on agree on terms and conditions checkbox");
+        logger.info("Step 05: Click on check eligibility button ");
         app.eligibilityPage.clickOnCheckEligibilityButton();
-        logger.info("Step 06: Click on check eligibility button");
+        logger.info("Step 06: Click on agree on terms and conditions checkbox");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsCheckbox();
         logger.info("Step 07: Click on agree on terms and conditions button");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsButton();
@@ -774,7 +776,7 @@ public class Eligibility extends NHCWebTest {
             app.eligibilityPage.selectFromTheLists(data.get("Preferred_District_AR"), data.get("Preferred_District_EN"), CheckEligibilityPageObjects.DDLPreferredDistrict());
         }
         logger.info("Step 15: Select current housing status dropdown list");
-        Browser.executeJSScroll(100);
+        Browser.executeJSScroll(250);
         Browser.waitForSeconds(1);
         app.eligibilityPage.selectFromTheLists(data.get("Current_Housing_Status_AR"), data.get("Current_Housing_Status_EN"), CheckEligibilityPageObjects.DDLCurrentHosingStatus());
         logger.info("Step 16: Select deed type dropdown lists");

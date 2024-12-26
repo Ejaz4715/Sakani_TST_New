@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import sa.nhc.web.objects.CardDetailsPageObjects;
 import sa.nhc.web.objects.exisitng.HomePageObjects;
-import sa.nhc.web.pages.exisitng.CommonUtilityPage;
 
 import java.util.List;
 
@@ -43,9 +42,8 @@ public class CardDetailsPage {
     }
 
     public void LabelCardDetailsPageExistenceChecker(By locator, String nameOfLocator) {
-        executeJSScroll(1000);
-        waitForSeconds(1);
         waitUntilVisibilityOfElement(locator, 50);
+        Browser.moveToElement(locator);
         WebElement label = driver.findElement(locator);
         boolean labelsDisplayed = label.isDisplayed();
         logger.addScreenshot(nameOfLocator + " Label Existence Checker");
@@ -55,14 +53,14 @@ public class CardDetailsPage {
     public void ClickOnTheBrochureViewButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(CardDetailsPageObjects.BrochureViewButton(), 50);
         Browser.waitUntilElementToBeClickable(CardDetailsPageObjects.BrochureViewButton(), 50);
-        CommonUtilityPage.moveToObject(CardDetailsPageObjects.BrochureViewButton());
+        Browser.moveToElement(CardDetailsPageObjects.BrochureViewButton());
         Browser.click(CardDetailsPageObjects.BrochureViewButton());
     }
 
     public void ClickOnTheMasterPlanViewButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(CardDetailsPageObjects.MasterPlanViewButton(), 50);
         Browser.waitUntilElementToBeClickable(CardDetailsPageObjects.MasterPlanViewButton(), 50);
-        CommonUtilityPage.moveToObject(CardDetailsPageObjects.MasterPlanViewButton());
+        Browser.moveToElement(CardDetailsPageObjects.MasterPlanViewButton());
         Browser.click(CardDetailsPageObjects.MasterPlanViewButton());
     }
 
@@ -97,7 +95,7 @@ public class CardDetailsPage {
     public void ClickOnTheLandProjectDetails() throws Exception {
         Browser.waitUntilVisibilityOfElement(CardDetailsPageObjects.LandProjectDetailsExistence(), 50);
         Browser.waitUntilElementToBeClickable(CardDetailsPageObjects.LandProjectDetailsExistence(), 50);
-        CommonUtilityPage.moveToObject(CardDetailsPageObjects.LandProjectDetailsExistence());
+        Browser.moveToElement(CardDetailsPageObjects.LandProjectDetailsExistence());
         Browser.click(CardDetailsPageObjects.LandProjectDetailsExistence());
     }
 
@@ -109,20 +107,18 @@ public class CardDetailsPage {
 
     public void mediaScrollChecker() throws Exception {
         Browser.waitUntilVisibilityOfElement(CardDetailsPageObjects.FirstMediaExistence(), 50);
-//        String expected = Browser.getText(CardDetailsPageObjects.MediaSliderPaginationLocator());
-//        String[] parts = expected.split("/");
-//        int beforeSlash = Integer.parseInt(parts[0].trim());
-//        int afterSlash = Integer.parseInt(parts[1].trim());
-//        if (beforeSlash != afterSlash) {
+        String expected = Browser.getText(CardDetailsPageObjects.MediaSliderPaginationLocator());
+        String[] parts = expected.split("/");
+        int beforeSlash = Integer.parseInt(parts[0].trim());
+        int afterSlash = Integer.parseInt(parts[1].trim());
+        if (beforeSlash != afterSlash) {
             Browser.moveToElement(CardDetailsPageObjects.FirstMediaExistence());
             Browser.click(CardDetailsPageObjects.MediaSliderButton());
-            Assert.assertTrue(Browser.isElementEnabled(By.xpath("//div[@class='swiper-button-prev ng-star-inserted']")), "The Slider Of the Media Is Not Working As Expected");
-
-//            String actual = Browser.getText(CardDetailsPageObjects.MediaSliderPaginationLocator());
-//            Assert.assertNotEquals(actual, expected, "The Slider Of the Media Is Not Working As Expected");
-//        } else {
-//            logger.addScreenshot("There is only one media attachment uploaded for the project");
-//        }
+            String actual = Browser.getText(CardDetailsPageObjects.MediaSliderPaginationLocator());
+            Assert.assertNotEquals(actual, expected, "The Slider Of the Media Is Not Working As Expected");
+        } else {
+            logger.addScreenshot("There is only one media attachment uploaded for the project");
+        }
         logger.addScreenshot("Media scroll");
     }
 

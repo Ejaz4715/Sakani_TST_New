@@ -7,6 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import sa.nhc.web.objects.FullAuctionJourneyPageObjects;
 import sa.nhc.web.objects.RegisterOfInterestPageObjects;
+import sa.nhc.web.objects.SortingPageObject;
 import sa.nhc.web.objects.exisitng.*;
 
 import java.time.LocalDate;

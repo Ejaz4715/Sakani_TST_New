@@ -71,8 +71,8 @@ public class CardDetailsPageObjects {
                 put("ar", "//span[contains(@class,'text-secondary fw-bold fs-6 lh-base ng-star-inserted')]");
             }});
             put("LandProjectType_Existence", new HashMap<>() {{
-                put("en", "(//h5[contains(@class,'text-secondary mb-1 ng-star-inserted')])");
-                put("ar", "(//h5[contains(@class,'text-secondary mb-1 ng-star-inserted')])");
+                put("en", "(//div[contains(@class,'d-flex align-items-center')])[2]");
+                put("ar", "(//div[contains(@class,'d-flex align-items-center')])[2]");
             }});
             put("MarketPriceLabelCardDetailsPage_Existence", new HashMap<>() {{
                 put("en", "(//p[contains(@class,'d-flex gap-1 mb-3 text-mid-gray fw-bold ng-star-inserted')])[1]");
@@ -147,20 +147,20 @@ public class CardDetailsPageObjects {
                 put("ar", "//div[contains(@class,'modal-content')]");
             }});
             put("UploadedFiles_Existence", new HashMap<>() {{
-                put("en", "//app-thumbs-gallery");
-                put("ar", "//app-thumbs-gallery");
+                put("en", "//app-thumbs-gallery-v5");
+                put("ar", "//app-thumbs-gallery-v5");
             }});
             put("NumberOfUploadedFiles_Existence", new HashMap<>() {{
-                put("en", "//span[contains(text() , 'Images')]");
-                put("ar", "//span[contains(text() , 'صور')]");
+                put("en", "//span[contains(text(),'/')]");
+                put("ar", "//span[contains(text(),'/')]");
             }});
             put("MediaButton_Expansion", new HashMap<>() {{
                 put("en", "//div[contains(@class,'expand-section')]");
                 put("ar", "//div[contains(@class,'expand-section')]");
             }});
             put("MediaPreviewPopUp_Existence", new HashMap<>() {{
-                put("en", "(//app-thumbs-gallery-slider)[2]");
-                put("ar", "(//app-thumbs-gallery-slider)[2]");
+                put("en", "(//div[contains(@class,'wrap-thumbs-sliders')])[2]");
+                put("ar", "(//div[contains(@class,'wrap-thumbs-sliders')])[2]");
             }});
             put("PlotList_Existence", new HashMap<>() {{
                 put("en", "//div[contains(text(),'Plot list')]");
@@ -215,12 +215,12 @@ public class CardDetailsPageObjects {
                 put("ar", "//span[@class='text-white']");
             }});
             put("MediaSlider_Button", new HashMap<>() {{
-                put("en", "//div[@class='modal-content']//div[@class='swiper-button-next ng-star-inserted']");
-                put("ar", "//div[@class='modal-content']//div[@class='swiper-button-next ng-star-inserted']");
+                put("en", "//div[@class='swiper-button-prev ng-star-inserted']");
+                put("ar", "//div[@class='swiper-button-prev ng-star-inserted']");
             }});
             put("FirstMedia_Existence", new HashMap<>() {{
-                put("en", "(//span[@class='swiper-pagination-bullet swiper-pagination-bullet-active'])[1]");
-                put("ar", "(//span[@class='swiper-pagination-bullet swiper-pagination-bullet-active'])[1]");
+                put("en", "(//div[@class='swiper-slide ng-star-inserted swiper-slide-visible swiper-slide-active'])[1]");
+                put("ar", "(//div[@class='swiper-slide ng-star-inserted swiper-slide-visible swiper-slide-active'])[1]");
             }});
         }
     };
@@ -442,4 +442,7 @@ public class CardDetailsPageObjects {
     public static By FirstMediaExistence() throws Exception {
         return By.xpath(get("FirstMedia_Existence"));
     }
+    // awl media (//div[@class='swiper-slide ng-star-inserted swiper-slide-visible swiper-slide-active'])[1]
+    //Slider Button //div[@class='swiper-button-prev ng-star-inserted']
+//text that hold the numbers of the slider
 }

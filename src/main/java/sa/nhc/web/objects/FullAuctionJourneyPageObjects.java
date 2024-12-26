@@ -972,31 +972,31 @@ public class FullAuctionJourneyPageObjects {
         return By.xpath(get("Maximize_Image"));
     }
 
-    public static By SearchButton() {
+    public static By SearchButton() throws Exception {
         return By.xpath(("//button/span[contains(text(),'بحث')]"));
     }
 
-    public static By AuctionStatusNew() {
+    public static By AuctionStatusNew() throws Exception {
         return By.xpath("//mat-select[@formcontrolname=\"auction_status\"]/descendant::span[2]");
     }
 
-    public static By ErrorMessage() {
+    public static By ErrorMessage() throws Exception {
         return By.xpath("//mat-error[contains (@id, 'error')]");
     }
 
-    public static By ProjectInformationLogs() {
+    public static By ProjectInformationLogs() throws Exception {
         return By.xpath("//span[contains (text(), 'سجل عمليات تحديث المشروع')]");
     }
 
-    public static By ImportNewAuctionUnitButton() {
+    public static By ImportNewAuctionUnitButton() throws Exception {
         return By.xpath("//span[contains (text(), 'وحدة مزاد جديدة للاستيراد')]");
     }
 
-    public static By UnitTypeDropdown() {
+    public static By UnitTypeDropdown() throws Exception {
         return By.xpath("//mat-select[@formcontrolname=\"unit_type\"]");
     }
 
-    public static By UploadFile() {
+    public static By UploadFile() throws Exception {
         return By.xpath("//input[@type = 'file']");
     }
 
@@ -1005,85 +1005,85 @@ public class FullAuctionJourneyPageObjects {
     }
 
 
-    public static By DownloadTemplateButton() {
+    public static By DownloadTemplateButton() throws Exception {
         return By.xpath("//button[contains (text(), 'تنزيل النموذج المعتمد')]");
     }
 
-    public static By DiscardImportButton() {
+    public static By DiscardImportButton() throws Exception {
         return By.xpath("//button [contains (text(), 'الغاء الاستيراد')]");
     }
 
-    public static By AgreeButton() {
+    public static By AgreeButton() throws Exception {
         return By.xpath("//button[contains (text(), 'موافق')]");
     }
 
-    public static By CommitButton() {
+    public static By CommitButton() throws Exception {
         return By.xpath("//button[contains(text(),' اعتماد')]");
     }
 
-    public static By ImportedUnit() {
+    public static By ImportedUnit() throws Exception {
         return By.xpath("(//datatable-body-cell/descendant::div)[6]");
     }
 
-    public static By UnitsModelPage() {
+    public static By UnitsModelPage() throws Exception {
         return By.xpath("//span[text() = 'حالة اعتماد نشر التصانيف']");
     }
 
-    public static By UnitsModelPublishStatus() {
+    public static By UnitsModelPublishStatus() throws Exception {
         return By.xpath("//datatable-body-cell[2]/descendant::span");
     }
 
-    public static By BasicInformationPage() {
+    public static By BasicInformationPage() throws Exception {
         return By.xpath("//span[contains (text(), 'المعلومات الأساسية')]");
     }
 
-    public static By AuctionLegalTab() {
+    public static By AuctionLegalTab() throws Exception {
         return By.xpath("//span[contains (text(), 'المزاد قانوني')]");
     }
 
-    public static By DeleteIconFile() {
+    public static By DeleteIconFile() throws Exception {
         return By.xpath("//app-icon-delete-circle");
     }
 
-    public static By AuctionSettingsTab() {
+    public static By AuctionSettingsTab() throws Exception {
         return By.xpath("//span[contains (text(), 'إعدادات المزاد')]");
     }
 
-    public static By EditButton() {
+    public static By EditButton() throws Exception {
         return By.xpath("//button[contains (text(), 'تعديل')]");
     }
 
-    public static By UpdateButton() {
+    public static By UpdateButton() throws Exception {
         return By.xpath("//span[contains (text(), 'تحديث')]");
     }
 
-    public static By AuctionMediaTab() {
+    public static By AuctionMediaTab() throws Exception {
         return By.xpath("//span[@class='mdc-tab__text-label']/child::span[contains(text(), 'وسائل الإعلام مشروع المزاد')]");
     }
 
-    public static By LogoImage() {
+    public static By LogoImage() throws Exception {
         return By.xpath("//h1[contains (text(), 'صورة الشعار')]/parent::div/following-sibling::div/child::input");
     }
 
-    public static By NumberOfAssets() {
+    public static By NumberOfAssets() throws Exception {
         return By.xpath("//input[@formcontrolname=\"number_of_assets\"]");
     }
 
-    public static By UnderSupervision() {
+    public static By UnderSupervision() throws Exception {
         return By.xpath("//input[@formcontrolname=\"under_supervision\"]");
     }
-    public static By CallNumber() {
+    public static By CallNumber() throws Exception {
         return By.xpath("//input[@placeholder=\"رقم الاتصال\"]");
     }
 
 
-    public static By CallNumberErrorMessage() {
+    public static By CallNumberErrorMessage() throws Exception {
         return By.xpath("//label[contains (@class, 'invalid')]");
     }
-    public static By WhatsAppNumber() {
+    public static By WhatsAppNumber() throws Exception {
         return By.xpath("//input[@placeholder=\"المراسلة واتساب\"]");
     }
-    public static By ValNumber() {
+    public static By ValNumber() throws Exception {
         return By.xpath("//input[@formcontrolname=\"val_license\"]");
     }
 

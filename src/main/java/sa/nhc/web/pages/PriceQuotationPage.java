@@ -282,6 +282,8 @@ public class PriceQuotationPage {
 
     public void clickOnFinancialAdvisoryLink() throws Exception {
         Browser.waitUntilVisibilityOfElement(PriceQuotationPageObjects.UpdateFinancialAdvisoryLink(), 50);
+        Browser.moveToElement(PriceQuotationPageObjects.UpdateFinancialAdvisoryClickableLink());
+        Browser.waitUntilElementToBeClickable(PriceQuotationPageObjects.UpdateFinancialAdvisoryClickableLink(),50);
         Browser.click(PriceQuotationPageObjects.UpdateFinancialAdvisoryClickableLink());
         Browser.waitUntilVisibilityOfElement(PriceQuotationPageObjects.PersonalFinancialInfo(), 50);
         boolean isExist = Browser.isElementDisplayed(PriceQuotationPageObjects.PersonalFinancialInfo());

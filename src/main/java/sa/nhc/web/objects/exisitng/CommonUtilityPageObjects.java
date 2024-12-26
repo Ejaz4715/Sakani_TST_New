@@ -2,7 +2,6 @@ package sa.nhc.web.objects.exisitng;
 
 import com.testcrew.manager.TestConfigManager;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 import java.util.HashMap;
 import java.util.Map;

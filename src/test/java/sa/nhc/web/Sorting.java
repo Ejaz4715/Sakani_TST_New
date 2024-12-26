@@ -1,9 +1,7 @@
 package sa.nhc.web;
 
-import com.testcrew.web.Browser;
 import org.testng.annotations.Test;
 import sa.nhc.web.base.NHCWebTest;
-import sa.nhc.web.objects.SortingPageObject;
 import sa.nhc.web.pages.exisitng.CommonUtilityPage;
 
 import java.util.Map;

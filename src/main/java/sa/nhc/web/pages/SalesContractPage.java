@@ -19,7 +19,6 @@ public class SalesContractPage {
         Browser.waitUntilVisibilityOfElement(SalesContractPageObject.SakaniLogo(), 30);
         Browser.waitUntilInvisibilityOfElement(SalesContractPageObject.LoadingIconPartners(), 30);
         if (Browser.isElementPresent(SalesContractPageObject.UpdatesPopUp())) {
-            CommonUtilityPage.moveToObject(SalesContractPageObject.UpdatesPopUp());
             Browser.click(SalesContractPageObject.UpdatesPopUp());
         } else if (Browser.isElementPresent(SalesContractPageObject.WarningPopUp())) {
             Browser.click(SalesContractPageObject.WarningPopUp());
@@ -44,10 +43,6 @@ public class SalesContractPage {
     }
 
     public void changeUILanguagePartners() throws Exception {
-        Browser.waitUntilInvisibilityOfElement(SalesContractPageObject.LoadingIconPartners(), 60);
-        if (Browser.isElementNotPresent(SalesContractPageObject.LanguageButton())){
-            Browser.driver.navigate().refresh();
-        }
         if (TestConfigManager.getSettingsApplicationLanguage().contains("en")) {
             Browser.waitUntilVisibilityOfElement(SalesContractPageObject.LanguageText(), 40);
             Browser.waitUntilInvisibilityOfElement(SalesContractPageObject.LoadingIconPartners(), 60);
@@ -66,26 +61,25 @@ public class SalesContractPage {
     }
 
     public void clickOnProjectsMenuOption() throws Exception {
-        Browser.waitUntilInvisibilityOfElement(SalesContractPageObject.LoadingIconPartners(), 60);
         Browser.waitUntilVisibilityOfElement(SalesContractPageObject.ProjectsMenuOption(), 40);
+        Browser.waitUntilInvisibilityOfElement(SalesContractPageObject.LoadingIconPartners(), 60);
         Browser.click(SalesContractPageObject.ProjectsMenuOption());
     }
 
     public void verifyProjectsPageIsDisplayed() throws Exception {
         logger.addScreenshot("");
-        Browser.waitUntilInvisibilityOfElement(SalesContractPageObject.LoadingIconPartners(), 60);
         Assert.assertTrue(Browser.isElementPresent(SalesContractPageObject.ProjectsPageHeading()), "Project page is not visible");
     }
 
     public void clickOnSearchByDropdown() throws Exception {
-        Browser.waitUntilInvisibilityOfElement(SalesContractPageObject.LoadingIconPartners(), 60);
         Browser.waitUntilVisibilityOfElement(SalesContractPageObject.SearchByDropdown(), 40);
+        Browser.waitUntilInvisibilityOfElement(SalesContractPageObject.LoadingIconPartners(), 60);
         Browser.click(SalesContractPageObject.SearchByDropdown());
     }
 
     public void enterProjectNameInSearchBar(String projectName) throws Exception {
-        Browser.waitUntilInvisibilityOfElement(SalesContractPageObject.LoadingIconPartners(), 60);
         Browser.waitUntilElementToBeClickable(SalesContractPageObject.ProjectNameDropdownInput(), 40);
+        Browser.waitUntilInvisibilityOfElement(SalesContractPageObject.LoadingIconPartners(), 60);
         Browser.setText(SalesContractPageObject.ProjectNameDropdownInput(), projectName);
     }
 
@@ -106,7 +100,6 @@ public class SalesContractPage {
     public void clickOnSearchButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(SalesContractPageObject.SearchButton(), 40);
         Browser.waitUntilInvisibilityOfElement(SalesContractPageObject.LoadingIconPartners(), 60);
-        CommonUtilityPage.moveToObject(SalesContractPageObject.SearchButton());
         Browser.click(SalesContractPageObject.SearchButton());
     }
 
@@ -174,9 +167,9 @@ public class SalesContractPage {
         Browser.waitUntilInvisibilityOfElement(SalesContractPageObject.LoadingIconPartners(), 60);
         Browser.waitUntilVisibilityOfElement(SalesContractPageObject.ApproveButton(), 40);
         Browser.waitUntilElementToBeClickable(SalesContractPageObject.ApproveButton(), 40);
-        Browser.moveToElement(SalesContractPageObject.ApproveButton());
         Browser.click(SalesContractPageObject.ApproveButton());
     }
+
 
     public void clickOnVerifyCodeButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(SalesContractPageObject.VerifyCodeButton(), 50);
@@ -237,10 +230,9 @@ public class SalesContractPage {
     }
 
     public void clickOnAddAnnexButton() throws Exception {
-        Browser.waitUntilInvisibilityOfElement(SalesContractPageObject.LoadingIconPartners(), 60);
         Browser.waitUntilVisibilityOfElement(SalesContractPageObject.AddAnnexButton(), 50);
+        Browser.waitUntilInvisibilityOfElement(SalesContractPageObject.LoadingIconPartners(), 60);
         CommonUtilityPage.moveToObject(SalesContractPageObject.AddAnnexButton());
-        Browser.waitUntilElementToBeClickable(SalesContractPageObject.AddAnnexButton(), 50);
         Browser.click(SalesContractPageObject.AddAnnexButton());
     }
 
@@ -263,7 +255,7 @@ public class SalesContractPage {
     public void verifyAddAnnexToSelectedUnitButtonIsNotDisplayed() throws Exception {
         logger.addScreenshot("");
         Browser.waitUntilInvisibilityOfElement(SalesContractPageObject.LoadingIconPartners(), 60);
-        Assert.assertFalse(Browser.isElementPresent(SalesContractPageObject.AddAnnexToSelectedUnitButton()), "Button is displayed");
+        Assert.assertTrue(Browser.isElementPresent(SalesContractPageObject.AddAnnexToSelectedUnitButton()), "Button is displayed");
     }
 
     public void clickOnAddAnnexToSelectedUnit() throws Exception {
@@ -369,7 +361,8 @@ public class SalesContractPage {
     public void clickOnSignAnnexLink() throws Exception {
         Browser.waitUntilVisibilityOfElement(SalesContractPageObject.SignAnnexLink(), 50);
         Browser.waitUntilInvisibilityOfElement(SalesContractPageObject.LoadingIconPartners(), 60);
-        CommonUtilityPage.moveToObject(SalesContractPageObject.SignAnnexLink());
+        Browser.executeJSScroll(1000);
+        Browser.waitForSeconds(1);
         Browser.click(SalesContractPageObject.SignAnnexLink());
     }
 

@@ -1,9 +1,11 @@
 package sa.nhc.web.pages;
 
 import com.testcrew.web.Browser;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import sa.nhc.web.objects.SortingPageObject;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -121,6 +123,7 @@ public class SortingPage {
         Assert.assertTrue(Browser.isElementDisplayed(SortingPageObject.promotedLabel_4()), "promoted label of project 4 is not displayed");
 
     }
+
 
     public void checkMostPopularSortingResult() throws Exception {
         Browser.waitUntilPresenceOfElement(SortingPageObject.marketplace_project_1(), 100);

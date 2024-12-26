@@ -1,7 +1,9 @@
 package sa.nhc.web;
 
+import com.testcrew.web.Browser;
 import org.testng.annotations.Test;
 import sa.nhc.web.base.NHCWebTest;
+import sa.nhc.web.objects.SortingPageObject;
 import sa.nhc.web.pages.exisitng.CommonUtilityPage;
 
 import java.util.Map;
@@ -13,7 +15,7 @@ public class Sorting extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      // app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         logger.info("Step 02: change language");
         app.loginPage.changeLanguageForUser();
@@ -28,7 +30,7 @@ public class Sorting extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      // app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         logger.info("Step 02: change language");
         app.loginPage.changeLanguageForUser();
@@ -45,7 +47,7 @@ public class Sorting extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      // app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         logger.info("Step 02: change language");
         app.loginPage.changeLanguageForUser();
@@ -56,7 +58,7 @@ public class Sorting extends NHCWebTest {
         logger.info("Step 05: click 'recommended' list is opened");
         app.sortingPage.selectRecommendedSortOption();
         logger.info("Step 06: check 'recommended' sorting result");
-        app.sortingPage.checkRecommendedSortingResult();
+        CommonUtilityPage.verifyTheListsIsDisplayed("مميز","Promoted",SortingPageObject.promotedLabel());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -64,7 +66,7 @@ public class Sorting extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      // app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         logger.info("Step 02: change language");
         app.loginPage.changeLanguageForUser();
@@ -75,7 +77,7 @@ public class Sorting extends NHCWebTest {
         logger.info("Step 05: click 'Most popular' list is option");
         app.sortingPage.selectMostPopSortOption();
         logger.info("Step 06: check 'Most Popular' sorting result");
-        app.sortingPage.checkMostPopularSortingResult();
+        CommonUtilityPage.verifyValueIsDisplayed("مميز","Promoted",SortingPageObject.promotedLabel());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -83,7 +85,7 @@ public class Sorting extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      // app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         logger.info("Step 02: change language");
         app.loginPage.changeLanguageForUser();
@@ -100,7 +102,7 @@ public class Sorting extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      // app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         logger.info("Step 02: change language");
         app.loginPage.changeLanguageForUser();
@@ -117,7 +119,7 @@ public class Sorting extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      // app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         logger.info("Step 02: change language");
         app.loginPage.changeLanguageForUser();
@@ -136,7 +138,7 @@ public class Sorting extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      // app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         logger.info("Step 02: change language");
         app.loginPage.changeLanguageForUser();
@@ -155,7 +157,7 @@ public class Sorting extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      // app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         logger.info("Step 02: change language");
         app.loginPage.changeLanguageForUser();
@@ -174,7 +176,7 @@ public class Sorting extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      // app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         logger.info("Step 02: change language");
         app.loginPage.changeLanguageForUser();
@@ -193,7 +195,7 @@ public class Sorting extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      // app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         logger.info("Step 02: change language");
         app.loginPage.changeLanguageForUser();
@@ -218,7 +220,7 @@ public class Sorting extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+      // app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         logger.info("Step 02: change language");
         app.loginPage.changeLanguageForUser();

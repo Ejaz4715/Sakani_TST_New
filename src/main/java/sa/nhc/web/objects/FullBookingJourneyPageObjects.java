@@ -285,15 +285,7 @@ public class FullBookingJourneyPageObjects {
                 put("en", "//mat-slide-toggle[@formcontrolname='using_general_booking_fee']/descendant::button[@role='switch']");
                 put("ar", "//mat-slide-toggle[@formcontrolname='using_general_booking_fee']/descendant::button[@role='switch']");
             }});
-            put("Use_Booking_Fee_Flag_On_Sakani", new HashMap<>() {{
-                put("en", "//mat-slide-toggle[@formcontrolname='use_booking_fee_flag']/descendant::button[@role='switch']");
-                put("ar", "//mat-slide-toggle[@formcontrolname='use_booking_fee_flag']/descendant::button[@role='switch']");
-            }});
-            put("Use_Booking_Fee_Flag_On_Partner", new HashMap<>() {{
-                put("en", "//mat-slide-toggle[@formcontrolname='use_booking_fee_flag_on_partner']/descendant::button[@role='switch']");
-                put("ar", "//mat-slide-toggle[@formcontrolname='use_booking_fee_flag_on_partner']/descendant::button[@role='switch']");
-            }});
-
+            //mat-slide-toggle[@formcontrolname='using_general_booking_fee']/descendant::span[1]
             put("Using_General_Booking_Fee_Toggle_Input", new HashMap<>() {{
                 put("en", "//mat-slide-toggle[@formcontrolname='using_general_booking_fee']/descendant::button[@role='switch']");
                 put("ar", "//mat-slide-toggle[@formcontrolname='using_general_booking_fee']/descendant::button[@role='switch']");
@@ -412,7 +404,7 @@ public class FullBookingJourneyPageObjects {
             }});
             put("Media_Tab_Label", new HashMap<>() {{
                 put("en", "//span[@class='mdc-tab__text-label']/child::span[contains(text(), 'Media')]");
-                put("ar", "//span[@class='mdc-tab__text-label']/child::span[contains(text(), 'المحتوى المرئي')]");
+                put("ar", "//span[@class='mdc-tab__text-label']/child::span[contains(text(), 'المحتوى المرئي')]|//span[contains(text(), 'المحتوى المرئي')]");
             }});
             put("Banner_Image_Attachment", new HashMap<>() {{
                 put("en", "//h1[contains (text(), 'Banner Image')]/parent::div/following-sibling::div/child::input");
@@ -489,7 +481,7 @@ public class FullBookingJourneyPageObjects {
             }});
             put("Description_Input", new HashMap<>() {{
                 put("en", "//form-field-component//textarea[@formcontrolname='description'] | //mat-form-field/descendant::textarea[@formcontrolname='description']");
-                put("ar", "//form-field-component//textarea[@formcontrolname='description'] | //mat-form-field/descendant::textarea[@formcontrolname='description']");
+                put("ar", "//form-field-component//textarea[@formcontrolname='description']");
             }});
             put("Pricing_Starting_At_Input", new HashMap<>() {{
                 put("en", "//input[@formcontrolname='price_starting_at']");
@@ -967,12 +959,8 @@ public class FullBookingJourneyPageObjects {
                 put("en", "//button[contains (text(), 'Update my financial information')]");
             }});
             put("Confirm_Final_Purchasing_Power_Page_Title", new HashMap<>() {{
-                put("ar", "//h3[contains (text(), 'المستشار العقاري')]");
-                put("en", "//h3[contains (text(), 'Financial Advisory')]");
-            }});
-            put("Update_My_Financial_Information_Button", new HashMap<>() {{
-                put("en", "//button[contains (text(), 'Update my financial information')]");
-                put("ar", "//button[contains (text(), 'تحديث معلوماتي المالية')]");
+                put("ar", "//h3[contains (text(), 'صمم دعمك')]");
+                put("en", "//h3[contains (text(), 'Please confirm the final purchasing power information')]");
             }});
         }
     };
@@ -1275,14 +1263,6 @@ public class FullBookingJourneyPageObjects {
 
     public static By UsingGeneralBookingFeeToggleInput() throws Exception {
         return By.xpath(get("Using_General_Booking_Fee_Toggle_Input"));
-    }
-
-    public static By UseBookingFeeFlagOnPartner() throws Exception {
-        return By.xpath(get("Use_Booking_Fee_Flag_On_Partner"));
-    }
-
-    public static By UseBookingFeeFlagOnSakani() throws Exception {
-        return By.xpath(get("Use_Booking_Fee_Flag_On_Sakani"));
     }
 
     public static By BookingFeeInput() throws Exception {
@@ -1938,37 +1918,7 @@ public class FullBookingJourneyPageObjects {
 
     public static By ConfirmFinalPurchasingPowerPageTitle() throws Exception {
         return By.xpath(get("Confirm_Final_Purchasing_Power_Page_Title"));
-    }
-
-    public static By UpdateMyFinancialInformationButton() throws Exception {
-        return By.xpath(get("Update_My_Financial_Information_Button"));
-    }
-
-    public static By AuctionMediaTab() throws Exception {
-        return By.xpath("//span[@class='mdc-tab__text-label']/child::span[contains(text(), 'وسائل الإعلام مشروع المزاد')]");
-    }
-
-    public static By LogoImage() throws Exception {
-        return By.xpath("//h1[contains (text(), 'صورة الشعار')]/parent::div/following-sibling::div/child::input");
-    }
-
-    public static By NumberOfAssets() throws Exception {
-        return By.xpath("//input[@formcontrolname=\"number_of_assets\"]");
-    }
-
-    public static By UnderSupervision() throws Exception {
-        return By.xpath("//input[@formcontrolname=\"under_supervision\"]");
-    }
-
-    public static By CallNumber() throws Exception {
-        return By.xpath("//input[@placeholder=\"رقم الاتصال\"]");
-    }
-
-    public static By CallNumberErrorMessage() throws Exception {
-        return By.xpath("//label[contains (@class, 'invalid')]");
-    }
-
-    public static By WhatsAppNumber() throws Exception {
-        return By.xpath("//input[@placeholder=\"المراسلة واتساب\"]");
+    }public static By ErrorMessageMediaPage() throws Exception {
+        return By.xpath(("(//mat-error[contains (@id, 'error')])[2]"));
     }
 }

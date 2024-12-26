@@ -18,8 +18,8 @@ public class QueueingOffPlanPageObjects {
                 put("ar", "//input[@formcontrolname=\"max_active_queueing_member\"]");
             }});
             put("Active_Queueing_Toggle", new HashMap<>() {{
-                put("en", "//div[@class='ng-star-inserted']/div[2]/mat-slide-toggle//button[@role='switch']");
-                put("ar", "//div[@class='ng-star-inserted']/div[2]/mat-slide-toggle//button[@role='switch']");
+                put("en", "//mat-slide-toggle[@formcontrolname=\"active_queueing\"]/descendant::button");
+                put("ar", "//mat-slide-toggle[@formcontrolname=\"active_queueing\"]/descendant::button");
             }});
             put("Active_Queueing_Toggle_Input", new HashMap<>() {{
                 put("en", "//mat-slide-toggle[@formcontrolname=\"active_queueing\"]/descendant::button");

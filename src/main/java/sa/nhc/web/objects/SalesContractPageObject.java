@@ -10,8 +10,8 @@ public class SalesContractPageObject {
     static Map<String, Map<String, String>> objects = new HashMap<>() {
         {
             put("Projects_Menu_Option", new HashMap<>() {{
-                put("en", "//span[contains (text() , 'Projects')]");
-                put("ar", "//span[contains (text() , 'المشاريع')]");
+                put("en", "//a[contains (text() , 'Projects')]");
+                put("ar", "//a[contains (text() , 'المشاريع')]");
             }});
             put("Projects_Page_Heading", new HashMap<>() {{
                 put("en", "//h3[contains (text(), 'Projects')]");
@@ -26,8 +26,8 @@ public class SalesContractPageObject {
                 put("ar", "//ng-dropdown-panel[@role='listbox']/descendant::div[@role='option']");
             }});
             put("Project_Name_Dropdown_Input", new HashMap<>() {{
-                put("en", "//label[contains (text(), 'Project name')]/ancestor::app-sapa-dropdown/descendant::input[@role='combobox']");
-                put("ar", "//label[contains (text(), 'اسم المشروع')]/ancestor::app-sapa-dropdown/descendant::input[@role='combobox']");
+                put("en", "//label[contains (text(), 'Project name')]/ancestor::app-sapa-dropdown/descendant::div[@role='combobox']/child::input");
+                put("ar", "//label[contains (text(), 'اسم المشروع')]/ancestor::app-sapa-dropdown/descendant::div[@role='combobox']/child::input");
             }});
             put("Project_Name_Dropdown_List", new HashMap<>() {{
                 put("en", "//ng-dropdown-panel[@role='listbox']/descendant::div[@role='option']");
@@ -78,8 +78,8 @@ public class SalesContractPageObject {
                 put("ar", "//p[contains (text(),'عقد البيع')]");
             }});
             put("Approve_Button", new HashMap<>() {{
-                put("en", "//app-sapa-modal//button[contains (text(), 'Approve')]");
-                put("ar", "//app-sapa-modal//button[contains (text(), 'عتم')] ");
+                put("en", "//button[contains (text(), 'Approve')]");
+                put("ar", "//button[contains (text(), 'يعتمد')]");
             }});
             put("OTP_Verification_Popup", new HashMap<>() {{
                 put("en", "//p[contains (text(), 'OTP verification')]");
@@ -270,8 +270,8 @@ public class SalesContractPageObject {
                 put("en", "//app-sapa-modal/descendant::div[contains (text(), 'contract')]");
             }});
             put("Loading_Icon_Partners", new HashMap<>() {{
-                put("ar", "//div[@class=\"spinner\"]");
-                put("en", "//div[@class=\"spinner\"]");
+                put("ar", "//app-sapa-loading-dot-pusle");
+                put("en", "//app-sapa-loading-dot-pusle");
             }});
         }
     };
@@ -547,9 +547,5 @@ public class SalesContractPageObject {
 
     public static By LoadingIconPartners() throws Exception {
         return By.xpath(get("Loading_Icon_Partners"));
-    }
-
-    public static By RejectMediaButton() throws Exception {
-        return By.xpath("//span[contains (text(), 'رفض المحتوى المرئي المرفوع')]");
     }
 }

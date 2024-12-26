@@ -186,12 +186,12 @@ public class MOHLandBookingJourneyPageObjects {
                 put("ar", "//div[contains (text(), 'replaceText')]");
             }});
             put("Request_Cancel_Dropdown_Button", new HashMap<>() {{
-                put("en", "//button/span[contains(text(),'Request Cancel')]");
-                put("ar", "//button/span[contains(text(),'طلب إلغاء')]");
+                put("en", "//div[@cardclass=\"cancel-request-section\"]");
+                put("ar", "//div[@cardclass=\"cancel-request-section\"]");
             }});
             put("Request_Cancel_Details", new HashMap<>() {{
-                put("en", "//div[contains(@class,\"cancel-request-section\")]");
-                put("ar", "//div[contains(@class,\"cancel-request-section\")]");
+                put("en", "//app-booking-cancel-request-list");
+                put("ar", "//app-booking-cancel-request-list");
             }});
             put("Reject_Cancel_Booking_Popup", new HashMap<>() {{
                 put("en", "//app-review-dialog");

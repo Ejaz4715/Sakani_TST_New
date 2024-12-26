@@ -13,7 +13,8 @@ public class HomePage {
             Browser.click(HomePageObjects.Register_Your_interest_Close_BTN());
         } else if (Browser.isElementPresent(HomePageObjects.Register_Your_interest_Close_BTN())) {
             Browser.click(HomePageObjects.Register_Your_interest_Close_BTN());
-        } else if (Browser.isElementPresent(HomePageObjects.Cookies_BTN())) {
+        }
+        else if (Browser.isElementPresent(HomePageObjects.Cookies_BTN())) {
             Browser.click(HomePageObjects.Cookies_BTN());
         }
     }

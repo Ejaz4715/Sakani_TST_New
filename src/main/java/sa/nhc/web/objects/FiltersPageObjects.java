@@ -102,8 +102,8 @@ public class FiltersPageObjects {
                 put("ar", "//div[contains(@class,'address')]");
             }});
             put("Apply_Result_For_Project", new HashMap<>() {{
-                put("en", "(//app-marketplace-project-card)[1]");
-                put("ar", "(//app-marketplace-project-card)[1]");
+                put("en", "(//app-marketplace-project-card/descendant::a)[1]");
+                put("ar", "(//app-marketplace-project-card/descendant::a)[1]");
             }});
             put("Close_X_Button", new HashMap<>() {{
                 put("en", "//span[contains(@class,'icon-cross')]");

@@ -1,6 +1,5 @@
 package sa.nhc.web;
 
-import com.testcrew.web.Browser;
 import org.testng.annotations.Test;
 import sa.nhc.web.base.NHCWebTest;
 import sa.nhc.web.objects.CardDetailsPageObjects;
@@ -15,7 +14,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -35,7 +34,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -61,7 +60,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -87,7 +86,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -113,7 +112,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -139,7 +138,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -165,7 +164,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -177,7 +176,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 03: Click on 'السوق العقاري'");
         CommonUtilityPage.ClickOnFilter();
         logger.info("Step 04: Click on 'وحدة او مشروع للبحث' and Search for a Specific Project");
-        app.homePage.SearchForAProject("Offplan Register Interest - Hang");
+        app.homePage.SearchForAProject(data.get("ProjectName"));
         logger.info("Step 05: Click on 'عرض النتائج'");
         app.homePage.ClickToShowResults();
         logger.info("Step 06: Click on 'المشروع الذي تم البحث عنه'");
@@ -191,7 +190,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -217,7 +216,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -243,7 +242,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -269,7 +268,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -295,7 +294,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -321,7 +320,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -347,7 +346,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -373,7 +372,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -399,7 +398,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -425,7 +424,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -451,7 +450,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -485,7 +484,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -511,7 +510,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -545,7 +544,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -569,7 +568,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -593,7 +592,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -608,9 +607,8 @@ public class CardDetails extends NHCWebTest {
         app.homePage.SearchForAProjectWithEnter(data.get("LandProjectName"));
         logger.info("Step 05: Click on 'المشروع الذي تم البحث عنه'");
         app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
-        logger.info("Step 06: Click on media expand button");
-        Browser.waitUntilVisibilityOfElement(CardDetailsPageObjects.NumberOfUploadedFilesExistence(), 40);
-        Browser.click(CardDetailsPageObjects.NumberOfUploadedFilesExistence());
+        logger.info("Step 06: Click on the Brochure view Button");
+        app.cardDetailsPage.ClickOnTheMedia();
         logger.info("Step 07: Check that if the media preview pop up is able to be viewed");
         app.cardDetailsPage.LabelCardDetailsPageExistenceChecker(CardDetailsPageObjects.MediaPreviewPopUpExistence(), "media Preview Pop Up");
     }
@@ -620,7 +618,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -644,7 +642,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -668,7 +666,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -692,7 +690,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -704,7 +702,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 03: Click on 'السوق العقاري'");
         CommonUtilityPage.ClickOnFilter();
         logger.info("Step 04: Click on 'وحدة او مشروع للبحث' and Search for a Specific Project");
-        app.homePage.SearchForAProjectWithEnter(data.get("LandProjectName1"));
+        app.homePage.SearchForAProjectWithEnter(data.get("LandProjectName"));
         logger.info("Step 05: Click on 'المشروع الذي تم البحث عنه'");
         app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
         logger.info("Step 06: Check that if the project address is displayed on the projects cards");
@@ -716,7 +714,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -728,7 +726,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 03: Click on 'السوق العقاري'");
         CommonUtilityPage.ClickOnFilter();
         logger.info("Step 04: Click on 'وحدة او مشروع للبحث' and Search for a Specific Project");
-        app.homePage.SearchForAProjectWithEnter(data.get("LandProjectName1"));
+        app.homePage.SearchForAProjectWithEnter(data.get("LandProjectName"));
         logger.info("Step 05: Click on 'المشروع الذي تم البحث عنه'");
         app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
         logger.info("Step 06: Check that if the Land Project Price is displayed on the projects cards");
@@ -740,7 +738,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -752,7 +750,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 03: Click on 'السوق العقاري'");
         CommonUtilityPage.ClickOnFilter();
         logger.info("Step 04: Click on 'وحدة او مشروع للبحث' and Search for a Specific Project");
-        app.homePage.SearchForAProjectWithEnter(data.get("LandProjectName1"));
+        app.homePage.SearchForAProjectWithEnter(data.get("LandProjectName"));
         logger.info("Step 05: Click on 'المشروع الذي تم البحث عنه'");
         app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
         logger.info("Step 06: Check that if the project Details is displayed on the projects cards");
@@ -766,7 +764,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -778,7 +776,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 03: Click on 'السوق العقاري'");
         CommonUtilityPage.ClickOnFilter();
         logger.info("Step 04: Click on 'وحدة او مشروع للبحث' and Search for a Specific Project");
-        app.homePage.SearchForAProjectWithEnter(data.get("LandProjectName1"));
+        app.homePage.SearchForAProjectWithEnter(data.get("LandProjectName"));
         logger.info("Step 05: Click on 'المشروع الذي تم البحث عنه'");
         app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
         logger.info("Step 06: Click on The Project Details");
@@ -798,7 +796,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -810,7 +808,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 03: Click on 'السوق العقاري'");
         CommonUtilityPage.ClickOnFilter();
         logger.info("Step 04: Click on 'وحدة او مشروع للبحث' and Search for a Specific Project");
-        app.homePage.SearchForAProjectWithEnter(data.get("LandProjectName1"));
+        app.homePage.SearchForAProjectWithEnter(data.get("LandProjectName"));
         logger.info("Step 05: Click on 'المشروع الذي تم البحث عنه'");
         app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
         logger.info("Step 06: Click on The Project Details");
@@ -826,7 +824,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -838,7 +836,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 03: Click on 'السوق العقاري'");
         CommonUtilityPage.ClickOnFilter();
         logger.info("Step 04: Click on 'وحدة او مشروع للبحث' and Search for a Specific Project");
-        app.homePage.SearchForAProjectWithEnter(data.get("LandProjectName1"));
+        app.homePage.SearchForAProjectWithEnter(data.get("LandProjectName"));
         logger.info("Step 05: Click on 'المشروع الذي تم البحث عنه'");
         app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
         logger.info("Step 06: Click on The Project Details");
@@ -852,7 +850,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -864,7 +862,7 @@ public class CardDetails extends NHCWebTest {
         logger.info("Step 03: Click on 'السوق العقاري'");
         CommonUtilityPage.ClickOnFilter();
         logger.info("Step 04: Click on 'وحدة او مشروع للبحث' and Search for a Specific Project");
-        app.homePage.SearchForAProjectWithEnter(data.get("LandProjectName1"));
+        app.homePage.SearchForAProjectWithEnter(data.get("LandProjectName"));
         logger.info("Step 05: Click on 'المشروع الذي تم البحث عنه'");
         app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
         logger.info("Step 06: Check that if the Plot List number in the project Details Content is displayed");

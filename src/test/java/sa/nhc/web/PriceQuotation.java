@@ -23,12 +23,13 @@ public class PriceQuotation extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
+        app.fullBookingJourneyPage.cancelTheExistingBookingProcess();
         logger.info("Step 03: Click on 'السوق العقاري'");
         app.mohLandBookingJourneyPage.clickOnFilterButton();
         logger.info("Step 04: Click on 'وحدة او مشروع للبحث' and Search for a Specific Project");
-        app.homePage.SearchForAProjectWithEnter(data.get("ProjectName1-3"));
+        app.homePage.SearchForAProjectWithEnter(data.get("ProjectName"));
         logger.info("Step 05: Click on 'المشروع الذي تم البحث عنه'");
-        app.cardDetailsPage.ClickOnTheSearchedProject();
+        app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
         logger.info("Step 06: Click on The Unit List Button");
         app.fullBookingJourneyPage.clickOnUnitsListButton();
         logger.info("Step 07: Click On Start Booking");
@@ -58,9 +59,9 @@ public class PriceQuotation extends NHCWebTest {
         logger.info("Step 03: Click on 'السوق العقاري'");
         app.mohLandBookingJourneyPage.clickOnFilterButton();
         logger.info("Step 04: Click on 'وحدة او مشروع للبحث' and Search for a Specific Project");
-        app.homePage.SearchForAProjectWithEnter(data.get("ProjectName1-3"));
+        app.homePage.SearchForAProjectWithEnter(data.get("ProjectName"));
         logger.info("Step 05: Click on 'المشروع الذي تم البحث عنه'");
-        app.cardDetailsPage.ClickOnTheSearchedProject();
+        app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
         logger.info("Step 06: Click on The Unit List Button");
         app.fullBookingJourneyPage.clickOnUnitsListButton();
         logger.info("Step 07: Click On Start Booking");
@@ -87,12 +88,13 @@ public class PriceQuotation extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
+        app.fullBookingJourneyPage.cancelTheExistingBookingProcess();
         logger.info("Step 03: Click on 'السوق العقاري'");
         app.mohLandBookingJourneyPage.clickOnFilterButton();
         logger.info("Step 04: Click on 'وحدة او مشروع للبحث' and Search for a Specific Project");
-        app.homePage.SearchForAProjectWithEnter(data.get("ProjectName1-3"));
+        app.homePage.SearchForAProjectWithEnter(data.get("ProjectName"));
         logger.info("Step 05: Click on 'المشروع الذي تم البحث عنه'");
-        app.cardDetailsPage.ClickOnTheSearchedProject();
+        app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
         logger.info("Step 06: Click on The Unit List Button");
         app.fullBookingJourneyPage.clickOnUnitsListButton();
         logger.info("Step 07: Click On Start Booking");
@@ -119,12 +121,13 @@ public class PriceQuotation extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
+        app.fullBookingJourneyPage.cancelTheExistingBookingProcess();
         logger.info("Step 03: Click on 'السوق العقاري'");
         app.mohLandBookingJourneyPage.clickOnFilterButton();
         logger.info("Step 04: Click on 'وحدة او مشروع للبحث' and Search for a Specific Project");
-        app.homePage.SearchForAProjectWithEnter(data.get("ProjectName"));
+        app.homePage.SearchForAProjectWithEnter(data.get("ProjectName1-3"));
         logger.info("Step 05: Click on 'المشروع الذي تم البحث عنه'");
-        app.cardDetailsPage.ClickOnTheSearchedProject();
+        app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
         logger.info("Step 06: Click on The Unit List Button");
         app.fullBookingJourneyPage.clickOnUnitsListButton();
         logger.info("Step 07: Click On Start Booking");
@@ -155,7 +158,7 @@ public class PriceQuotation extends NHCWebTest {
         logger.info("Step 03: Click on Filters ");
         CommonUtilityPage.ClickOnFilter();
         logger.info("Step 04: Click on 'وحدة او مشروع للبحث' and Search for a Specific Project");
-        app.homePage.SearchForAProjectWithEnter(data.get("ProjectName"));
+        app.homePage.SearchForAProjectWithEnter(data.get("ProjectName1-3"));
         logger.info("Step 05: Click on the project card ");
         app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
         logger.info("Step 06: Click on the Units list button ");
@@ -194,6 +197,7 @@ public class PriceQuotation extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
+        app.fullBookingJourneyPage.cancelTheExistingBookingProcess();
         logger.info("Step 03: Click on the user profile name");
         app.priceQuotationPage.ClickOnUserProfileName();
         logger.info("Step 04: Click on My Activities");
@@ -222,6 +226,7 @@ public class PriceQuotation extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
+        app.fullBookingJourneyPage.cancelTheExistingBookingProcess();
         logger.info("Step 03: Click on the user profile name");
         app.priceQuotationPage.ClickOnUserProfileName();
         logger.info("Step 04: Click on My Activities");
@@ -250,6 +255,7 @@ public class PriceQuotation extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
+        app.fullBookingJourneyPage.cancelTheExistingBookingProcess();
         logger.info("Step 03: Hover on the user profile name ");
         app.eligibilityPage.hoverToUserIconProfile();
         app.eligibilityPage.clickOnMyProfileButton();
@@ -285,6 +291,7 @@ public class PriceQuotation extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
+        app.fullBookingJourneyPage.cancelTheExistingBookingProcess();
         logger.info("Step 03: Click on the user profile name");
         app.priceQuotationPage.ClickOnUserProfileName();
         logger.info("Step 04: Click on My Activities");
@@ -311,6 +318,7 @@ public class PriceQuotation extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
+        app.fullBookingJourneyPage.cancelTheExistingBookingProcess();
         logger.info("Step 03: Click on the user profile name");
         app.priceQuotationPage.ClickOnUserProfileName();
         logger.info("Step 04: Click on My Activities");
@@ -339,6 +347,7 @@ public class PriceQuotation extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
+        app.fullBookingJourneyPage.cancelTheExistingBookingProcess();
         logger.info("Step 03: Click on the user profile name");
         app.priceQuotationPage.ClickOnUserProfileName();
         logger.info("Step 04: Click on My Activities");
@@ -369,6 +378,7 @@ public class PriceQuotation extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
+        app.fullBookingJourneyPage.cancelTheExistingBookingProcess();
         logger.info("Step 03: Click on the user profile name");
         app.priceQuotationPage.ClickOnUserProfileName();
         logger.info("Step 04: Verify that the Eligible and non eligible user type is exist");
@@ -389,6 +399,7 @@ public class PriceQuotation extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
+        app.fullBookingJourneyPage.cancelTheExistingBookingProcess();
         logger.info("Step 03: Click on the user profile name");
         app.priceQuotationPage.ClickOnUserProfileName();
         logger.info("Step 04: Verify that the user is eligible");
@@ -409,6 +420,7 @@ public class PriceQuotation extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
+        app.fullBookingJourneyPage.cancelTheExistingBookingProcess();
         logger.info("Step 03: Click on the user profile name");
         app.priceQuotationPage.ClickOnUserProfileName();
         logger.info("Step 04: Click on My Activities");
@@ -437,6 +449,7 @@ public class PriceQuotation extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
+        app.fullBookingJourneyPage.cancelTheExistingBookingProcess();
         logger.info("Step 03: Click on the user profile name");
         app.priceQuotationPage.ClickOnUserProfileName();
         logger.info("Step 04: Click on My Activities");
@@ -465,6 +478,7 @@ public class PriceQuotation extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
+        app.fullBookingJourneyPage.cancelTheExistingBookingProcess();
         logger.info("Step 03: Click on the user profile name");
         app.priceQuotationPage.ClickOnUserProfileName();
         logger.info("Step 04: Click on My Activities");
@@ -493,6 +507,7 @@ public class PriceQuotation extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
+        app.fullBookingJourneyPage.cancelTheExistingBookingProcess();
         logger.info("Step 03: Click on the user profile name");
         app.priceQuotationPage.ClickOnUserProfileName();
         logger.info("Step 04: Click on My Activities");

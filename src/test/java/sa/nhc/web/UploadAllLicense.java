@@ -24,7 +24,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -75,7 +75,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -104,7 +104,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -135,7 +135,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -168,7 +168,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -201,7 +201,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -232,7 +232,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -263,7 +263,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -296,7 +296,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -327,7 +327,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -358,7 +358,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -390,7 +390,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -422,7 +422,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -454,7 +454,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -485,7 +485,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -522,7 +522,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -556,7 +556,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -576,7 +576,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -596,7 +596,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -616,7 +616,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -640,7 +640,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -667,7 +667,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -695,7 +695,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -727,7 +727,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -761,7 +761,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -797,7 +797,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -833,7 +833,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -877,7 +877,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -914,7 +914,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -948,7 +948,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -984,7 +984,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1021,7 +1021,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1060,7 +1060,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -1097,7 +1097,7 @@ public class UploadAllLicense extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));

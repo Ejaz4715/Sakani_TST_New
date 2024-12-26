@@ -14,7 +14,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -24,15 +24,14 @@ public class RegisterOfInterest extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Enter a project name then search for it");
         app.registerOfInterestPage.ProjectNameSearch(data.get("ProjectName"));
-        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Access The Searched Project and On the is bookable toggle");
+        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         app.fullBookingJourneyPage.clickOnIsBookableToggle();
         app.fullBookingJourneyPage.verifyIsBookableToggleIsOn();
         logger.info("Step 07: Save the Changes");
         app.registerOfInterestPage.saveChanges();
         logger.info("Step 08: Changes are saved successfully");
         CommonUtilityPage.verifyPopupMessageIsDisplayed("Record saved successfully", "تم الحفظ بنجاح", FullBookingJourneyPageObjects.SystemPopupMessage());
-
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -40,7 +39,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -50,10 +49,8 @@ public class RegisterOfInterest extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Enter a project name then search for it");
         app.registerOfInterestPage.ProjectNameSearch(data.get("ProjectName"));
-        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Access The Searched Project and On the is bookable toggle then save");
-        app.fullBookingJourneyPage.clickOnIsBookableToggle();
-        app.fullBookingJourneyPage.verifyIsBookableToggleIsOn();
+//        app.registerOfInterestPage.accessAndOnBookableToggle();
         logger.info("Step 07: Check that the Register Your Interest toggle is not appeared");
         app.registerOfInterestPage.registerYourInterestFalseExistence();
     }
@@ -63,7 +60,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -73,14 +70,12 @@ public class RegisterOfInterest extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Enter a project name then search for it");
         app.registerOfInterestPage.ProjectNameSearch(data.get("ProjectName"));
-        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Access The Searched Project and Off the is bookable toggle");
-        app.registerOfInterestPage.accessAndOffBookableToggle();
+//        app.registerOfInterestPage.accessAndOffBookableToggle();
         logger.info("Step 07: Save the Changes");
         app.registerOfInterestPage.saveChanges();
         logger.info("Step 08: Changes are saved successfully");
-        CommonUtilityPage.verifyPopupMessageIsDisplayed("Record saved successfully", "تم الحفظ بنجاح", FullBookingJourneyPageObjects.SystemPopupMessage());
-
+        app.registerOfInterestPage.verifySaveChangesSuccessMessage();
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -88,7 +83,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -98,9 +93,8 @@ public class RegisterOfInterest extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Enter a project name then search for it");
         app.registerOfInterestPage.ProjectNameSearch(data.get("ProjectName"));
-        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Access The Searched Project and Off the is bookable toggle");
-        app.registerOfInterestPage.accessAndOffBookableToggle();
+//        app.registerOfInterestPage.accessAndOffBookableToggle();
         logger.info("Step 07: Check that the Register Your Interest toggle is appeared");
         app.registerOfInterestPage.registerYourInterestTrueExistence();
     }
@@ -110,7 +104,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -120,14 +114,12 @@ public class RegisterOfInterest extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnProjects();
         logger.info("Step 05: Enter a project name then search for it");
         app.registerOfInterestPage.ProjectNameSearch(data.get("ProjectName"));
-        app.fullBookingJourneyPage.navigateToSearchedProject(data.get("ProjectName"));
         logger.info("Step 06: Access The Searched Project and Off the is bookable toggle and On the Register Your interest");
-        app.registerOfInterestPage.accessAndOnRegisterYourInterest();
+//        app.registerOfInterestPage.accessAndOnRegisterYourInterest();
         logger.info("Step 07: Save the Changes");
         app.registerOfInterestPage.saveChanges();
         logger.info("Step 08: Changes are saved successfully");
-        CommonUtilityPage.verifyPopupMessageIsDisplayed("Record saved successfully", "تم الحفظ بنجاح", FullBookingJourneyPageObjects.SystemPopupMessage());
-
+        app.registerOfInterestPage.verifySaveChangesSuccessMessage();
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -135,7 +127,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -154,7 +146,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -175,7 +167,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -194,7 +186,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -210,7 +202,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 05: Click on 'عرض النتائج'");
         app.homePage.ClickToShowResults();
         logger.info("Step 06: Click on 'المشروع الذي تم البحث عنه'");
-        app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
+        app.registerOfInterestPage.ResultProjectDiv();
         logger.info("Step 07: Click on 'قائمة الوحدات '");
         app.registerOfInterestPage.ListOfApartments();
         logger.info("Step 08: Check the existence of the Register Your Interest Label");
@@ -222,7 +214,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -238,7 +230,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 05: Click on 'عرض النتائج'");
         app.homePage.ClickToShowResults();
         logger.info("Step 06: Click on 'المشروع الذي تم البحث عنه'");
-        app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
+        app.registerOfInterestPage.ResultProjectDiv();
         logger.info("Step 07: Click on 'قائمة الوحدات '");
         app.registerOfInterestPage.ListOfApartments();
         logger.info("Step 08: Check the existence of the Register Your Interest Label");
@@ -250,7 +242,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -266,7 +258,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 05: Click on 'عرض النتائج'");
         app.homePage.ClickToShowResults();
         logger.info("Step 06: Click on 'المشروع الذي تم البحث عنه'");
-        app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
+        app.registerOfInterestPage.ResultProjectDiv();
         logger.info("Step 07: Click on 'قائمة الوحدات '");
         app.registerOfInterestPage.ListOfApartments();
         logger.info("Step 08: Enter The inValid Email and submit");
@@ -280,7 +272,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -296,13 +288,13 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 05: Click on 'عرض النتائج'");
         app.homePage.ClickToShowResults();
         logger.info("Step 06: Click on 'المشروع الذي تم البحث عنه'");
-        app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
+        app.registerOfInterestPage.ResultProjectDiv();
         logger.info("Step 07: Click on 'قائمة الوحدات '");
         app.registerOfInterestPage.ListOfApartments();
         logger.info("Step 08: Enter The inValid Email and submit");
         app.registerOfInterestPage.EnterTheInValidEmail(data.get("inValidEMail"));
         logger.info("Step 09: Verify the invalid Email message Content is matching");
-        app.registerOfInterestPage.verifyValidationMessageOfInvalidEmail();
+        app.registerOfInterestPage.TheInValidEmailMSGContentChecker(data.get("inValidEMailValidationMSG"));
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -310,7 +302,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -326,7 +318,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 05: Click on 'عرض النتائج'");
         app.homePage.ClickToShowResults();
         logger.info("Step 06: Click on 'المشروع الذي تم البحث عنه'");
-        app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
+        app.registerOfInterestPage.ResultProjectDiv();
         logger.info("Step 07: Click on 'قائمة الوحدات '");
         app.registerOfInterestPage.ListOfApartments();
         logger.info("Step 08: Leave the Email Field Empty and try to submit");
@@ -338,7 +330,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -354,14 +346,13 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 05: Click on 'عرض النتائج'");
         app.homePage.ClickToShowResults();
         logger.info("Step 06: Click on 'المشروع الذي تم البحث عنه'");
-        app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
+        app.registerOfInterestPage.ResultProjectDiv();
         logger.info("Step 07: Click on 'قائمة الوحدات '");
         app.registerOfInterestPage.ListOfApartments();
         logger.info("Step 08: Enter The inValid Email and submit");
         app.registerOfInterestPage.EnterTheInValidEmail(data.get("inValidEMail"));
         logger.info("Step 09: Checking that the user is unable to submit with invalid email");
-//        app.registerOfInterestPage.verifyUnsuccessfulRegistrationInvalidEmail();
-        app.registerOfInterestPage.verifyValidationMessageOfInvalidEmail();
+        app.registerOfInterestPage.verifyUnsuccessfulRegistrationInvalidEmail();
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -369,7 +360,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -385,7 +376,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 05: Click on 'عرض النتائج'");
         app.homePage.ClickToShowResults();
         logger.info("Step 06: Click on 'المشروع الذي تم البحث عنه'");
-        app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
+        app.registerOfInterestPage.ResultProjectDiv();
         logger.info("Step 07: Click on 'قائمة الوحدات '");
         app.registerOfInterestPage.ListOfApartments();
         logger.info("Step 08: Entering valid email and check if the user is able to submit");
@@ -397,7 +388,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -413,7 +404,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 05: Click on 'عرض النتائج'");
         app.homePage.ClickToShowResults();
         logger.info("Step 06: Click on 'المشروع الذي تم البحث عنه'");
-        app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
+        app.registerOfInterestPage.ResultProjectDiv();
         logger.info("Step 07: Click on 'قائمة الوحدات '");
         app.registerOfInterestPage.ListOfApartments();
         logger.info("Step 08: Enter The Email with spaces and try to submit");
@@ -425,7 +416,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -441,7 +432,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 05: Click on 'عرض النتائج'");
         app.homePage.ClickToShowResults();
         logger.info("Step 06: Click on 'المشروع الذي تم البحث عنه'");
-        app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
+        app.registerOfInterestPage.ResultProjectDiv();
         logger.info("Step 07: Click on 'قائمة الوحدات '");
         app.registerOfInterestPage.ListOfApartments();
         logger.info("Step 08: Enter The Email with Special Characters and try to submit");
@@ -453,7 +444,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -469,7 +460,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 05: Click on 'عرض النتائج'");
         app.homePage.ClickToShowResults();
         logger.info("Step 06: Click on 'المشروع الذي تم البحث عنه'");
-        app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
+        app.registerOfInterestPage.ResultProjectDiv();
         logger.info("Step 07: Click on 'قائمة الوحدات '");
         app.registerOfInterestPage.ListOfApartments();
         logger.info("Step 08: Entering valid email and submit");
@@ -483,7 +474,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -499,11 +490,11 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 05: Click on 'عرض النتائج'");
         app.homePage.ClickToShowResults();
         logger.info("Step 06: Click on 'المشروع الذي تم البحث عنه'");
-        app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
+        app.registerOfInterestPage.ResultProjectDiv();
         logger.info("Step 07: Click on 'قائمة الوحدات '");
         app.registerOfInterestPage.ListOfApartments();
         logger.info("Step 08: Entering valid email and submit");
-//        app.registerOfInterestPage.enterTheValidEmail(data.get("ValidEMail"));
+        app.registerOfInterestPage.enterTheValidEmail(data.get("ValidEMail"));
         logger.info("Step 09: Check if that the user is unable to register his interest twice for the same project");
         app.registerOfInterestPage.unableRegisteringTwice();
     }
@@ -513,7 +504,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -529,7 +520,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 05: Click on 'عرض النتائج'");
         app.homePage.ClickToShowResults();
         logger.info("Step 06: Click on 'المشروع الذي تم البحث عنه'");
-        app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
+        app.registerOfInterestPage.ResultProjectDiv();
         logger.info("Step 07: Click on 'قائمة الوحدات '");
         app.registerOfInterestPage.ListOfApartments();
         logger.info("Step 08: Entering valid email and submit");
@@ -543,7 +534,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
+//app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form and login");
@@ -559,7 +550,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 05: Click on 'عرض النتائج'");
         app.homePage.ClickToShowResults();
         logger.info("Step 06: Click on 'المشروع الذي تم البحث عنه'");
-        app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
+        app.registerOfInterestPage.ResultProjectDiv();
         logger.info("Step 07: Click on 'قائمة الوحدات '");
         app.registerOfInterestPage.ListOfApartments();
         logger.info("Step 08: Entering valid email and submit");
@@ -573,11 +564,9 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
-        app.homePage.closeAllSakaniPopups();
-        app.loginPage.changeLanguageForUser();
+//app.loginPage.alertBoxLogin();
         logger.info("Step 02: Accessing The MarketPlace");
-        CommonUtilityPage.MarketPlace();
+        app.registerOfInterestPage.AccessWebsiteAndClickOnMarketPlaceAsAGuest();
         logger.info("Step 03: Click on Filter");
         CommonUtilityPage.ClickOnFilter();
         logger.info("Step 04: Click on 'وحدة او مشروع للبحث' and Search for a Specific Project");
@@ -585,7 +574,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 05: Click on 'عرض النتائج'");
         app.homePage.ClickToShowResults();
         logger.info("Step 06: Click on 'المشروع الذي تم البحث عنه'");
-        app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
+        app.registerOfInterestPage.ResultProjectDiv();
         logger.info("Step 07: Click on 'قائمة الوحدات '");
         app.registerOfInterestPage.ListOfApartments();
         logger.info("Step 08: Login from the Button exist in the register your interest label");
@@ -599,11 +588,9 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
-        app.homePage.closeAllSakaniPopups();
-        app.loginPage.changeLanguageForUser();
+//app.loginPage.alertBoxLogin();
         logger.info("Step 02: Accessing The MarketPlace");
-        CommonUtilityPage.MarketPlace();
+        app.registerOfInterestPage.AccessWebsiteAndClickOnMarketPlaceAsAGuest();
         logger.info("Step 03: Click on Filter");
         CommonUtilityPage.ClickOnFilter();
         logger.info("Step 04: Click on 'وحدة او مشروع للبحث' and Search for a Specific Project");
@@ -611,7 +598,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 05: Click on 'عرض النتائج'");
         app.homePage.ClickToShowResults();
         logger.info("Step 06: Click on 'المشروع الذي تم البحث عنه'");
-        app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
+        app.registerOfInterestPage.ResultProjectDiv();
         logger.info("Step 07: Click on 'قائمة الوحدات '");
         app.registerOfInterestPage.ListOfApartments();
         logger.info("Step 08: Login from the Button exist in the register your interest label");
@@ -625,11 +612,9 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
-        app.homePage.closeAllSakaniPopups();
-        app.loginPage.changeLanguageForUser();
+//app.loginPage.alertBoxLogin();
         logger.info("Step 02: Accessing The MarketPlace");
-        CommonUtilityPage.MarketPlace();
+        app.registerOfInterestPage.AccessWebsiteAndClickOnMarketPlaceAsAGuest();
         logger.info("Step 03: Click on Filter");
         CommonUtilityPage.ClickOnFilter();
         logger.info("Step 04: Click on 'وحدة او مشروع للبحث' and Search for a Specific Project");
@@ -637,7 +622,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 05: Click on 'عرض النتائج'");
         app.homePage.ClickToShowResults();
         logger.info("Step 06: Click on 'المشروع الذي تم البحث عنه'");
-        app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
+        app.registerOfInterestPage.ResultProjectDiv();
         logger.info("Step 07: Click on 'قائمة الوحدات '");
         app.registerOfInterestPage.ListOfApartments();
         logger.info("Step 08: Check the existence of the Register Your Interest Label");
@@ -649,11 +634,9 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
-        app.homePage.closeAllSakaniPopups();
-        app.loginPage.changeLanguageForUser();
+//app.loginPage.alertBoxLogin();
         logger.info("Step 02: Accessing The MarketPlace");
-        CommonUtilityPage.MarketPlace();
+        app.registerOfInterestPage.AccessWebsiteAndClickOnMarketPlaceAsAGuest();
         logger.info("Step 03: Click on Filter");
         CommonUtilityPage.ClickOnFilter();
         logger.info("Step 04: Click on 'وحدة او مشروع للبحث' and Search for a Specific Project");
@@ -661,7 +644,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 05: Click on 'عرض النتائج'");
         app.homePage.ClickToShowResults();
         logger.info("Step 06: Click on 'المشروع الذي تم البحث عنه'");
-        app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
+        app.registerOfInterestPage.ResultProjectDiv();
         logger.info("Step 07: Click on 'قائمة الوحدات '");
         app.registerOfInterestPage.ListOfApartments();
         logger.info("Step 08: Check the existence of the Login BTN in Register Your Interest Label");
@@ -673,11 +656,9 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Alert box login");
-        //app.loginPage.alertBoxLogin();
-        app.homePage.closeAllSakaniPopups();
-        app.loginPage.changeLanguageForUser();
+//app.loginPage.alertBoxLogin();
         logger.info("Step 02: Accessing The MarketPlace");
-        CommonUtilityPage.MarketPlace();
+        app.registerOfInterestPage.AccessWebsiteAndClickOnMarketPlaceAsAGuest();
         logger.info("Step 03: Click on Filter");
         CommonUtilityPage.ClickOnFilter();
         logger.info("Step 04: Click on 'وحدة او مشروع للبحث' and Search for a Specific Project");
@@ -685,7 +666,7 @@ public class RegisterOfInterest extends NHCWebTest {
         logger.info("Step 05: Click on 'عرض النتائج'");
         app.homePage.ClickToShowResults();
         logger.info("Step 06: Click on 'المشروع الذي تم البحث عنه'");
-        app.mohLandBookingJourneyPage.clickOnTheSearchedProject();
+        app.registerOfInterestPage.ResultProjectDiv();
         logger.info("Step 07: Click on 'قائمة الوحدات '");
         app.registerOfInterestPage.ListOfApartments();
         logger.info("Step 08: Click Login Button that exist in the register your interest label and Go back");

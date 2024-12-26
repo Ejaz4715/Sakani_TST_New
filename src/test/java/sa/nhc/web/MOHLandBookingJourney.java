@@ -24,7 +24,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -44,7 +44,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -66,7 +66,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -91,7 +91,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -108,7 +108,8 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 05: Click on view button");
         app.mohLandBookingJourneyPage.clickOnViewButton();
         logger.info("Step 06: Verify the searched project will display");
-        app.mohLandBookingJourneyPage.verifyTheSearchProjectIsDisplayed(data.get("Project_Name"));
+        CommonUtilityPage.verifyValueIsDisplayed(data.get("Project_Name"),BookingPageObjects.projectTitle());
+//        app.mohLandBookingJourneyPage.verifyTheSearchProjectIsDisplayed(data.get("Project_Name"));
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -116,7 +117,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -143,7 +144,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -172,7 +173,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -201,7 +202,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -232,7 +233,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -272,7 +273,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -313,7 +314,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -356,7 +357,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -399,7 +400,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -444,7 +445,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -492,7 +493,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -519,7 +520,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -552,7 +553,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -583,7 +584,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -616,7 +617,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -649,7 +650,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -687,7 +688,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -725,7 +726,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -765,7 +766,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -805,7 +806,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -849,7 +850,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -895,7 +896,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -942,7 +943,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -978,7 +979,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -998,7 +999,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1018,7 +1019,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1038,7 +1039,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1062,7 +1063,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1089,7 +1090,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1117,7 +1118,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1149,7 +1150,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1183,7 +1184,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1219,7 +1220,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1255,7 +1256,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1299,7 +1300,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -1346,7 +1347,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1380,7 +1381,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1416,7 +1417,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1444,7 +1445,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 12: Click confirm button");
         app.eligibilityPage.clickOnConfirmButton();
         logger.info("Step 13: Verify the status will change to \"مقبول\"");
-        Browser.waitForSeconds(2);
+        Browser.waitForSeconds(5);
         CommonUtilityPage.verifyValueIsDisplayed("مقبول", "Approved", MOHLandBookingJourneyPageObjects.cancellationStatus());
     }
 
@@ -1453,7 +1454,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -1480,7 +1481,7 @@ public class MOHLandBookingJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+//        app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");

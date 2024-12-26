@@ -51,7 +51,7 @@ public class MOHLandBookingJourneyPage {
      * Select the entered project name
      */
     public void selectTheEnteredProjectName() throws Exception {
-//        Browser.waitUntilVisibilityOfElement(EligibilityPageObject.optionListSelected(), 40);
+        Browser.waitUntilVisibilityOfElement(EligibilityPageObject.optionListSelected(), 40);
         Browser.click(EligibilityPageObject.optionListSelected());
     }
 
@@ -86,6 +86,7 @@ public class MOHLandBookingJourneyPage {
      */
     public void verifyTheSearchProjectIsDisplayed(String searchedProject) throws Exception {
         Browser.waitUntilVisibilityOfElement(BookingPageObjects.projectTitle(), 40);
+        Browser.waitForSeconds(2);
         String ProjectName = Browser.getWebElement(BookingPageObjects.projectTitle()).getText();
         logger.addScreenshot("");
         Assert.assertTrue(ProjectName.contains(searchedProject));
@@ -97,12 +98,13 @@ public class MOHLandBookingJourneyPage {
      */
     public void clickOnTheSearchedProject() throws Exception {
         Browser.waitUntilVisibilityOfElement(BookingPageObjects.projectTitle(), 40);
-        CommonUtilityPage.moveToObject(BookingPageObjects.projectTitle());
+        Browser.moveToElement(BookingPageObjects.projectTitle());
         Browser.waitUntilElementToBeClickable(BookingPageObjects.projectTitle(), 40);
 //        boolean presence = false;
 //        while (!presence) {
-            Browser.click(BookingPageObjects.projectTitle());
-            Browser.waitForSeconds(2);
+        Browser.waitForSeconds(2);
+        Browser.doubleClick(BookingPageObjects.projectTitle());
+            Browser.waitForSeconds(5);
 //            if (Browser.isElementPresent(MOHLandBookingJourneyPageObjects.startBookingButton()) || Browser.isElementPresent(FullBookingJourneyPageObjects.UnitsListButton())) {
 //                presence = true;
 //            }
@@ -184,8 +186,9 @@ public class MOHLandBookingJourneyPage {
      */
     public void clickOnReservePlotButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(MOHLandBookingJourneyPageObjects.reservePlotButton(), 40);
-        Browser.executeJSScrollIntoView(MOHLandBookingJourneyPageObjects.reservePlotButton());
+        Browser.moveToElement(MOHLandBookingJourneyPageObjects.reservePlotButton());
         Browser.waitUntilElementToBeClickable(MOHLandBookingJourneyPageObjects.reservePlotButton(),40);
+        Browser.waitForSeconds(1);
         Browser.click(MOHLandBookingJourneyPageObjects.reservePlotButton());
     }
 
@@ -271,6 +274,7 @@ public class MOHLandBookingJourneyPage {
      */
     public void clickOnMyActivitiesButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(MOHLandBookingJourneyPageObjects.myActivitiesButton(), 40);
+        Browser.moveToElement(MOHLandBookingJourneyPageObjects.myActivitiesButton());
         Browser.waitUntilElementToBeClickable(MOHLandBookingJourneyPageObjects.myActivitiesButton(), 40);
         Browser.click(MOHLandBookingJourneyPageObjects.myActivitiesButton());
     }
@@ -289,6 +293,8 @@ public class MOHLandBookingJourneyPage {
      */
     public void clickOnViewBookingButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(MOHLandBookingJourneyPageObjects.viewBookingButton(), 40);
+        Browser.waitUntilElementToBeClickable(MOHLandBookingJourneyPageObjects.viewBookingButton(),40);
+        Browser.moveToElement(MOHLandBookingJourneyPageObjects.viewBookingButton());
         Browser.click(MOHLandBookingJourneyPageObjects.viewBookingButton());
     }
 
@@ -336,8 +342,10 @@ public class MOHLandBookingJourneyPage {
         Browser.waitUntilElementToBeClickable(EligibilityPageObject.myProfileButton(),40);
         Browser.click(EligibilityPageObject.myProfileButton());
         Browser.waitUntilVisibilityOfElement(MOHLandBookingJourneyPageObjects.myActivitiesButton(), 40);
+        Browser.waitUntilElementToBeClickable(MOHLandBookingJourneyPageObjects.myActivitiesButton(),50);
         Browser.click(MOHLandBookingJourneyPageObjects.myActivitiesButton());
         Browser.waitUntilVisibilityOfElement(MOHLandBookingJourneyPageObjects.bookingsButton(), 40);
+        Browser.waitUntilElementToBeClickable(MOHLandBookingJourneyPageObjects.bookingsButton(),50);
         Browser.click(MOHLandBookingJourneyPageObjects.bookingsButton());
         if (Browser.isElementPresent(MOHLandBookingJourneyPageObjects.viewBookingButton())) {
             Browser.waitUntilVisibilityOfElement(MOHLandBookingJourneyPageObjects.viewBookingButton(), 40);

@@ -2,7 +2,6 @@ package sa.nhc.web.pages;
 
 import com.testcrew.utility.TCRobot;
 import com.testcrew.web.Browser;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import sa.nhc.web.objects.*;
@@ -72,10 +71,9 @@ public class RegisterOfInterestPage {
     }
 
     public void verifyValidationMessageOfInvalidEmail() throws Exception {
-//        Browser.waitUntilVisibilityOfElement(HomePageObjects.InvalidEmailValidationMSG(), 50);
-//        Assert.assertTrue(Browser.isElementPresent(HomePageObjects.InvalidEmailValidationMSG()), "The Invalid Email Validation MSG Didn't Appeared");
-        Assert.assertFalse(Browser.isElementEnabled(HomePageObjects.SubmitBTn()), "Submit button is clickable");
-        logger.addScreenshot("");
+        Browser.waitUntilVisibilityOfElement(HomePageObjects.InvalidEmailValidationMSG(), 50);
+        Assert.assertTrue(Browser.isElementPresent(HomePageObjects.InvalidEmailValidationMSG()), "The Invalid Email Validation MSG Didn't Appeared");
+        logger.addScreenshot("verify Validation Message Of Invalid Email");
     }
 
     public void TheInValidEmailMSGContentChecker(String inValidEMailValidationMSG) throws Exception {
@@ -86,8 +84,7 @@ public class RegisterOfInterestPage {
 
     public void EnterEmailWithSpecialCharacters(String EMailWithSpecialCharacters) throws Exception {
         Browser.waitUntilVisibilityOfElement(HomePageObjects.EmailField(), 50);
-        Browser.moveToElement(HomePageObjects.EmailField());
-        Browser.waitForSeconds(1);
+        Browser.waitForSeconds(3);
         Browser.setText(HomePageObjects.EmailField(), EMailWithSpecialCharacters);
         Assert.assertTrue(Browser.isElementDisabled(HomePageObjects.SubmitBTn()), "The User is able to click submit while the email Contains SpecialCharacters");
         logger.addScreenshot("Enter Email With Special Characters");
@@ -95,8 +92,7 @@ public class RegisterOfInterestPage {
 
     public void EnterEmailWithSpaces(String EMailWithSpaces) throws Exception {
         Browser.waitUntilVisibilityOfElement(HomePageObjects.EmailField(), 50);
-        Browser.moveToElement(HomePageObjects.EmailField());
-        Browser.waitForSeconds(1);
+        Browser.waitForSeconds(3);
         Browser.setText(HomePageObjects.EmailField(), EMailWithSpaces);
         Assert.assertTrue(Browser.isElementDisabled(HomePageObjects.SubmitBTn()), "The User is able to click submit while the email Contains SPaces");
         logger.addScreenshot("Enter Email With Spaces");
@@ -104,28 +100,23 @@ public class RegisterOfInterestPage {
 
     public void EnterTheInValidEmail(String inValidEMail) throws Exception {
         Browser.waitUntilVisibilityOfElement(HomePageObjects.EmailField(), 50);
-        CommonUtilityPage.moveToObject(HomePageObjects.EmailField());
-        WebElement element = Browser.getWebElement(HomePageObjects.EmailField());
-        element.sendKeys(Keys.chord(Keys.CONTROL, "a") + Keys.BACK_SPACE);
+        Browser.waitForSeconds(3);
         Browser.setText(HomePageObjects.EmailField(), inValidEMail);
-//        Browser.click(HomePageObjects.SubmitBTn());
-//        logger.addScreenshot("Enter The InValid Email");
+        Browser.click(HomePageObjects.SubmitBTn());
+        logger.addScreenshot("Enter The InValid Email");
     }
 
     public void leaveTheEmailEmpty() throws Exception {
         Browser.waitUntilVisibilityOfElement(HomePageObjects.EmailField(), 50);
-        Browser.moveToElement(HomePageObjects.EmailField());
-        Browser.waitForSeconds(1);
-        WebElement element = Browser.getWebElement(HomePageObjects.EmailField());
-        element.sendKeys(Keys.chord(Keys.CONTROL, "a") + Keys.BACK_SPACE);
+        Browser.waitForSeconds(3);
+        Browser.clearText(HomePageObjects.EmailField());
         Assert.assertTrue(Browser.isElementDisabled(HomePageObjects.SubmitBTn()), "The User is able to click submit while the email field is empty");
         logger.addScreenshot("leave The Email Empty");
     }
 
     public void enterAnyValidEmailValidation(String ValidEMail) throws Exception {
         Browser.waitUntilVisibilityOfElement(HomePageObjects.EmailField(), 50);
-        Browser.moveToElement(HomePageObjects.EmailField());
-        Browser.waitForSeconds(1);
+        Browser.waitForSeconds(3);
         Browser.setText(HomePageObjects.EmailField(), ValidEMail);
         Assert.assertTrue(Browser.isElementEnabled(HomePageObjects.SubmitBTn()), "The User is unable to Click Submit by entering a valid email");
         logger.addScreenshot("enter Any Valid Email Validation");
@@ -133,8 +124,7 @@ public class RegisterOfInterestPage {
 
     public void enterTheValidEmail(String ValidEmail) throws Exception {
         Browser.waitUntilVisibilityOfElement(HomePageObjects.EmailField(), 50);
-        Browser.moveToElement(HomePageObjects.EmailField());
-        Browser.waitForSeconds(1);
+        Browser.waitForSeconds(3);
         Browser.setText(HomePageObjects.EmailField(), ValidEmail);
         Browser.click(HomePageObjects.SubmitBTn());
         logger.addScreenshot("enter The Valid Email");
@@ -291,10 +281,9 @@ public class RegisterOfInterestPage {
     }
 
     public void accessAndOffBookableToggle() throws Exception {
-//        Browser.waitForSeconds(2);
-//        Browser.click(RegisterOfInterestPageObjects.SearchedProjectResult());
-//        Browser.waitForSeconds(2);
-        Browser.waitUntilVisibilityOfElement(RegisterOfInterestPageObjects.bookableCheckerArea(), 40);
+        Browser.waitForSeconds(2);
+        Browser.click(RegisterOfInterestPageObjects.SearchedProjectResult());
+        Browser.waitForSeconds(2);
         WebElement bookableChecker = Browser.getWebElement(RegisterOfInterestPageObjects.bookableCheckerArea());
         String result = bookableChecker.getAttribute("aria-checked");
         if (result.contains("true")) {
@@ -305,9 +294,10 @@ public class RegisterOfInterestPage {
     }
 
     public void accessAndOnRegisterYourInterest() throws Exception {
-//        Browser.click(RegisterOfInterestPageObjects.SearchedProjectResult());
-        Browser.waitUntilVisibilityOfElement(RegisterOfInterestPageObjects.bookableCheckerArea(), 60);
-        String result = Browser.getAttributeValue(RegisterOfInterestPageObjects.bookableCheckerArea(), "aria-checked");
+        Browser.click(RegisterOfInterestPageObjects.SearchedProjectResult());
+        Browser.waitForSeconds(3);
+        WebElement bookableChecker = Browser.getWebElement(RegisterOfInterestPageObjects.bookableCheckerArea());
+        String result = bookableChecker.getAttribute("aria-checked");
         if (result.contains("true")) {
             Browser.click(RegisterOfInterestPageObjects.bookableCheckerClicker());
         }
@@ -334,7 +324,7 @@ public class RegisterOfInterestPage {
     }
 
     public void turnOnBookableToggleAndVerify() throws Exception {
-        Browser.waitUntilVisibilityOfElement(RegisterOfInterestPageObjects.bookableCheckerArea(), 40);
+        Browser.waitForSeconds(3);
         WebElement bookableChecker = Browser.getWebElement(RegisterOfInterestPageObjects.bookableCheckerArea());
         boolean result = Boolean.parseBoolean(bookableChecker.getAttribute("aria-checked"));
         if (!result) {

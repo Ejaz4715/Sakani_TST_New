@@ -20,7 +20,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the registration form");
@@ -59,7 +59,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -72,9 +72,9 @@ public class Objection extends NHCWebTest {
         app.eligibilityPage.hoverToServices();
         logger.info("Step 04: Click on check eligibility nav title");
         app.eligibilityPage.clickOnCheckEligibilityNavTitle();
-        logger.info("Step 05: Click on agree on terms and conditions checkbox");
+        logger.info("Step 05: Click on check eligibility button");
         app.eligibilityPage.clickOnCheckEligibilityButton();
-        logger.info("Step 06: Click on check eligibility button");
+        logger.info("Step 06: Click on agree on terms and conditions checkbox");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsCheckbox();
         logger.info("Step 07: Click on agree on terms and conditions button");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsButton();
@@ -99,10 +99,10 @@ public class Objection extends NHCWebTest {
         Browser.executeJSScroll(100);
         Browser.waitForSeconds(1);
         app.eligibilityPage.selectFromTheLists(data.get("Current_Housing_Status_AR"), data.get("Current_Housing_Status_EN"), CheckEligibilityPageObjects.DDLCurrentHosingStatus());
-        logger.info("Step 16: Select deed type dropdown lists");
-        if (Browser.isElementPresent(EligibilityPageObject.deedTypeDropdownList())) {
-            app.eligibilityPage.selectDeedType(data.get("Deed_Type_AR"), data.get("Deed_Type_EN"), EligibilityPageObject.deedTypeDropdownList(), data.get("Construction_Status_AR"), data.get("Construction_Status_EN"),EligibilityPageObject.constructionStatusDropdownList());
-        }
+//       logger.info("Step 16: Select deed type dropdown lists");
+////        if (Browser.isElementPresent(EligibilityPageObject.deedTypeDropdownList())) {
+////            app.eligibilityPage.selectDeedType(data.get("Deed_Type_AR"), data.get("Deed_Type_EN"), EligibilityPageObject.deedTypeDropdownList(), data.get("Construction_Status_AR"), data.get("Construction_Status_EN"),EligibilityPageObject.constructionStatusDropdownList());
+////        }
         logger.info("Step 17: Click on confirm button");
         app.eligibilityPage.clickOnConfirmButton();
         logger.info("Step 18: Verify the user able to view \"تقديم اعتراض\" button");
@@ -116,7 +116,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -139,7 +139,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -164,7 +164,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -189,7 +189,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -214,7 +214,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -239,7 +239,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -268,7 +268,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -299,7 +299,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -329,7 +329,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -360,7 +360,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -391,7 +391,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -422,7 +422,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -453,7 +453,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -484,7 +484,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -515,7 +515,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -553,7 +553,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -587,7 +587,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -629,7 +629,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -645,7 +645,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -663,7 +663,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -683,7 +683,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -703,7 +703,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -717,7 +717,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 06: Click on search button");
         app.objectionPage.clickSearchButton();
         logger.info("Step 07: Verify the admin able to view the appeal user");
-        app.objectionPage.verifyBeneficiaryIsSameAsEntered("Beneficiary_ID", ObjectionPageObjects.searchedUserResult());
+        CommonUtilityPage.verifyValueIsDisplayed(data.get("Beneficiary_ID"), ObjectionPageObjects.searchedUserResult());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -725,7 +725,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -751,7 +751,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -779,7 +779,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -805,7 +805,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -831,7 +831,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -859,7 +859,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -889,7 +889,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -921,7 +921,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -955,7 +955,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -989,7 +989,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1025,7 +1025,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1069,7 +1069,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1095,7 +1095,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1123,7 +1123,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1149,7 +1149,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1177,7 +1177,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1211,7 +1211,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1247,7 +1247,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1287,7 +1287,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -1300,6 +1300,7 @@ public class Objection extends NHCWebTest {
         app.eligibilityPage.hoverToUserIconProfile();
         app.eligibilityPage.clickOnMyProfileButton();
         logger.info("Step 04: Verify the status is \"يتطلب مستندات إضافية\"");
+        Browser.waitUntilVisibilityOfElement(ObjectionPageObjects.requireAdditionalDocumentsStatus(),40);
         Browser.moveToElement(ObjectionPageObjects.requireAdditionalDocumentsStatus());
         CommonUtilityPage.verifyValueIsDisplayed("يتطلب مستندات إضافية", "Requires additional documents", ObjectionPageObjects.requireAdditionalDocumentsStatus());
     }
@@ -1309,7 +1310,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -1332,7 +1333,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -1352,6 +1353,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 06: Click on submit button");
         app.objectionPage.clickSubmitButton();
         logger.info("Step 07: Verify the status will change to \"يتم فحص الطلب\" ");
+        Browser.waitUntilVisibilityOfElement(ObjectionPageObjects.requireAdditionalDocumentsStatus(),40);
         Browser.moveToElement(ObjectionPageObjects.requireAdditionalDocumentsStatus());
         CommonUtilityPage.verifyValueIsDisplayed("يتم فحص الطلب", "Request checked", ObjectionPageObjects.requireAdditionalDocumentsStatus());
     }
@@ -1366,7 +1368,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1392,7 +1394,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1418,7 +1420,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1446,7 +1448,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1480,7 +1482,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1516,7 +1518,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -1544,7 +1546,7 @@ public class Objection extends NHCWebTest {
 //        logger.info("Step 00: Test Data : " + data.toString());
 //        app.openApplication(data);
 //        logger.info("Step 01: Navigate to Sakani admin site");
-//        app.loginPage.alertBoxLogin();
+//        //app.loginPage.alertBoxLogin();
 //        logger.info("Step 02: Login to the portal with admin credentials");
 //        app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
 //        app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1578,7 +1580,7 @@ public class Objection extends NHCWebTest {
 //        logger.info("Step 00: Test Data : " + data.toString());
 //        app.openApplication(data);
 //        logger.info("Step 01: Navigate to Sakani housing site");
-//        app.loginPage.alertBoxLogin();
+//        //app.loginPage.alertBoxLogin();
 //        app.homePage.closeAllSakaniPopups();
 //        logger.info("Step 02: Navigate to the login form");
 //        app.homePage.clickOnLoginButtonInHomePage();
@@ -1606,7 +1608,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the registration form");
@@ -1639,7 +1641,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -1652,66 +1654,119 @@ public class Objection extends NHCWebTest {
         app.eligibilityPage.hoverToServices();
         logger.info("Step 04: Click on check eligibility nav title");
         app.eligibilityPage.clickOnCheckEligibilityNavTitle();
-        logger.info("Step 05: Click on agree on terms and conditions checkbox");
+        logger.info("Step 05: Click on check eligibility button");
         app.eligibilityPage.clickOnCheckEligibilityButton();
-        logger.info("Step 06: Click on check eligibility button");
+        logger.info("Step 04: Click on agree on terms and conditions checkbox");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsCheckbox();
-        logger.info("Step 07: Click on agree on terms and conditions button");
+        logger.info("Step 05: Click on agree on terms and conditions button");
         app.eligibilityPage.clickOnAgreeOnTermsAndConditionsButton();
-        logger.info("Step 08: Click on acknowledge radio buttons");
+        logger.info("Step 06: Click on acknowledge radio buttons");
         app.eligibilityPage.clickOnNoRadioButton();
         app.eligibilityPage.clickOnYesRadioButton();
-        logger.info("Step 09: Click on continue to confirm acknowledge button");
+        logger.info("Step 07: Click on continue to confirm acknowledge button");
         app.eligibilityPage.clickOnContinueToConfirmAcknowledgeButton();
-        logger.info("Step 10: Select current region dropdown list");
+        logger.info("Step 08: Select current region dropdown list");
         app.eligibilityPage.selectFromTheLists(data.get("Current_Region_AR"), data.get("Current_Region_EN"), CheckEligibilityPageObjects.DDLCurrentRegion());
-        logger.info("Step 11: Select current city dropdown list");
+        logger.info("Step 09: Select current city dropdown list");
         app.eligibilityPage.selectFromTheLists(data.get("Current_City_AR"), data.get("Current_City_EN"), CheckEligibilityPageObjects.DDLCurrentCity());
-        logger.info("Step 12: Select preferred region dropdown list");
+        logger.info("Step 10: Select preferred region dropdown list");
         app.eligibilityPage.selectFromTheLists(data.get("Preferred_Region_AR"), data.get("Preferred_Region_EN"), CheckEligibilityPageObjects.DDLPreferredRegion());
-        logger.info("Step 13: Select preferred city dropdown list");
+        logger.info("Step 11: Select preferred city dropdown list");
         app.eligibilityPage.selectFromTheLists(data.get("Preferred_City_AR"), data.get("Preferred_City_EN"), CheckEligibilityPageObjects.DDLPreferredCity());
-        logger.info("Step 14: Select preferred district dropdown list");
+        logger.info("Step 12: Select preferred district dropdown list");
         if (Browser.isElementPresent(CheckEligibilityPageObjects.DDLPreferredDistrict())) {
             app.eligibilityPage.selectFromTheLists(data.get("Preferred_District_AR"), data.get("Preferred_District_EN"), CheckEligibilityPageObjects.DDLPreferredDistrict());
         }
-        logger.info("Step 15: Select current housing status dropdown list");
+        logger.info("Step 13: Select current housing status dropdown list");
         Browser.executeJSScroll(100);
         Browser.waitForSeconds(1);
         app.eligibilityPage.selectFromTheLists(data.get("Current_Housing_Status_AR"), data.get("Current_Housing_Status_EN"), CheckEligibilityPageObjects.DDLCurrentHosingStatus());
-        logger.info("Step 16: Select deed type dropdown lists");
-        Browser.executeJSScroll(350);
-        Browser.waitForSeconds(1);
-        if (Browser.isElementPresent(EligibilityPageObject.deedTypeDropdownList())) {
-            app.eligibilityPage.selectDeedType(data.get("Deed_Type_AR"), data.get("Deed_Type_EN"), EligibilityPageObject.deedTypeDropdownList(), data.get("Construction_Status_AR"), data.get("Construction_Status_EN"),EligibilityPageObject.constructionStatusDropdownList());
-        }
-        logger.info("Step 17: Click on confirm button");
+      logger.info("Step 14: Select deed type dropdown lists");
+//        if (Browser.isElementPresent(EligibilityPageObject.deedTypeDropdownList())) {
+//            app.eligibilityPage.selectDeedType(data.get("Deed_Type_AR"), data.get("Deed_Type_EN"), EligibilityPageObject.deedTypeDropdownList(), data.get("Construction_Status_AR"), data.get("Construction_Status_EN"),EligibilityPageObject.constructionStatusDropdownList());
+//        }
+        logger.info("Step 15: Click on confirm button");
         app.eligibilityPage.clickOnConfirmButton();
+        logger.info("Step 16: Verify the user able to view \"تقديم اعتراض\" button");
         app.eligibilityPage.closeWindowOfSurvey();
-        logger.info("Step 18: Navigate to user profile");
-        app.eligibilityPage.hoverToUserIconProfile();
-        app.eligibilityPage.clickOnMyProfileButton();
-        logger.info("Step 19: Click on request appeal");
-        Browser.executeJSScroll(-350);
-        Browser.waitForSeconds(1);
-        app.objectionPage.clickRequestAppealButton();
-        logger.info("Step 20: Select justification dropdown list");
-        app.eligibilityPage.selectFromTheLists(data.get("Justification_AR"), data.get("Justification_EN"), ObjectionPageObjects.justificationDropdownList());
-        logger.info("Step 21: Enter comments textarea");
-        app.objectionPage.enterComments(data.get("Comments"));
-        logger.info("Step 22: Click continue button");
-        app.objectionPage.clickContinueButton();
-        logger.info("Step 23: Upload files of national ID and family card");
-        if (Browser.isElementPresent(ObjectionPageObjects.deleteIconButton())) {
-            Browser.click(ObjectionPageObjects.deleteIconButton());
-            Browser.click(ObjectionPageObjects.deleteIconButton());
-        }
-        CommonUtilityPage.UploadAttachment(data.get("Upload_File"), ObjectionPageObjects.uploadIdFile());
-        CommonUtilityPage.UploadAttachment(data.get("Upload_File"), ObjectionPageObjects.uploadFamilyCardFile());
-        logger.info("Step 24: Click continue button");
-        app.objectionPage.clickContinueButton();
-        logger.info("Step 10: Verify the user navigate to \"تم تقديم الاعتراض بنجاح\" page");
-        CommonUtilityPage.verifyValueIsDisplayed("تم تقديم الاعتراض بنجاح", "You have successfully Submitted your appeal", ObjectionPageObjects.appealSuccessfullySubmittedMessage());
+        app.eligibilityPage.verifyTheEligibilityMessage(EligibilityPageObject.notEligibleMessage());
+        app.objectionPage.verifyTheAppealButtonIsDisplayed();
+//        logger.info("Step 00: Test Data : " + data.toString());
+//        app.openApplication(data);
+//        logger.info("Step 01: Navigate to Sakani housing site");
+//        //app.loginPage.alertBoxLogin();
+//        app.homePage.closeAllSakaniPopups();
+//        app.loginPage.changeLanguageForUser();
+//        logger.info("Step 02: Navigate to the login form");
+//        app.homePage.clickOnLoginButtonInHomePage();
+//        app.loginPage.userLogin(data.get("Username"), data.get("Password"));
+//        app.loginPage.enterOTPForUser(data.get("OTP"));
+//        app.loginPage.clickOnVerifyOTPButton();
+//        app.loginPage.clickOnCancelButtonOfPopup();
+//        logger.info("Step 03: Hover to the services navbar");
+//        app.eligibilityPage.hoverToServices();
+//        logger.info("Step 04: Click on check eligibility nav title");
+//        app.eligibilityPage.clickOnCheckEligibilityNavTitle();
+//        logger.info("Step 05: Click on agree on terms and conditions checkbox");
+//        app.eligibilityPage.clickOnCheckEligibilityButton();
+//        logger.info("Step 06: Click on check eligibility button");
+//        app.eligibilityPage.clickOnAgreeOnTermsAndConditionsCheckbox();
+//        logger.info("Step 07: Click on agree on terms and conditions button");
+//        app.eligibilityPage.clickOnAgreeOnTermsAndConditionsButton();
+//        logger.info("Step 08: Click on acknowledge radio buttons");
+//        app.eligibilityPage.clickOnNoRadioButton();
+//        app.eligibilityPage.clickOnYesRadioButton();
+//        logger.info("Step 09: Click on continue to confirm acknowledge button");
+//        app.eligibilityPage.clickOnContinueToConfirmAcknowledgeButton();
+//        logger.info("Step 10: Select current region dropdown list");
+//        app.eligibilityPage.selectFromTheLists(data.get("Current_Region_AR"), data.get("Current_Region_EN"), CheckEligibilityPageObjects.DDLCurrentRegion());
+//        logger.info("Step 11: Select current city dropdown list");
+//        app.eligibilityPage.selectFromTheLists(data.get("Current_City_AR"), data.get("Current_City_EN"), CheckEligibilityPageObjects.DDLCurrentCity());
+//        logger.info("Step 12: Select preferred region dropdown list");
+//        app.eligibilityPage.selectFromTheLists(data.get("Preferred_Region_AR"), data.get("Preferred_Region_EN"), CheckEligibilityPageObjects.DDLPreferredRegion());
+//        logger.info("Step 13: Select preferred city dropdown list");
+//        app.eligibilityPage.selectFromTheLists(data.get("Preferred_City_AR"), data.get("Preferred_City_EN"), CheckEligibilityPageObjects.DDLPreferredCity());
+//        logger.info("Step 14: Select preferred district dropdown list");
+//        if (Browser.isElementPresent(CheckEligibilityPageObjects.DDLPreferredDistrict())) {
+//            app.eligibilityPage.selectFromTheLists(data.get("Preferred_District_AR"), data.get("Preferred_District_EN"), CheckEligibilityPageObjects.DDLPreferredDistrict());
+//        }
+//        logger.info("Step 15: Select current housing status dropdown list");
+//        Browser.executeJSScroll(100);
+//        Browser.waitForSeconds(1);
+//        app.eligibilityPage.selectFromTheLists(data.get("Current_Housing_Status_AR"), data.get("Current_Housing_Status_EN"), CheckEligibilityPageObjects.DDLCurrentHosingStatus());
+//        logger.info("Step 16: Select deed type dropdown lists");
+//        Browser.executeJSScroll(350);
+//        Browser.waitForSeconds(1);
+//        if (Browser.isElementPresent(EligibilityPageObject.deedTypeDropdownList())) {
+//            app.eligibilityPage.selectDeedType(data.get("Deed_Type_AR"), data.get("Deed_Type_EN"), EligibilityPageObject.deedTypeDropdownList(), data.get("Construction_Status_AR"), data.get("Construction_Status_EN"),EligibilityPageObject.constructionStatusDropdownList());
+//        }
+//        logger.info("Step 17: Click on confirm button");
+//        app.eligibilityPage.clickOnConfirmButton();
+//        app.eligibilityPage.closeWindowOfSurvey();
+//        logger.info("Step 18: Navigate to user profile");
+//        app.eligibilityPage.hoverToUserIconProfile();
+//        app.eligibilityPage.clickOnMyProfileButton();
+//        logger.info("Step 19: Click on request appeal");
+//        Browser.executeJSScroll(-350);
+//        Browser.waitForSeconds(1);
+//        app.objectionPage.clickRequestAppealButton();
+//        logger.info("Step 20: Select justification dropdown list");
+//        app.eligibilityPage.selectFromTheLists(data.get("Justification_AR"), data.get("Justification_EN"), ObjectionPageObjects.justificationDropdownList());
+//        logger.info("Step 21: Enter comments textarea");
+//        app.objectionPage.enterComments(data.get("Comments"));
+//        logger.info("Step 22: Click continue button");
+//        app.objectionPage.clickContinueButton();
+//        logger.info("Step 23: Upload files of national ID and family card");
+//        if (Browser.isElementPresent(ObjectionPageObjects.deleteIconButton())) {
+//            Browser.click(ObjectionPageObjects.deleteIconButton());
+//            Browser.click(ObjectionPageObjects.deleteIconButton());
+//        }
+//        CommonUtilityPage.UploadAttachment(data.get("Upload_File"), ObjectionPageObjects.uploadIdFile());
+//        CommonUtilityPage.UploadAttachment(data.get("Upload_File"), ObjectionPageObjects.uploadFamilyCardFile());
+//        logger.info("Step 24: Click continue button");
+//        app.objectionPage.clickContinueButton();
+//        logger.info("Step 10: Verify the user navigate to \"تم تقديم الاعتراض بنجاح\" page");
+//        CommonUtilityPage.verifyValueIsDisplayed("تم تقديم الاعتراض بنجاح", "You have successfully Submitted your appeal", ObjectionPageObjects.appealSuccessfullySubmittedMessage());
 
     }
 
@@ -1721,7 +1776,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1763,7 +1818,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1791,7 +1846,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani admin site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         logger.info("Step 02: Login to the portal with admin credentials");
         app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
@@ -1819,7 +1874,7 @@ public class Objection extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -1832,6 +1887,7 @@ public class Objection extends NHCWebTest {
         app.eligibilityPage.hoverToUserIconProfile();
         app.eligibilityPage.clickOnMyProfileButton();
         logger.info("Step 04: Verify the status will change to \"طلب رفض\" ");
+        Browser.waitUntilVisibilityOfElement(ObjectionPageObjects.rejectedApprovedRequestStatus(),40);
         Browser.moveToElement(ObjectionPageObjects.rejectedApprovedRequestStatus());
         CommonUtilityPage.verifyValueIsDisplayed("اكتمل الطلب", "Request completed", ObjectionPageObjects.rejectedApprovedRequestStatus());
     }

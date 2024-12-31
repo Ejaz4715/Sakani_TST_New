@@ -42,16 +42,16 @@ public class RegisterOfInterestPageObjects {
                 put("ar", "//mat-slide-toggle[@formcontrolname='bookable']/descendant::button");
             }});
             put("RegisterYourInterestChecker_Area", new HashMap<>() {{
-                put("en", "//mat-slide-toggle[@formcontrolname='use_register_interest_flag']/descendant::input");
-                put("ar", "//mat-slide-toggle[@formcontrolname='use_register_interest_flag']/descendant::input");
+                put("en", "//mat-slide-toggle[@formcontrolname='use_register_interest_flag']/descendant::button");
+                put("ar", "//mat-slide-toggle[@formcontrolname='use_register_interest_flag']/descendant::button");
             }});
             put("RegisterYourInterestChecker_Clicker", new HashMap<>() {{
                 put("en", "//mat-slide-toggle[@formcontrolname='use_register_interest_flag']");
                 put("ar", "//mat-slide-toggle[@formcontrolname='use_register_interest_flag']");
             }});
             put("RegisterYourInterest_Toggle", new HashMap<>() {{
-                put("en", "//span[contains(text(),'تسجيل الاهتمام في المشروع')]");
-                put("ar", "//span[contains(text(),'تسجيل الاهتمام في المشروع')]");
+                put("en", "//label[contains(text(),'تسجيل الاهتمام في المشروع')]");
+                put("ar", "//label[contains(text(),'تسجيل الاهتمام في المشروع')]");
             }});
             put("saveChanges_BTN", new HashMap<>() {{
                 put("en", "//button[contains(text(),'Save')]");

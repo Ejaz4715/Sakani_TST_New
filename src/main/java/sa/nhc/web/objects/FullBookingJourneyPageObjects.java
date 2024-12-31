@@ -762,8 +762,8 @@ public class FullBookingJourneyPageObjects {
                 put("ar", "//h5[contains (text(), 'من الوحدات المتاحة')]");
             }});
             put("Unit_For_Booking", new HashMap<>() {{
-                put("en", "//span[contains (text(), 'replaceText')]/ancestor::app-project-unit-card-information//descendant::h4");
-                put("ar", "//span[contains (text(), 'replaceText')]/ancestor::app-project-unit-card-information//descendant::h4");
+                put("en", "//span[contains (text(), 'For All')]/ancestor::app-project-unit-card-information//descendant::h4");
+                put("ar", "//span[contains (text(), 'للجميع')]/ancestor::app-project-unit-card-information//descendant::h4");
             }});
             put("Unit_Details_Page_Text", new HashMap<>() {{
                 put("en", "//div[contains (text(), 'Block number')]");
@@ -959,8 +959,12 @@ public class FullBookingJourneyPageObjects {
                 put("en", "//button[contains (text(), 'Update my financial information')]");
             }});
             put("Confirm_Final_Purchasing_Power_Page_Title", new HashMap<>() {{
-                put("ar", "//h3[contains (text(), 'صمم دعمك')]");
-                put("en", "//h3[contains (text(), 'Please confirm the final purchasing power information')]");
+                put("ar", "//h3[contains (text(), 'المستشار العقاري')]");
+                put("en", "//h3[contains (text(), 'Financial Advisory')]");
+            }});
+            put("Use_Booking_Fee_Flag_On_Sakani", new HashMap<>() {{
+                put("en", "//mat-slide-toggle[@formcontrolname='use_booking_fee_flag']/descendant::button[@role='switch']");
+                put("ar", "//mat-slide-toggle[@formcontrolname='use_booking_fee_flag']/descendant::button[@role='switch']");
             }});
         }
     };
@@ -1458,6 +1462,10 @@ public class FullBookingJourneyPageObjects {
         return By.xpath(get("Description_Input"));
     }
 
+    public static By UseBookingFeeFlagOnSakani() throws Exception {
+        return By.xpath(get("Use_Booking_Fee_Flag_On_Sakani"));
+    }
+
     public static By PricingStartingAtInput() throws Exception {
         return By.xpath(get("Pricing_Starting_At_Input"));
     }
@@ -1731,8 +1739,8 @@ public class FullBookingJourneyPageObjects {
         return By.xpath(get("Available_Units_Label"));
     }
 
-    public static By UnitForBooking(String type) throws Exception {
-        return By.xpath(get("Unit_For_Booking").replaceAll("replaceText", type));
+    public static By UnitForBooking() throws Exception {
+        return By.xpath(get("Unit_For_Booking"));
     }
 
     public static By UnitDetailsPageText() throws Exception {
@@ -1918,7 +1926,9 @@ public class FullBookingJourneyPageObjects {
 
     public static By ConfirmFinalPurchasingPowerPageTitle() throws Exception {
         return By.xpath(get("Confirm_Final_Purchasing_Power_Page_Title"));
-    }public static By ErrorMessageMediaPage() throws Exception {
+    }
+
+    public static By ErrorMessageMediaPage() throws Exception {
         return By.xpath(("(//mat-error[contains (@id, 'error')])[2]"));
     }
 }

@@ -553,7 +553,7 @@ public class FullAuctionJourneyPage {
     public void clickOnSaveButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.saveBTN(), 50);
         Browser.moveToElement(FullAuctionJourneyPageObjects.saveBTN());
-        Browser.waitUntilElementToBeClickable(FullAuctionJourneyPageObjects.saveBTN(),50);
+        Browser.waitUntilElementToBeClickable(FullAuctionJourneyPageObjects.saveBTN(), 50);
         Browser.click(FullAuctionJourneyPageObjects.saveBTN());
     }
 
@@ -1011,6 +1011,7 @@ public class FullAuctionJourneyPage {
 
     public void clickOnApproveButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.ApproveButton(), 40);
+        Browser.moveToElement(FullAuctionJourneyPageObjects.ApproveButton());
         Browser.click(FullAuctionJourneyPageObjects.ApproveButton());
     }
 
@@ -1159,42 +1160,86 @@ public class FullAuctionJourneyPage {
         CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.NumberOfAssets());
         Browser.setText(FullAuctionJourneyPageObjects.NumberOfAssets(), assets);
     }
+
     public void enterTextInUnderSupervision(String text) throws Exception {
         Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.UnderSupervision(), 40);
         CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.UnderSupervision());
         Browser.setText(FullAuctionJourneyPageObjects.UnderSupervision(), text);
     }
+
     public void enterCallNumber(String text) throws Exception {
         Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.CallNumber(), 40);
         CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.CallNumber());
         Browser.setText(FullAuctionJourneyPageObjects.CallNumber(), text);
     }
+
     public void enterWhatsAppNumber(String text) throws Exception {
         Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.WhatsAppNumber(), 40);
         CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.WhatsAppNumber());
         Browser.setText(FullAuctionJourneyPageObjects.WhatsAppNumber(), text);
     }
+
     public void enterValNumber(String text) throws Exception {
         Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.ValNumber(), 40);
         CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.ValNumber());
         Browser.setText(FullAuctionJourneyPageObjects.ValNumber(), text);
     }
-    public static void clickOnAuctionMediaTab() throws Exception {
+
+    public void clickOnAuctionMediaTab() throws Exception {
         Browser.waitUntilPresenceOfElement(FullAuctionJourneyPageObjects.AuctionMediaTab(), 500);
         Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.AuctionMediaTab(), 500);
         Browser.waitUntilElementToBeClickable(FullAuctionJourneyPageObjects.AuctionMediaTab(), 500);
         Browser.moveToElement(FullAuctionJourneyPageObjects.AuctionMediaTab());
         Browser.click(FullAuctionJourneyPageObjects.AuctionMediaTab());
-        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.saveBTN(),500);
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.saveBTN(), 500);
     }
 
     public void clickOnSignContractBanner() throws Exception {
-        while (Browser.isElementNotPresent(FullAuctionJourneyPageObjects.SignContractBanner())){
-            driver.navigate().refresh();
-            Browser.waitForSeconds(2);
+        if (!Browser.isElementPresent(FullAuctionJourneyPageObjects.ApproveButton())) {
+            while (Browser.isElementNotPresent(FullAuctionJourneyPageObjects.SignContractBanner())) {
+                driver.navigate().refresh();
+                Browser.waitForSeconds(2);
+            }
+            Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.SignContractBanner(), 40);
+            Browser.moveToElement(FullAuctionJourneyPageObjects.SignContractBanner());
+            Browser.click(FullAuctionJourneyPageObjects.SignContractBanner());
         }
-        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.SignContractBanner(), 40);
-        Browser.moveToElement(FullAuctionJourneyPageObjects.SignContractBanner());
-        Browser.click(FullAuctionJourneyPageObjects.SignContractBanner());
+    }
+
+    public void navigateToTheWonAuction(String projName) throws Exception {
+        Browser.waitUntilPresenceOfElement(FullAuctionJourneyPageObjects.ViewAuctionButton(projName), 40);
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.ViewAuctionButton(projName), 40);
+        Browser.waitUntilElementToBeClickable(FullAuctionJourneyPageObjects.ViewAuctionButton(projName), 40);
+        Browser.moveToElement(FullAuctionJourneyPageObjects.ViewAuctionButton(projName));
+        Browser.executeJSScroll(200);
+        Browser.waitForSeconds(1);
+        Browser.click(FullAuctionJourneyPageObjects.ViewAuctionButton(projName));
+    }
+
+    public void clickOnViewInvoiceButton() {
+        Browser.waitUntilPresenceOfElement(FullAuctionJourneyPageObjects.ViewInvoiceButton(), 40);
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.ViewInvoiceButton(), 40);
+        Browser.waitUntilElementToBeClickable(FullAuctionJourneyPageObjects.ViewInvoiceButton(), 40);
+        Browser.executeJSScroll(500);
+        Browser.waitForSeconds(1);
+        Browser.click(FullAuctionJourneyPageObjects.ViewInvoiceButton());
+    }
+
+    public void clickOnViewContractButton() {
+        Browser.waitUntilPresenceOfElement(FullAuctionJourneyPageObjects.ViewContractButton(), 40);
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.ViewContractButton(), 40);
+        Browser.waitUntilElementToBeClickable(FullAuctionJourneyPageObjects.ViewContractButton(), 40);
+        Browser.executeJSScroll(500);
+        Browser.waitForSeconds(1);
+        Browser.click(FullAuctionJourneyPageObjects.ViewContractButton());
+    }
+
+    public void clickOnViewAcknowledgmentButton() {
+        Browser.waitUntilPresenceOfElement(FullAuctionJourneyPageObjects.ViewAcknowledgmentButton(), 40);
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.ViewAcknowledgmentButton(), 40);
+        Browser.waitUntilElementToBeClickable(FullAuctionJourneyPageObjects.ViewAcknowledgmentButton(), 40);
+        Browser.executeJSScroll(500);
+        Browser.waitForSeconds(1);
+        Browser.click(FullAuctionJourneyPageObjects.ViewAcknowledgmentButton());
     }
 }

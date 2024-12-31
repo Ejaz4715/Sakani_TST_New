@@ -11,8 +11,8 @@ public class BookingPageObjects {
     static Map<String, Map<String, String>> objects = new HashMap<>() {
         {
             put("Project-Title", new HashMap<>() {{
-                put("en", "//div[contains(@class,'project-name')]");
-                put("ar", "//div[contains(@class,'project-name')]");
+                put("en", "//app-marketplace-project-card-template/descendant::div[11]");
+                put("ar", "//app-marketplace-project-card-template/descendant::div[11]");
             }});
             put("Close-review", new HashMap<>() {{
                 put("en", "//button[@aria-label='Close']");

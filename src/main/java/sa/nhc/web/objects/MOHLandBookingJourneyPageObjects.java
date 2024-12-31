@@ -10,8 +10,8 @@ public class MOHLandBookingJourneyPageObjects {
     static Map<String, Map<String, String>> objects = new HashMap<>() {
         {
             put("Filter_Button", new HashMap<>() {{
-                put("en", "//div[@id=\"marketplace-filter-sort\"]/div[1]");
-                put("ar", "//div[@id=\"marketplace-filter-sort\"]/div[1]");
+                put("en", "//div[@id=\"marketplace-filter-sort\"]/div[2]");
+                put("ar", "//div[@id=\"marketplace-filter-sort\"]/div[2]");
             }});
             put("Filter_Result_Popup", new HashMap<>() {{
                 put("en", "//app-marketplace-filter");

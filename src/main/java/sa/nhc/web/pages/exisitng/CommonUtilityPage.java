@@ -419,6 +419,7 @@ public class CommonUtilityPage {
         Browser.waitUntilVisibilityOfElement(element, 60);
         Browser.waitUntilElementToBeClickable(element, 60);
         Browser.moveToElement(element);
+        Browser.waitForSeconds(1);
         Browser.click(element);
     }
 }

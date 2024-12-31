@@ -44,6 +44,7 @@ public class MOHLandBookingJourneyPage {
      */
     public void enterProjectName(String projectName) throws Exception {
         Browser.waitUntilVisibilityOfElement(MOHLandBookingJourneyPageObjects.projectInputFiled(), 40);
+        Browser.moveToElement(MOHLandBookingJourneyPageObjects.projectInputFiled());
         Browser.setText(MOHLandBookingJourneyPageObjects.projectInputFiled(), projectName);
     }
 

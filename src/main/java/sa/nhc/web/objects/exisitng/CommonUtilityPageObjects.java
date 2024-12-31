@@ -120,4 +120,8 @@ public class CommonUtilityPageObjects {
     public static By Hover() throws Exception {
         return By.xpath(get("Hover"));
     }
+
+    public static By ErrorToastMessage() {
+        return By.xpath("//div[contains (@class, 'close')]");
+    }
 }

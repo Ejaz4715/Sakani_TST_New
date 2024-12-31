@@ -1072,6 +1072,7 @@ public class FullAuctionJourneyPageObjects {
     public static By UnderSupervision() throws Exception {
         return By.xpath("//input[@formcontrolname=\"under_supervision\"]");
     }
+
     public static By CallNumber() throws Exception {
         return By.xpath("//input[@placeholder=\"رقم الاتصال\"]");
     }
@@ -1080,9 +1081,11 @@ public class FullAuctionJourneyPageObjects {
     public static By CallNumberErrorMessage() throws Exception {
         return By.xpath("//label[contains (@class, 'invalid')]");
     }
+
     public static By WhatsAppNumber() throws Exception {
         return By.xpath("//input[@placeholder=\"المراسلة واتساب\"]");
     }
+
     public static By ValNumber() throws Exception {
         return By.xpath("//input[@formcontrolname=\"val_license\"]");
     }
@@ -1093,5 +1096,30 @@ public class FullAuctionJourneyPageObjects {
 
     public static By SignContractApproveMessage() throws Exception {
         return By.xpath(get("Sign_Contract_Approve_Message"));
+    }
+
+    public static By SignContractStatus() {
+        return By.xpath("//span[contains (text(), 'لقد وقعت على العقد بنجاح')]");
+    }
+
+    public static By ViewAuctionButton(String projName) {
+        return By.xpath("//h5[text()= 'replaceText']/ancestor::app-collapse-box/descendant::span[contains (text(), ' عرض المزاد')]".replace("replaceText", projName));
+
+    }
+
+    public static By ViewInvoiceButton() {
+        return By.xpath("//div[text() ='فاتورة']/parent::div/descendant::span[contains (text(), 'عرض')]");
+    }
+
+    public static By ViewContractButton() {
+        return By.xpath("//div[text() ='العقد']/parent::div/descendant::span[contains (text(), 'عرض')]");
+    }
+
+    public static By ViewAcknowledgmentButton() {
+        return By.xpath("//div[text() ='عرض اعترافي']/parent::div/descendant::span[contains (text(), 'عرض')]");
+    }
+
+    public static By AttachmentPopupViewerCloseButton() {
+        return By.xpath("//app-modal//span");
     }
 }

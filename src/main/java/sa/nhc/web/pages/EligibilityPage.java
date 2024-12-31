@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import sa.nhc.web.objects.EligibilityPageObject;
+import sa.nhc.web.objects.MOHLandBookingJourneyPageObjects;
 import sa.nhc.web.objects.exisitng.CommonUtilityPageObjects;
 import sa.nhc.web.objects.exisitng.LoginPageObjects;
 
@@ -30,8 +31,15 @@ public class EligibilityPage {
      */
     public void clickOnMyProfileButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(EligibilityPageObject.myProfileButton(), 40);
+        Browser.moveToElement(EligibilityPageObject.myProfileButton());
         Browser.waitUntilElementToBeClickable(EligibilityPageObject.myProfileButton(), 40);
         Browser.click(EligibilityPageObject.myProfileButton());
+        while (!Browser.isElementPresent((MOHLandBookingJourneyPageObjects.myActivitiesButton()))){
+            hoverToUserIconProfile();
+            Browser.moveToElement(EligibilityPageObject.myProfileButton());
+            Browser.waitUntilElementToBeClickable(EligibilityPageObject.myProfileButton(), 40);
+            Browser.click(EligibilityPageObject.myProfileButton());
+        }
     }
 
     /**

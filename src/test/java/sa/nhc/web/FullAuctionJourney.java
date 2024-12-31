@@ -1,6 +1,7 @@
 package sa.nhc.web;
 
 import com.testcrew.web.Browser;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import sa.nhc.web.base.NHCWebTest;
 import sa.nhc.web.objects.FiltersPageObjects;
@@ -2492,7 +2493,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -2530,7 +2531,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -2570,7 +2571,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -2604,7 +2605,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -2648,12 +2649,12 @@ public class FullAuctionJourney extends NHCWebTest {
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void Full_Auction_Journey_TC_97(Map<String, String> data) throws Exception {
+    public void Full_Auction_Journey_TC_96(Map<String, String> data) throws Exception {
         //Verify user is able to Approve the sign contract
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
-        app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         app.homePage.clickOnLoginButtonInHomePage();
@@ -2685,13 +2686,118 @@ public class FullAuctionJourney extends NHCWebTest {
         CommonUtilityPage.verifyValueIsDisplayed("نجاح", "Success", FullAuctionJourneyPageObjects.SignContractApproveMessage());
     }
 
+    @Test(dataProvider = "testDataProvider")
+    public void Full_Auction_Journey_TC_97(Map<String, String> data) throws Exception {
+        //Verify auction sign contract is approved
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Navigate to Sakani user site");
+        app.homePage.closeAllSakaniPopups();
+        app.loginPage.changeLanguageForUser();
+        app.homePage.clickOnLoginButtonInHomePage();
+        logger.info("Step 02: Login to the portal with user credentials");
+        app.loginPage.userLogin(data.get("Username"), data.get("Password"));
+        app.loginPage.enterOTPForUser(data.get("OTP"));
+        app.loginPage.clickOnVerifyOTPButton();
+        app.loginPage.clickOnCancelButtonOfPopup();
+        logger.info("Step 03: Hover on the user profile name ");
+        app.eligibilityPage.hoverToUserIconProfile();
+        app.eligibilityPage.clickOnMyProfileButton();
+        logger.info("Step 04: Navigate to my activities");
+        app.mohLandBookingJourneyPage.clickOnMyActivitiesButton();
+        logger.info("Step 05: Click on Closed Auction button");
+        app.fullAuctionJourneyPage.clickOnAuctionSideMenuButton();
+        CommonUtilityPage.verifyValueIsDisplayed("لقد وقعت على العقد بنجاح", "Signed", FullAuctionJourneyPageObjects.SignContractStatus());
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void Full_Auction_Journey_TC_98(Map<String, String> data) throws Exception {
+        //Verify user is able to click on download invoice button
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Navigate to Sakani user site");
+        app.homePage.closeAllSakaniPopups();
+        app.loginPage.changeLanguageForUser();
+        app.homePage.clickOnLoginButtonInHomePage();
+        logger.info("Step 02: Login to the portal with user credentials");
+        app.loginPage.userLogin(data.get("Username"), data.get("Password"));
+        app.loginPage.enterOTPForUser(data.get("OTP"));
+        app.loginPage.clickOnVerifyOTPButton();
+        app.loginPage.clickOnCancelButtonOfPopup();
+        logger.info("Step 03: Hover on the user profile name ");
+        app.eligibilityPage.hoverToUserIconProfile();
+        app.eligibilityPage.clickOnMyProfileButton();
+        logger.info("Step 04: Navigate to my activities");
+        app.mohLandBookingJourneyPage.clickOnMyActivitiesButton();
+        logger.info("Step 05: Click on Closed Auction button");
+        app.fullAuctionJourneyPage.clickOnAuctionSideMenuButton();
+        app.fullAuctionJourneyPage.navigateToTheWonAuction(data.get("Project_Name"));
+        app.fullAuctionJourneyPage.clickOnViewInvoiceButton();
+        CommonUtilityPage.verifyElementIsDisplayed("Attachment viewer", FullAuctionJourneyPageObjects.AttachmentPopupViewerCloseButton());
+    }
+
+
+    @Test(dataProvider = "testDataProvider")
+    public void Full_Auction_Journey_TC_99(Map<String, String> data) throws Exception {
+        //Verify user is able to click on download invoice button
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Navigate to Sakani user site");
+        //app.loginPage.alertBoxLogin();
+        app.homePage.closeAllSakaniPopups();
+        app.loginPage.changeLanguageForUser();
+        app.homePage.clickOnLoginButtonInHomePage();
+        logger.info("Step 02: Login to the portal with user credentials");
+        app.loginPage.userLogin(data.get("Username"), data.get("Password"));
+        app.loginPage.enterOTPForUser(data.get("OTP"));
+        app.loginPage.clickOnVerifyOTPButton();
+        app.loginPage.clickOnCancelButtonOfPopup();
+        logger.info("Step 03: Hover on the user profile name ");
+        app.eligibilityPage.hoverToUserIconProfile();
+        app.eligibilityPage.clickOnMyProfileButton();
+        logger.info("Step 04: Navigate to my activities");
+        app.mohLandBookingJourneyPage.clickOnMyActivitiesButton();
+        logger.info("Step 05: Click on Closed Auction button");
+        app.fullAuctionJourneyPage.clickOnAuctionSideMenuButton();
+        app.fullAuctionJourneyPage.navigateToTheWonAuction(data.get("Project_Name"));
+        app.fullAuctionJourneyPage.clickOnViewContractButton();
+        CommonUtilityPage.verifyElementIsDisplayed("Attachment viewer", FullAuctionJourneyPageObjects.AttachmentPopupViewerCloseButton());
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void Full_Auction_Journey_TC_100(Map<String, String> data) throws Exception {
+        //Verify user is able to click on download invoice button
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Navigate to Sakani user site");
+        //app.loginPage.alertBoxLogin();
+        app.homePage.closeAllSakaniPopups();
+        app.loginPage.changeLanguageForUser();
+        app.homePage.clickOnLoginButtonInHomePage();
+        logger.info("Step 02: Login to the portal with user credentials");
+        app.loginPage.userLogin(data.get("Username"), data.get("Password"));
+        app.loginPage.enterOTPForUser(data.get("OTP"));
+        app.loginPage.clickOnVerifyOTPButton();
+        app.loginPage.clickOnCancelButtonOfPopup();
+        logger.info("Step 03: Hover on the user profile name ");
+        app.eligibilityPage.hoverToUserIconProfile();
+        app.eligibilityPage.clickOnMyProfileButton();
+        logger.info("Step 04: Navigate to my activities");
+        app.mohLandBookingJourneyPage.clickOnMyActivitiesButton();
+        logger.info("Step 05: Click on Closed Auction button");
+        app.fullAuctionJourneyPage.clickOnAuctionSideMenuButton();
+        app.fullAuctionJourneyPage.navigateToTheWonAuction(data.get("Project_Name"));
+        app.fullAuctionJourneyPage.clickOnViewAcknowledgmentButton();
+        CommonUtilityPage.verifyElementIsDisplayed("Attachment viewer", FullAuctionJourneyPageObjects.AttachmentPopupViewerCloseButton());
+    }
+
     /**
      * Admin checks Auction Status
      * TC_100 - TC_108
      */
 
     @Test(dataProvider = "testDataProvider")
-    public void Full_Auction_Journey_TC_100(Map<String, String> data) throws Exception {
+    public void Full_Auction_Journey_TC_1001(Map<String, String> data) throws Exception {
         //Verify auction status dropdown is accessible and selectable by the admin
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);

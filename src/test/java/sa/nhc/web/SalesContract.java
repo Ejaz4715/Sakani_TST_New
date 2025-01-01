@@ -161,9 +161,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partners & Login");
-        // //app.loginPage.alertBoxLogin();
-        // app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -177,13 +174,9 @@ public class SalesContract extends NHCWebTest {
         data.putAll(TestDataManager.readDependantGlobalTestData("SalesContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         logger.info("Step 01: Navigate to Sakani Partners & Login");
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
-        //app.salesContractPage.closePopUp();
         logger.info("Step 02: Click on Projects in side menu");
         app.salesContractPage.clickOnProjectsMenuOption();
         logger.info("Step 03: Click on Search By dropdown ");
@@ -205,9 +198,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -223,9 +213,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -252,9 +239,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -282,9 +266,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -313,9 +294,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -344,9 +322,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -377,9 +352,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -412,9 +384,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -449,9 +418,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -480,9 +446,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -512,9 +475,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -801,7 +761,7 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
-        //app.loginPage.alertBoxLogin();
+        //app.loginPage.alertBoxLogin();F
         app.homePage.closeAllSakaniPopups();
         app.loginPage.changeLanguageForUser();
         logger.info("Step 02: Navigate to the login form");
@@ -872,7 +832,6 @@ public class SalesContract extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnCancelButtonOnPopup();
         logger.info("Step 07: Verify the booking fee status is Paid");
         CommonUtilityPage.verifyElementIsDisplayed("Financing options", SalesContractPageObject.FinancingOptionsHeading());
-//        app.fullBookingJourneyPage.verifyBookingFeeStatus("مسددة", "Paid");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -924,9 +883,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partners & Login");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -940,9 +896,6 @@ public class SalesContract extends NHCWebTest {
         data.putAll(TestDataManager.readDependantGlobalTestData("SalesContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         logger.info("Step 01: Navigate to Sakani Partners & Login");
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
@@ -968,9 +921,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -997,9 +947,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -1028,9 +975,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -1066,9 +1010,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -1109,9 +1050,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -1140,9 +1078,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -1171,9 +1106,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -1204,9 +1136,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -1239,9 +1168,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -1276,9 +1202,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -1315,9 +1238,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -1348,9 +1268,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -1390,9 +1307,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -1433,9 +1347,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -1476,9 +1387,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -1518,9 +1426,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -1564,9 +1469,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -1607,9 +1509,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -1655,9 +1554,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -1701,9 +1597,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -1749,9 +1642,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -1799,9 +1689,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -1849,9 +1736,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -1899,9 +1783,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -1957,9 +1838,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -1994,9 +1872,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -2031,9 +1906,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -2343,9 +2215,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();
@@ -2390,9 +2259,6 @@ public class SalesContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani Partner site");
-        //app.loginPage.alertBoxLogin();
-        //app.salesContractPage.changeUILanguagePartners();
-        // app.loginPage.clickOnLoginRegisterButtonInPartner();
         app.loginPage.loginToSakaniPartners(data.get("Username"), data.get("Password"));
         app.loginPage.inputOTPSakaniPartner(data.get("OTP"));
         //app.salesContractPage.closePopUp();

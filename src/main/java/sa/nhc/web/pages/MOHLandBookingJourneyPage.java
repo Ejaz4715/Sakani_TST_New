@@ -104,8 +104,8 @@ public class MOHLandBookingJourneyPage {
 //        boolean presence = false;
 //        while (!presence) {
         Browser.waitForSeconds(2);
-        Browser.doubleClick(BookingPageObjects.projectTitle());
-            Browser.waitForSeconds(5);
+        Browser.click(BookingPageObjects.projectTitle());
+            Browser.waitForSeconds(2);
 //            if (Browser.isElementPresent(MOHLandBookingJourneyPageObjects.startBookingButton()) || Browser.isElementPresent(FullBookingJourneyPageObjects.UnitsListButton())) {
 //                presence = true;
 //            }

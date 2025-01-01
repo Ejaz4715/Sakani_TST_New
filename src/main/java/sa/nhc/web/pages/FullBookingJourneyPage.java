@@ -1681,7 +1681,8 @@ public class FullBookingJourneyPage {
      * Method to click on 'Units list' button in Booking page (Sakani housing)
      */
     public void clickOnUnitsListButton() throws Exception {
-        Browser.waitUntilInvisibilityOfElement(PriceQuotationPageObjects.ApartmentDivLoader(), 50);
+//        Browser.waitUntilInvisibilityOfElement(PriceQuotationPageObjects.ApartmentDivLoader(), 50);
+        CommonUtilityPage.verifyNewTabIsOpenedAndSwitch();
         Browser.waitUntilPresenceOfElement(FullBookingJourneyPageObjects.UnitsListButton(), 40);
         Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.UnitsListButton(), 40);
         CommonUtilityPage.moveToObject(FullBookingJourneyPageObjects.UnitsListButton());
@@ -1923,10 +1924,18 @@ public class FullBookingJourneyPage {
      * Method to click on 'Continue' button after selecting unit for booking(Sakani housing)
      */
     public void clickOnContinueButton() throws Exception {
-        Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.ContinueButton(), 40);
-        CommonUtilityPage.moveToObject(FullBookingJourneyPageObjects.ContinueButton());
-        Browser.click(FullBookingJourneyPageObjects.ContinueButton());
-        Browser.waitUntilInvisibilityOfElement(FullBookingJourneyPageObjects.LoadingIconForHousing(), 40);
+        if (Browser.isElementPresent(FullBookingJourneyPageObjects.ContinueButton())){
+            Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.ContinueButton(), 40);
+            CommonUtilityPage.moveToObject(FullBookingJourneyPageObjects.ContinueButton());
+            Browser.click(FullBookingJourneyPageObjects.ContinueButton());
+            Browser.waitUntilInvisibilityOfElement(FullBookingJourneyPageObjects.LoadingIconForHousing(), 40);
+        }
+        else if (Browser.isElementPresent(By.xpath("//button[contains (text(), 'تأكيد')]"))){
+            Browser.waitUntilVisibilityOfElement(By.xpath("//button[contains (text(), 'تأكيد')]"), 40);
+            CommonUtilityPage.moveToObject(By.xpath("//button[contains (text(), 'تأكيد')]"));
+            Browser.click(By.xpath("//button[contains (text(), 'تأكيد')]"));
+            Browser.waitUntilInvisibilityOfElement(FullBookingJourneyPageObjects.LoadingIconForHousing(), 40);
+        }
     }
 
     /**
@@ -2023,10 +2032,12 @@ public class FullBookingJourneyPage {
      * Method to click 'Cancel' button on the pop-up (Sakani housing)
      */
     public void clickOnCancelButtonOnPopup() throws Exception {
-        Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.CancelButtonOnPopup(), 40);
-        CommonUtilityPage.moveToObject(FullBookingJourneyPageObjects.CancelButtonOnPopup());
-        Browser.waitUntilElementToBeClickable(FullBookingJourneyPageObjects.CancelButtonOnPopup(), 50);
-        Browser.click(FullBookingJourneyPageObjects.CancelButtonOnPopup());
+        if (Browser.isElementPresent(FullBookingJourneyPageObjects.CancelButtonOnPopup())){
+            Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.CancelButtonOnPopup(), 40);
+            CommonUtilityPage.moveToObject(FullBookingJourneyPageObjects.CancelButtonOnPopup());
+            Browser.waitUntilElementToBeClickable(FullBookingJourneyPageObjects.CancelButtonOnPopup(), 50);
+            Browser.click(FullBookingJourneyPageObjects.CancelButtonOnPopup());
+        }
     }
 
     /**

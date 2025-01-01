@@ -69,6 +69,7 @@ public class SalesContractPage {
         Browser.waitUntilInvisibilityOfElement(SalesContractPageObject.LoadingIconPartners(), 60);
         Browser.waitUntilVisibilityOfElement(SalesContractPageObject.ProjectsMenuOption(), 40);
         Browser.moveToElement(SalesContractPageObject.ProjectsMenuOption());
+        Browser.waitForSeconds(1);
         Browser.click(SalesContractPageObject.ProjectsMenuOption());
     }
 

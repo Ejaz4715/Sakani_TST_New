@@ -2832,7 +2832,7 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 04: Click on Auction Status dropdown");
         app.fullAuctionJourneyPage.clickOnAuctionStatusDropdown();
         logger.info("Step 05: Select auction status");
-        CommonUtilityPage.selectFromList("المزاد مفتوح", "Open", FullAuctionJourneyPageObjects.AuctionStatusDropdownList());
+        CommonUtilityPage.selectFromList("مفتوحة", "Open", FullAuctionJourneyPageObjects.AuctionStatusDropdownList());
         app.fullAuctionJourneyPage.verifySearchButtonIsClickable();
     }
 
@@ -2877,10 +2877,10 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 04: Click on Auction Status dropdown");
         app.fullAuctionJourneyPage.clickOnAuctionStatusDropdown();
         logger.info("Step 05: Select auction status");
-        CommonUtilityPage.selectFromList("المزاد مفتوح", "Open", FullAuctionJourneyPageObjects.AuctionStatusDropdownList());
+        CommonUtilityPage.selectFromList("مفتوحة", "Open", FullAuctionJourneyPageObjects.AuctionStatusDropdownList());
         logger.info("Step 06: Click Search button");
         app.fullAuctionJourneyPage.clickOnSearchButtonOnAuctionPage();
-        CommonUtilityPage.verifyValueIsDisplayed("المزاد مفتوح", "Open", FullAuctionJourneyPageObjects.AuctionStatus());
+        CommonUtilityPage.verifyValueIsDisplayed("مفتوحة", "Open", FullAuctionJourneyPageObjects.AuctionStatus());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -2923,10 +2923,10 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 04: Click on Auction Status dropdown");
         app.fullAuctionJourneyPage.clickOnAuctionStatusDropdown();
         logger.info("Step 05: Select auction status");
-        CommonUtilityPage.selectFromList("منتهية", "Expired", FullAuctionJourneyPageObjects.AuctionStatusDropdownList());
+        CommonUtilityPage.selectFromList("انتهاء صلاحية الإعلان", "Expired", FullAuctionJourneyPageObjects.AuctionStatusDropdownList());
         logger.info("Step 06: Click Search button");
         app.fullAuctionJourneyPage.clickOnSearchButtonOnAuctionPage();
-        CommonUtilityPage.verifyValueIsDisplayed("منتهية", "Expired", FullAuctionJourneyPageObjects.AuctionStatus());
+        CommonUtilityPage.verifyValueIsDisplayed("انتهاء صلاحية الإعلان", "Expired", FullAuctionJourneyPageObjects.AuctionStatus());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -2946,10 +2946,10 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 04: Click on Auction Status dropdown");
         app.fullAuctionJourneyPage.clickOnAuctionStatusDropdown();
         logger.info("Step 05: Select auction status");
-        CommonUtilityPage.selectFromList("مغلق", "Closed", FullAuctionJourneyPageObjects.AuctionStatusDropdownList());
+        CommonUtilityPage.selectFromList("مغلقة", "Closed", FullAuctionJourneyPageObjects.AuctionStatusDropdownList());
         logger.info("Step 06: Click Search button");
         app.fullAuctionJourneyPage.clickOnSearchButtonOnAuctionPage();
-        CommonUtilityPage.verifyValueIsDisplayed("مغلق", "Closed", FullAuctionJourneyPageObjects.AuctionStatus());
+        CommonUtilityPage.verifyValueIsDisplayed("مغلقة", "Closed", FullAuctionJourneyPageObjects.AuctionStatus());
     }
 
     @Test(dataProvider = "testDataProvider")

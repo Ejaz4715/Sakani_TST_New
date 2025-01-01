@@ -676,7 +676,6 @@ public class SalesContract extends NHCWebTest {
         app.loginPage.clickOnCancelButtonOfPopup();
         logger.info("Step 03: Navigate to user dashboard");
         Browser.moveToElement(CommonUtilityPageObjects.ErrorToastMessage());
-        Browser.click(CommonUtilityPageObjects.ErrorToastMessage());
         app.eligibilityPage.hoverToUserIconProfile();
         app.eligibilityPage.clickOnMyProfileButton();
         logger.info("Step 04: Check user Financial Recommendation");
@@ -699,7 +698,6 @@ public class SalesContract extends NHCWebTest {
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
         logger.info("Step 03: Navigate to user dashboard");
-        Browser.click(CommonUtilityPageObjects.ErrorToastMessage());
         app.eligibilityPage.hoverToUserIconProfile();
         app.eligibilityPage.clickOnMyProfileButton();
         logger.info("Step 04: Navigate to Update Financial Recommendation");
@@ -723,7 +721,6 @@ public class SalesContract extends NHCWebTest {
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
         logger.info("Step 03: Navigate to user dashboard");
-        Browser.click(CommonUtilityPageObjects.ErrorToastMessage());
         app.eligibilityPage.hoverToUserIconProfile();
         app.eligibilityPage.clickOnMyProfileButton();
         logger.info("Step 04: Navigate to Update Financial Recommendation");
@@ -820,7 +817,6 @@ public class SalesContract extends NHCWebTest {
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
         logger.info("Step 03: Hover on the user profile name ");
-        Browser.click(CommonUtilityPageObjects.ErrorToastMessage());
         app.eligibilityPage.hoverToUserIconProfile();
         app.eligibilityPage.clickOnMyProfileButton();
         logger.info("Step 04: Navigate to my activities");
@@ -850,7 +846,6 @@ public class SalesContract extends NHCWebTest {
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
         logger.info("Step 03: Hover on the user profile name ");
-        Browser.click(CommonUtilityPageObjects.ErrorToastMessage());
         app.eligibilityPage.hoverToUserIconProfile();
         app.eligibilityPage.clickOnMyProfileButton();
         logger.info("Step 04: Navigate to my activities");
@@ -1955,7 +1950,7 @@ public class SalesContract extends NHCWebTest {
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
         logger.info("Step 03: Hover on the user profile name ");
-        Browser.click(CommonUtilityPageObjects.ErrorToastMessage());
+        
         app.eligibilityPage.hoverToUserIconProfile();
         app.eligibilityPage.clickOnMyProfileButton();
         logger.info("Step 04: Navigate to my activities");
@@ -1984,7 +1979,6 @@ public class SalesContract extends NHCWebTest {
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
         logger.info("Step 03: Hover on the user profile name ");
-        Browser.click(CommonUtilityPageObjects.ErrorToastMessage());
         app.eligibilityPage.hoverToUserIconProfile();
         app.eligibilityPage.clickOnMyProfileButton();
         logger.info("Step 04: Navigate to my activities");
@@ -2014,7 +2008,6 @@ public class SalesContract extends NHCWebTest {
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
         logger.info("Step 03: Hover on the user profile name ");
-        Browser.click(CommonUtilityPageObjects.ErrorToastMessage());
         app.eligibilityPage.hoverToUserIconProfile();
         app.eligibilityPage.clickOnMyProfileButton();
         logger.info("Step 04: Navigate to my activities");
@@ -2046,7 +2039,6 @@ public class SalesContract extends NHCWebTest {
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
         logger.info("Step 03: Hover on the user profile name ");
-        Browser.click(CommonUtilityPageObjects.ErrorToastMessage());
         app.eligibilityPage.hoverToUserIconProfile();
         app.eligibilityPage.clickOnMyProfileButton();
         logger.info("Step 04: Navigate to my activities");
@@ -2080,7 +2072,6 @@ public class SalesContract extends NHCWebTest {
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
         logger.info("Step 03: Hover on the user profile name ");
-        Browser.click(CommonUtilityPageObjects.ErrorToastMessage());
         app.eligibilityPage.hoverToUserIconProfile();
         app.eligibilityPage.clickOnMyProfileButton();
         logger.info("Step 04: Navigate to my activities");
@@ -2114,7 +2105,6 @@ public class SalesContract extends NHCWebTest {
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
         logger.info("Step 03: Hover on the user profile name ");
-        Browser.click(CommonUtilityPageObjects.ErrorToastMessage());
         app.eligibilityPage.hoverToUserIconProfile();
         app.eligibilityPage.clickOnMyProfileButton();
         logger.info("Step 04: Navigate to my activities");
@@ -2150,7 +2140,6 @@ public class SalesContract extends NHCWebTest {
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
         logger.info("Step 03: Hover on the user profile name ");
-        Browser.click(CommonUtilityPageObjects.ErrorToastMessage());
         app.eligibilityPage.hoverToUserIconProfile();
         app.eligibilityPage.clickOnMyProfileButton();
         logger.info("Step 04: Navigate to my activities");
@@ -2186,7 +2175,6 @@ public class SalesContract extends NHCWebTest {
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
         logger.info("Step 03: Hover on the user profile name ");
-        Browser.click(CommonUtilityPageObjects.ErrorToastMessage());
         app.eligibilityPage.hoverToUserIconProfile();
         app.eligibilityPage.clickOnMyProfileButton();
         logger.info("Step 04: Navigate to my activities");
@@ -2318,7 +2306,6 @@ public class SalesContract extends NHCWebTest {
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
         logger.info("Step 03: Hover on the user profile name ");
-        Browser.click(CommonUtilityPageObjects.ErrorToastMessage());
         app.eligibilityPage.hoverToUserIconProfile();
         app.eligibilityPage.clickOnMyProfileButton();
         logger.info("Step 04: Navigate to my activities");
@@ -2350,7 +2337,6 @@ public class SalesContract extends NHCWebTest {
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
         logger.info("Step 03: Hover on the user profile name ");
-        Browser.click(CommonUtilityPageObjects.ErrorToastMessage());
         app.eligibilityPage.hoverToUserIconProfile();
         app.eligibilityPage.clickOnMyProfileButton();
         logger.info("Step 04: Navigate to my activities");
@@ -2383,7 +2369,6 @@ public class SalesContract extends NHCWebTest {
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
         logger.info("Step 03: Hover on the user profile name ");
-        Browser.click(CommonUtilityPageObjects.ErrorToastMessage());
         app.eligibilityPage.hoverToUserIconProfile();
         app.eligibilityPage.clickOnMyProfileButton();
         logger.info("Step 04: Navigate to my activities");
@@ -2419,7 +2404,6 @@ public class SalesContract extends NHCWebTest {
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
         logger.info("Step 03: Hover on the user profile name ");
-        Browser.click(CommonUtilityPageObjects.ErrorToastMessage());
         app.eligibilityPage.hoverToUserIconProfile();
         app.eligibilityPage.clickOnMyProfileButton();
         logger.info("Step 04: Navigate to my activities");

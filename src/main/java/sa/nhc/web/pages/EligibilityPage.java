@@ -7,6 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import sa.nhc.web.objects.EligibilityPageObject;
 import sa.nhc.web.objects.MOHLandBookingJourneyPageObjects;
+import sa.nhc.web.objects.exisitng.BookingPageObjects;
 import sa.nhc.web.objects.exisitng.CommonUtilityPageObjects;
 import sa.nhc.web.objects.exisitng.LoginPageObjects;
 
@@ -21,6 +22,10 @@ public class EligibilityPage {
      * Hover on the profile icon
      */
     public void hoverToUserIconProfile() throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonUtilityPageObjects.ErrorToastMessage(), 40);
+        Browser.moveToElement(CommonUtilityPageObjects.ErrorToastMessage());
+        Browser.click(CommonUtilityPageObjects.ErrorToastMessage());
+        Browser.waitUntilInvisibilityOfElement(By.xpath("//span[contains (@class, 'loader')]"), 40);
         Browser.waitUntilVisibilityOfElement(EligibilityPageObject.iconProfile(), 40);
         logger.addScreenshot("");
         Browser.moveToElement(EligibilityPageObject.iconProfile());
@@ -30,16 +35,12 @@ public class EligibilityPage {
      * Click on my profile text button
      */
     public void clickOnMyProfileButton() throws Exception {
+        Browser.waitUntilInvisibilityOfElement(By.xpath("//span[contains (@class, 'loader')]"), 40);
+        Browser.waitUntilPresenceOfElement(EligibilityPageObject.myProfileButton(), 40);
         Browser.waitUntilVisibilityOfElement(EligibilityPageObject.myProfileButton(), 40);
         Browser.moveToElement(EligibilityPageObject.myProfileButton());
         Browser.waitUntilElementToBeClickable(EligibilityPageObject.myProfileButton(), 40);
         Browser.click(EligibilityPageObject.myProfileButton());
-        while (!Browser.isElementPresent((MOHLandBookingJourneyPageObjects.myActivitiesButton()))){
-            hoverToUserIconProfile();
-            Browser.moveToElement(EligibilityPageObject.myProfileButton());
-            Browser.waitUntilElementToBeClickable(EligibilityPageObject.myProfileButton(), 40);
-            Browser.click(EligibilityPageObject.myProfileButton());
-        }
     }
 
     /**

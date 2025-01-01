@@ -2791,13 +2791,49 @@ public class FullAuctionJourney extends NHCWebTest {
         CommonUtilityPage.verifyElementIsDisplayed("Attachment viewer", FullAuctionJourneyPageObjects.AttachmentPopupViewerCloseButton());
     }
 
+
+    @Test(dataProvider = "testDataProvider")
+    public void Full_Auction_Journey_TC_101(Map<String, String> data) throws Exception {
+        //Verify user is not able to Join expired/closed auctions
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Navigate to Sakani user site");
+        //app.loginPage.alertBoxLogin();
+        app.homePage.closeAllSakaniPopups();
+        app.loginPage.changeLanguageForUser();
+        app.homePage.clickOnLoginButtonInHomePage();
+        logger.info("Step 02: Login to the portal with user credentials");
+        app.loginPage.userLogin(data.get("Username"), data.get("Password"));
+        app.loginPage.enterOTPForUser(data.get("OTP"));
+        app.loginPage.clickOnVerifyOTPButton();
+        app.loginPage.clickOnCancelButtonOfPopup();
+        logger.info("Step 03: Search for project from auction filter");
+        app.fullAuctionJourneyPage.clickOnAuctionTab();
+        app.mohLandBookingJourneyPage.clickOnFilterButton();
+        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
+        logger.info("Step 04: Enter in Project search field");
+        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
+        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
+        logger.info("Step 05: Click on view button");
+        CommonUtilityPage.clickOnViewButtonFromFilter();
+        logger.info("Step 06: Verify the search result is displayed");
+        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
+        logger.info("Step 07: Navigate to searched Auction project page");
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 08: Select from Available unit");
+        app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
+        logger.info("Step 09: Verify 'Join this auction' button is not displayed");
+        app.fullAuctionJourneyPage.verifyJoinThisAuctionButtonIsNotDisplayed();
+        app.fullAuctionJourneyPage.verifyApplyForThisAuctionButtonIsNotDisplayed();
+    }
+
     /**
      * Admin checks Auction Status
      * TC_100 - TC_108
      */
 
     @Test(dataProvider = "testDataProvider")
-    public void Full_Auction_Journey_TC_1001(Map<String, String> data) throws Exception {
+    public void Full_Auction_Journey_TC_102(Map<String, String> data) throws Exception {
         //Verify auction status dropdown is accessible and selectable by the admin
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
@@ -2816,7 +2852,7 @@ public class FullAuctionJourney extends NHCWebTest {
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void Full_Auction_Journey_TC_101(Map<String, String> data) throws Exception {
+    public void Full_Auction_Journey_TC_103(Map<String, String> data) throws Exception {
         //Verify Search button is clickable when auction status is selected.
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
@@ -2838,7 +2874,7 @@ public class FullAuctionJourney extends NHCWebTest {
 
 
     @Test(dataProvider = "testDataProvider")
-    public void Full_Auction_Journey_TC_102(Map<String, String> data) throws Exception {
+    public void Full_Auction_Journey_TC_104(Map<String, String> data) throws Exception {
         //Verify new Auction status is 'Not started'
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
@@ -2861,7 +2897,7 @@ public class FullAuctionJourney extends NHCWebTest {
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void Full_Auction_Journey_TC_103(Map<String, String> data) throws Exception {
+    public void Full_Auction_Journey_TC_105(Map<String, String> data) throws Exception {
         //Verify new Auction status is  'Open'
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
@@ -2884,7 +2920,7 @@ public class FullAuctionJourney extends NHCWebTest {
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void Full_Auction_Journey_TC_104(Map<String, String> data) throws Exception {
+    public void Full_Auction_Journey_TC_106(Map<String, String> data) throws Exception {
         //Verify new Auction status is  'Sold'
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
@@ -2907,7 +2943,7 @@ public class FullAuctionJourney extends NHCWebTest {
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void Full_Auction_Journey_TC_105(Map<String, String> data) throws Exception {
+    public void Full_Auction_Journey_TC_107(Map<String, String> data) throws Exception {
         //Verify new Auction status is  'Expired'
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
@@ -2930,7 +2966,7 @@ public class FullAuctionJourney extends NHCWebTest {
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void Full_Auction_Journey_TC_106(Map<String, String> data) throws Exception {
+    public void Full_Auction_Journey_TC_108(Map<String, String> data) throws Exception {
         //Verify new Auction status is  'Closed'
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
@@ -2953,7 +2989,7 @@ public class FullAuctionJourney extends NHCWebTest {
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void Full_Auction_Journey_TC_107(Map<String, String> data) throws Exception {
+    public void Full_Auction_Journey_TC_109(Map<String, String> data) throws Exception {
         //Verify new Auction status is  'Waiting for contract'
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
@@ -2976,7 +3012,7 @@ public class FullAuctionJourney extends NHCWebTest {
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void Full_Auction_Journey_TC_108(Map<String, String> data) throws Exception {
+    public void Full_Auction_Journey_TC_110(Map<String, String> data) throws Exception {
         //Verify new Auction status is  'Waiting for Payment'
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);

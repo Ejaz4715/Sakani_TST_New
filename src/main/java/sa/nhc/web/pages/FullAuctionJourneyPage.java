@@ -279,6 +279,31 @@ public class FullAuctionJourneyPage {
         logger.addScreenshot("Error Message : " + ErrorMsg);
     }
 
+    public void validateErrorMessageIfEndDateIsLessThanStartDate(int year, int yearEnd, int dayStart) throws Exception {
+        String yearStart = String.valueOf(Integer.parseInt(CommonUtilityPage.getHijriDate().split("/")[2]) + year);
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.startAuctionDateIcon(), 40);
+        Browser.moveToElement(FullAuctionJourneyPageObjects.startAuctionDateIcon());
+        Browser.click(FullAuctionJourneyPageObjects.startAuctionDateIcon());
+        Browser.selectDropdownByVisibleText(FullAuctionJourneyPageObjects.getYearList(), yearStart);
+        Browser.selectDropdownByVisibleText(FullAuctionJourneyPageObjects.getMonthList(), CommonUtilityPage.getHijriDate().split("/")[1]);
+        List<WebElement> listDays = driver.findElements(FullAuctionJourneyPageObjects.getDayList());
+        String day = CommonUtilityPage.getHijriDate(10).split("/")[0].replaceFirst("^0*", "");
+        for (WebElement y : listDays) {
+            String getDay = y.getText();
+            if (getDay.equalsIgnoreCase(day)) {
+                y.click();
+                Browser.click(FullAuctionJourneyPageObjects.inputStartAuctionHours());
+                break;
+            }
+        }
+        logger.addScreenshot("Auction start date is selected");
+
+        selectAuctionEndDateFromCalendar(yearEnd);
+        String ErrorMsg = Browser.getText(FullAuctionJourneyPageObjects.valueErrorMsg());
+        assertTrue(ErrorMsg.contains("يجب أن يكون تاريخ الانتهاء أكبر من تاريخ البدء")
+                || ErrorMsg.contains("End date must be greater than start date"));
+        logger.addScreenshot("Error Message : " + ErrorMsg);
+    }
     public void clickToEnabledApplyGeneralSettingLabel() throws Exception {
         Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.applyGeneralSettingLabel(), 40);
         CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.applyGeneralSettingLabel());
@@ -769,6 +794,12 @@ public class FullAuctionJourneyPage {
         }
     }
 
+    public void verifyApplyForThisAuctionButtonIsNotDisplayed() throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.ApplyForThisAuctionButton(), 40);
+        CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.ApplyForThisAuctionButton());
+        Assert.assertFalse(Browser.isElementPresent(FullAuctionJourneyPageObjects.ApplyForThisAuctionButton()), "Apply for this auction button is displayed");
+    }
+
     public void clickOnMadaPayment() throws Exception {
         Browser.waitUntilInvisibilityOfElement(FullBookingJourneyPageObjects.LoadingIconForHousing(), 100);
         Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.MadaPaymentOption(), 50);
@@ -855,6 +886,11 @@ public class FullAuctionJourneyPage {
         CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.JoinThisAuctionButton());
         logger.addScreenshot("");
         Assert.assertTrue(Browser.isElementEnabled(FullAuctionJourneyPageObjects.JoinThisAuctionButton()), "Join this Auction button is disabled");
+    }
+
+    public void verifyJoinThisAuctionButtonIsNotDisplayed() throws Exception {
+        logger.addScreenshot("");
+        Assert.assertFalse(Browser.isElementPresent(FullAuctionJourneyPageObjects.JoinThisAuctionButton()), "Join this Auction button is displayed");
     }
 
     public void clickOnJoinThisAuctionButton() throws Exception {

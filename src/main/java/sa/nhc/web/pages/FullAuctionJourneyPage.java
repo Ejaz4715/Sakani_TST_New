@@ -794,6 +794,12 @@ public class FullAuctionJourneyPage {
         }
     }
 
+    public void verifyApplyForThisAuctionButtonIsNotDisplayed() throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.ApplyForThisAuctionButton(), 40);
+        CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.ApplyForThisAuctionButton());
+        Assert.assertFalse(Browser.isElementPresent(FullAuctionJourneyPageObjects.ApplyForThisAuctionButton()), "Apply for this auction button is displayed");
+    }
+
     public void clickOnMadaPayment() throws Exception {
         Browser.waitUntilInvisibilityOfElement(FullBookingJourneyPageObjects.LoadingIconForHousing(), 100);
         Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.MadaPaymentOption(), 50);
@@ -880,6 +886,11 @@ public class FullAuctionJourneyPage {
         CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.JoinThisAuctionButton());
         logger.addScreenshot("");
         Assert.assertTrue(Browser.isElementEnabled(FullAuctionJourneyPageObjects.JoinThisAuctionButton()), "Join this Auction button is disabled");
+    }
+
+    public void verifyJoinThisAuctionButtonIsNotDisplayed() throws Exception {
+        logger.addScreenshot("");
+        Assert.assertFalse(Browser.isElementPresent(FullAuctionJourneyPageObjects.JoinThisAuctionButton()), "Join this Auction button is displayed");
     }
 
     public void clickOnJoinThisAuctionButton() throws Exception {

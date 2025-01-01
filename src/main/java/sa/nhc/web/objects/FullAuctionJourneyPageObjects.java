@@ -1122,4 +1122,10 @@ public class FullAuctionJourneyPageObjects {
     public static By AttachmentPopupViewerCloseButton() {
         return By.xpath("//app-modal//span");
     }
+    public static By MediaModel() throws Exception {
+        return By.xpath("//span[contains(text(),'المحتوى المرئي')]");
+    }
+    public static By City() throws Exception {
+        return By.xpath(("//input[@class=\"mat-mdc-autocomplete-trigger form-control ng-valid ng-touched ng-dirty\"]"));
+    }
 }

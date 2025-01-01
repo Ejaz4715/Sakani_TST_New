@@ -1027,7 +1027,8 @@ public class FullBookingJourneyPage {
      */
     public void clickOnUnitsTab() throws Exception {
         Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.UnitsTabLabel(), 40);
-        CommonUtilityPage.moveToObject(FullBookingJourneyPageObjects.UnitsTabLabel());
+        Browser.moveToElement(FullBookingJourneyPageObjects.UnitsTabLabel());
+        Browser.waitUntilElementToBeClickable(FullBookingJourneyPageObjects.UnitsTabLabel(), 50);
         Browser.click(FullBookingJourneyPageObjects.UnitsTabLabel());
     }
 
@@ -1036,7 +1037,8 @@ public class FullBookingJourneyPage {
      */
     public void clickOnNewImportUnitButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.NewImportUnitButton(), 40);
-        CommonUtilityPage.moveToObject(FullBookingJourneyPageObjects.NewImportUnitButton());
+        Browser.moveToElement(FullBookingJourneyPageObjects.NewImportUnitButton());
+        Browser.waitUntilElementToBeClickable(FullBookingJourneyPageObjects.NewImportUnitButton(), 50);
         Browser.click(FullBookingJourneyPageObjects.NewImportUnitButton());
     }
 
@@ -1045,7 +1047,8 @@ public class FullBookingJourneyPage {
      */
     public void clickOnUnitTypeDropdown() throws Exception {
         Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.UnitTypeDropdown(), 40);
-        CommonUtilityPage.moveToObject(FullBookingJourneyPageObjects.UnitTypeDropdown());
+        Browser.moveToElement(FullBookingJourneyPageObjects.UnitTypeDropdown());
+        Browser.waitUntilElementToBeClickable(FullBookingJourneyPageObjects.UnitTypeDropdown(), 50);
         Browser.click(FullBookingJourneyPageObjects.UnitTypeDropdown());
     }
 
@@ -1075,7 +1078,8 @@ public class FullBookingJourneyPage {
      */
     public void clickOnSaveButtonOnMediaPage() throws Exception {
         Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.SaveButtonOnMediaPage(), 40);
-        CommonUtilityPage.moveToObject(FullBookingJourneyPageObjects.SaveButtonOnMediaPage());
+        Browser.moveToElement(FullBookingJourneyPageObjects.SaveButtonOnMediaPage());
+        Browser.waitUntilElementToBeClickable(FullBookingJourneyPageObjects.SaveButtonOnMediaPage(), 50);
         Browser.click(FullBookingJourneyPageObjects.SaveButtonOnMediaPage());
     }
 
@@ -1228,6 +1232,10 @@ public class FullBookingJourneyPage {
         Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.DescriptionInput(), 40);
         CommonUtilityPage.moveToObject(FullBookingJourneyPageObjects.DescriptionInput());
         Browser.setText(FullBookingJourneyPageObjects.DescriptionInput(), description);
+    }  public void enterDescriptions(String description) throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.DescriptionsInput(), 40);
+        CommonUtilityPage.moveToObject(FullBookingJourneyPageObjects.DescriptionsInput());
+        Browser.setText(FullBookingJourneyPageObjects.DescriptionsInput(), description);
     }
 
     /**
@@ -1357,14 +1365,45 @@ public class FullBookingJourneyPage {
         Browser.click(FullBookingJourneyPageObjects.ApproveMediaButton());
     }
 
-    public void verifyMediaIsApproved() throws Exception {
+    public void verifyMediaIsApprovedAuction() throws Exception {
         Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.AuctionMediaTab(), 40);
         String status = Browser.getText(FullAuctionJourneyPageObjects.AuctionMediaTab());
         while (!status.contains("تمت الموافقة وتم النشر")) {
             Browser.waitForSeconds(10);
             driver.navigate().refresh();
+            Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.AuctionMediaTab(), 40);
             status = Browser.getText(FullAuctionJourneyPageObjects.AuctionMediaTab());
         }
+        logger.addScreenshot("Media status is: " + status);
+        Assert.assertTrue(status.contains("Approved") || status.contains("تمت الموافقة وتم النشر"), "Actual media approval status is (" + status + ") and expected should be (Approved) OR (تمت الموافقة وتم النشر)");
+    }    public void verifyMediaIsApproved() throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.MediaTabLabel(), 40);
+        String status = Browser.getText(FullBookingJourneyPageObjects.MediaTabLabel());
+        while (!status.contains("تمت الموافقة وتم النشر")) {
+            Browser.waitForSeconds(10);
+            driver.navigate().refresh();
+            Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.MediaTabLabel(), 40);
+            status = Browser.getText(FullBookingJourneyPageObjects.MediaTabLabel());
+        }
+        logger.addScreenshot("Media status is: " + status);
+        Assert.assertTrue(status.contains("Approved") || status.contains("تمت الموافقة وتم النشر"), "Actual media approval status is (" + status + ") and expected should be (Approved) OR (تمت الموافقة وتم النشر)");
+    }
+
+    public void verifyMediaModelIsApproved() throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.MediaModel(), 40);
+        String status = Browser.getText(FullAuctionJourneyPageObjects.MediaModel());
+        while (!status.contains("تمت الموافقة وتم النشر")) {
+            Browser.waitForSeconds(10);
+            driver.navigate().refresh();
+            status = Browser.getText(FullAuctionJourneyPageObjects.MediaModel());
+        }
+        logger.addScreenshot("Media status is: " + status);
+        Assert.assertTrue(status.contains("Approved") || status.contains("تمت الموافقة وتم النشر"), "Actual media approval status is (" + status + ") and expected should be (Approved) OR (تمت الموافقة وتم النشر)");
+    }
+
+    public void verifyTheMediaIsApproved() throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.MediaTabLabel(), 40);
+        String status = Browser.getText(FullBookingJourneyPageObjects.MediaTabLabel());
         logger.addScreenshot("Media status is: " + status);
         Assert.assertTrue(status.contains("Approved") || status.contains("تمت الموافقة وتم النشر"), "Actual media approval status is (" + status + ") and expected should be (Approved) OR (تمت الموافقة وتم النشر)");
     }
@@ -1430,7 +1469,7 @@ public class FullBookingJourneyPage {
     public void clickOnSaveIcon() throws Exception {
         Browser.waitUntilInvisibilityOfElement(FullBookingJourneyPageObjects.SystemPopupMessage(), 40);
         Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.SaveButtonAddUnitModel(), 40);
-        CommonUtilityPage.moveToObject(FullBookingJourneyPageObjects.SaveButtonAddUnitModel());
+        Browser.moveToElement(FullBookingJourneyPageObjects.SaveButtonAddUnitModel());
         Browser.click(FullBookingJourneyPageObjects.SaveButtonAddUnitModel());
     }
 
@@ -2272,7 +2311,8 @@ public class FullBookingJourneyPage {
      */
     public void clickOnBackArrowButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.BackArrowButton(), 40);
-        CommonUtilityPage.moveToObject(FullBookingJourneyPageObjects.BackArrowButton());
+        Browser.moveToElement(FullBookingJourneyPageObjects.BackArrowButton());
+        Browser.waitUntilElementToBeClickable(FullBookingJourneyPageObjects.BackArrowButton(),100);
         Browser.click(FullBookingJourneyPageObjects.BackArrowButton());
     }
 
@@ -2297,6 +2337,8 @@ public class FullBookingJourneyPage {
         Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.IsPublishUnitModelToggle(), 40);
         boolean state = Boolean.parseBoolean(Browser.getAttributeValue(FullBookingJourneyPageObjects.IsPublishUnitModelToggle(), "aria-checked"));
         while (!state) {
+            Browser.moveToElement(FullBookingJourneyPageObjects.IsPublishUnitModelToggle());
+            Browser.waitUntilElementToBeClickable(FullBookingJourneyPageObjects.IsPublishUnitModelToggle(),50);
             Browser.click(FullBookingJourneyPageObjects.IsPublishUnitModelToggle());
             state = Boolean.parseBoolean(Browser.getAttributeValue(FullBookingJourneyPageObjects.IsPublishUnitModelToggle(), "aria-checked"));
         }

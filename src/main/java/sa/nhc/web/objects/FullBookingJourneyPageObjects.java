@@ -483,6 +483,10 @@ public class FullBookingJourneyPageObjects {
                 put("en", "//form-field-component//textarea[@formcontrolname='description'] | //mat-form-field/descendant::textarea[@formcontrolname='description']");
                 put("ar", "//form-field-component//textarea[@formcontrolname='description']");
             }});
+            put("Descriptions_Input", new HashMap<>() {{
+                put("en", "//form-field-component//textarea[@formcontrolname='description'] | //mat-form-field/descendant::textarea[@formcontrolname='description']");
+                put("ar", "//form-field-component//textarea[@formcontrolname='description']| //mat-form-field/descendant::textarea[@formcontrolname='description']");
+            }});
             put("Pricing_Starting_At_Input", new HashMap<>() {{
                 put("en", "//input[@formcontrolname='price_starting_at']");
                 put("ar", "//input[@formcontrolname='price_starting_at']");
@@ -1865,6 +1869,8 @@ public class FullBookingJourneyPageObjects {
 
     public static By CancelledLink() throws Exception {
         return By.xpath(get("Cancelled_Link"));
+    }   public static By DescriptionsInput() throws Exception {
+        return By.xpath(get("Descriptions_Input"));
     }
 
     public static By CancellationDate() throws Exception {

@@ -430,8 +430,8 @@ public class FullAuctionJourneyPageObjects {
                 put("ar", "(//app-alert/descendant::span[2])[1]");
             }});
             put("Auction_Status_Dropdown", new HashMap<>() {{
-                put("en", "//app-nsar-dropdown[@formcontrolname='status']/descendant::ng-select");
-                put("ar", "//app-nsar-dropdown[@formcontrolname='status']/descendant::ng-select");
+                put("en", "//app-nsar-dropdown[@formcontrolname='auction_status']/descendant::ng-select");
+                put("ar", "//app-nsar-dropdown[@formcontrolname='auction_status']/descendant::ng-select");
             }});
             put("Auction_Status_Dropdown_List", new HashMap<>() {{
                 put("en", "//ng-dropdown-panel[@role='listbox']/descendant::div[@role='option']");

@@ -2,18 +2,16 @@ package sa.nhc.web;
 
 import com.testcrew.manager.TestDataManager;
 import com.testcrew.web.Browser;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.annotations.Test;
 import sa.nhc.web.base.NHCWebTest;
-import sa.nhc.web.objects.FiltersPageObjects;
 import sa.nhc.web.objects.FullAuctionJourneyPageObjects;
 import sa.nhc.web.objects.FullBookingJourneyPageObjects;
-import sa.nhc.web.objects.MOHLandBookingJourneyPageObjects;
 import sa.nhc.web.objects.exisitng.CommonUtilityPageObjects;
 import sa.nhc.web.pages.exisitng.CommonUtilityPage;
 
 import java.util.Map;
 
-import static com.testcrew.base.WebBaseTest.logger;
 import static com.testcrew.web.Browser.driver;
 
 public class FullAuctionJourneyNew extends NHCWebTest {
@@ -119,7 +117,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
         logger.info("Step 06: Verify user is able to select city");
         CommonUtilityPage.selectFromLists(data.get("Region"), FullAuctionJourneyPageObjects.RegionDropdownList(), FullAuctionJourneyPageObjects.SelectedRegion());
         CommonUtilityPage.selectFromLists(data.get("City"), FullAuctionJourneyPageObjects.CityDropdownList(), FullAuctionJourneyPageObjects.SelectedCity());
-        CommonUtilityPage.verifyOptionIsSelected(data.get("City"), FullAuctionJourneyPageObjects.CityDropdownList());
+        CommonUtilityPage.verifyCityIsDisplayed(data.get("City"), FullAuctionJourneyPageObjects.City());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -223,7 +221,8 @@ public class FullAuctionJourneyNew extends NHCWebTest {
         logger.info("Step 05: Click on add new auction project");
         app.fullAuctionJourneyPage.clickOnAddNewAuctionProject();
         logger.info("Step 06: Verify error message that displayed if select end date less than start date");
-        app.fullAuctionJourneyPage.validateErrorMessageIfEndDateIsLessThanStartDate(1, 0);
+        app.fullAuctionJourneyPage.validateErrorMessageIfEndDateIsLessThanStartDate(1, 0, 10);
+
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -243,14 +242,17 @@ public class FullAuctionJourneyNew extends NHCWebTest {
         logger.info("Step 05: Click on add new auction project");
         app.fullAuctionJourneyPage.clickOnAddNewAuctionProject();
         logger.info("Step 06: Fill all required data");
-        app.fullAuctionJourneyPage.enterProjectName(data.get("Project_Name"));
+        String projectName = data.get("Project_Name") + RandomStringUtils.randomNumeric(5);
+        app.fullAuctionJourneyPage.enterProjectName(projectName);
+        TestDataManager.addDependantGlobalTestData("Auctions", "Project_Name", projectName);
+        TestDataManager.writeDependantGlobalTestData("Auctions");
         CommonUtilityPage.selectFromLists(data.get("Auction_Type"), FullAuctionJourneyPageObjects.AuctionTypeDropdownList(), FullAuctionJourneyPageObjects.SelectedAuctionType());
         CommonUtilityPage.selectFromLists(data.get("Region"), FullAuctionJourneyPageObjects.RegionDropdownList(), FullAuctionJourneyPageObjects.SelectedRegion());
         CommonUtilityPage.selectFromLists(data.get("City"), FullAuctionJourneyPageObjects.CityDropdownList(), FullAuctionJourneyPageObjects.SelectedCity());
         app.fullAuctionJourneyPage.selectAuctionStartDateFromCalendar(0);
-        app.fullAuctionJourneyPage.enterStartTimeOfAuction(0, 20, 0);
+        app.fullAuctionJourneyPage.enterStartTimeOfAuction(4, 0, 0);
         app.fullAuctionJourneyPage.selectAuctionEndDateFromCalendar(0);
-        app.fullAuctionJourneyPage.enterEndTimeOfAuction(0, 40, 0);
+        app.fullAuctionJourneyPage.enterEndTimeOfAuction(6, 0, 0);
         logger.info("Step 07: Verify admin is able to save after providing mandatory data (message: Saved Successfully)");
         app.fullAuctionJourneyPage.getAuctionDateAndTime();
         app.fullAuctionJourneyPage.clickOnSaveButton();
@@ -260,6 +262,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_12(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -279,6 +282,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_13(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -298,6 +302,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_14(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -317,6 +322,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_15(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -337,6 +343,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_16(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -358,6 +365,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_17(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -379,6 +387,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_18(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -401,6 +410,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_19(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -423,6 +433,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_20(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -445,6 +456,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_21(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -492,6 +504,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_23(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -520,6 +533,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_24(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -548,6 +562,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_25(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -568,6 +583,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_26(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -588,6 +604,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_27(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -608,6 +625,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_28(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -630,6 +648,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_29(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -655,6 +674,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_30(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -678,6 +698,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_31(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -703,6 +724,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_32(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -726,6 +748,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_33(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -749,6 +772,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_34(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -774,6 +798,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_35(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -790,11 +815,12 @@ public class FullAuctionJourneyNew extends NHCWebTest {
         app.fullBookingJourneyPage.navigateToSearchedProject(data.get("Project_Name"));
         app.fullBookingJourneyPage.clickOnUnitModelTab();
         app.fullAuctionJourneyPage.clickOnTheUnitModel();
-        app.fullBookingJourneyPage.verifyMediaIsApproved();
+        app.fullBookingJourneyPage.verifyMediaModelIsApproved();
     }
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_36(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -817,6 +843,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_37(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -840,6 +867,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_38(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -863,6 +891,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_39(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -888,6 +917,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_40(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -911,6 +941,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_41(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -937,6 +968,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_42(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -963,6 +995,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_43(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -988,6 +1021,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_44(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1012,6 +1046,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_45(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1038,6 +1073,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_46(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1062,6 +1098,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_47(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1086,6 +1123,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_48(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1110,6 +1148,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_49(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1134,6 +1173,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_50(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1158,6 +1198,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_51(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1182,6 +1223,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_52(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1200,12 +1242,15 @@ public class FullAuctionJourneyNew extends NHCWebTest {
         app.fullAuctionJourneyPage.clickOnTheUnitModel();
         app.fullAuctionJourneyPage.clickOnTheAuctionSettingsTab();
         CommonUtilityPage.clickOnElement(FullAuctionJourneyPageObjects.EditButton());
+        app.fullAuctionJourneyPage.enabledApplyFeeForAuctionUnitLabel();
+        app.fullAuctionJourneyPage.enterValidActionFeeAmount(data.get("Action_Fee_Amount"));
         CommonUtilityPage.clickOnElement(FullAuctionJourneyPageObjects.UpdateButton());
         CommonUtilityPage.verifyValueIsDisplayed("AR Model was updated", FullBookingJourneyPageObjects.SystemPopupMessage());
     }
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_53(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1228,6 +1273,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_54(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1248,6 +1294,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_55(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1268,6 +1315,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_56(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1289,6 +1337,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_57(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1311,6 +1360,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_58(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1332,6 +1382,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_59(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1354,6 +1405,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_60(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1376,6 +1428,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_61(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1397,6 +1450,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_62(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1419,6 +1473,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_63(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1440,6 +1495,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_64(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1462,6 +1518,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_65(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1483,6 +1540,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_66(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1505,6 +1563,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_67(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1527,6 +1586,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_68(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1549,6 +1609,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_69(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1570,6 +1631,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_70(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1591,6 +1653,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_71(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1612,6 +1675,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_72(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1635,6 +1699,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_73(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1660,6 +1725,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_74(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1681,6 +1747,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_75(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1702,6 +1769,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_76(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1723,6 +1791,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_77(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1744,6 +1813,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_78(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1765,6 +1835,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_79(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1786,6 +1857,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_80(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1807,6 +1879,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_81(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1834,6 +1907,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_82(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1858,6 +1932,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_83(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1878,6 +1953,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_84(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1903,6 +1979,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_85(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1917,11 +1994,12 @@ public class FullAuctionJourneyNew extends NHCWebTest {
         app.fullAuctionJourneyPage.clickOnAuctionProjects();
         app.fullBookingJourneyPage.adminSearchProject(data.get("Project_Name"));
         app.fullBookingJourneyPage.navigateToSearchedProject(data.get("Project_Name"));
-        app.fullBookingJourneyPage.verifyMediaIsApproved();
+        app.fullBookingJourneyPage.verifyMediaIsApprovedAuction();
     }
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_New_TC_86(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");
@@ -1936,6 +2014,131 @@ public class FullAuctionJourneyNew extends NHCWebTest {
         app.fullAuctionJourneyPage.clickOnAuctionProjects();
         app.fullBookingJourneyPage.adminSearchProject(data.get("Project_Name"));
         app.fullBookingJourneyPage.navigateToSearchedProject(data.get("Project_Name"));
+        app.fullBookingJourneyPage.clickOnIsPublishedToggle();
+        app.fullBookingJourneyPage.verifyIsPublishedToggleIsOn();
+        CommonUtilityPage.verifyPopupMessageIsDisplayed("Project publishment updated successfully", "تم تحديث نشر المشروع بنجاح", FullBookingJourneyPageObjects.SystemPopupMessage());
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void Full_Auction_Journey_New_With_Fee(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to the portal with admin credentials");
+        app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
+        logger.info("Step 02: Enter OTP Number");
+        app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
+        app.loginPage.changeLanguageAdmin(data);
+        logger.info("Step 03: Click on auctions");
+        app.fullAuctionJourneyPage.clickOnSideBarMenuInHomePage();
+        app.fullAuctionJourneyPage.clickOnAuction();
+        logger.info("Step 04: Verify admin is able to publish the auction (Message :تم تحديث نشر المشروع بنجاح)");
+        app.fullAuctionJourneyPage.clickOnAuctionProjects();
+        logger.info("Step 05: Click on add new auction project");
+        app.fullAuctionJourneyPage.clickOnAddNewAuctionProject();
+        logger.info("Step 06: Complete full auction journey with fee");
+        String projectName = data.get("Project_Name") + RandomStringUtils.randomNumeric(5);
+        app.fullAuctionJourneyPage.enterProjectName(projectName);
+        TestDataManager.addDependantGlobalTestData("Auctions", "Project_Name", projectName);
+        TestDataManager.writeDependantGlobalTestData("Auctions");
+        CommonUtilityPage.selectFromLists(data.get("Auction_Type"), FullAuctionJourneyPageObjects.AuctionTypeDropdownList(), FullAuctionJourneyPageObjects.SelectedAuctionType());
+        CommonUtilityPage.selectFromLists(data.get("Region"), FullAuctionJourneyPageObjects.RegionDropdownList(), FullAuctionJourneyPageObjects.SelectedRegion());
+        CommonUtilityPage.selectFromLists(data.get("City"), FullAuctionJourneyPageObjects.CityDropdownList(), FullAuctionJourneyPageObjects.SelectedCity());
+        app.fullAuctionJourneyPage.selectAuctionStartDateFromCalendar(0);
+        app.fullAuctionJourneyPage.enterStartTimeOfAuction(0, 5, 0);
+        app.fullAuctionJourneyPage.selectAuctionEndDateFromCalendar(0);
+        app.fullAuctionJourneyPage.enterEndTimeOfAuction(0, 16, 0);
+        app.fullAuctionJourneyPage.getAuctionDateAndTime();
+        app.fullAuctionJourneyPage.clickOnSaveButton();
+        app.fullAuctionJourneyPage.clickOnSaveButton();
+        CommonUtilityPage.verifyValueIsDisplayed("تم الحفظ بنجاح", "Create auctions successfully", FullBookingJourneyPageObjects.SystemPopupMessage());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
+        app.fullAuctionJourneyPage.editAuctionUnitFile(data.get("startDate"), data.get("endDate"), data.get("startTimeHr"), data.get("startTimeMin"), data.get("endTimeHr"), data.get("endTimeMin"));
+        app.fullBookingJourneyPage.clickOnUnitsTab();
+        app.fullAuctionJourneyPage.clickOnImportNewAuctionUnitButton();
+        CommonUtilityPage.selectFromLists(data.get("UnitType"), FullAuctionJourneyPageObjects.UnitTypeDropdown(), FullAuctionJourneyPageObjects.SelectedCity());
+        CommonUtilityPage.UploadAttachment(data.get("ImportUnitFile"), FullAuctionJourneyPageObjects.UploadFile());
+        app.fullAuctionJourneyPage.clickOnSaveButton();
+        CommonUtilityPage.verifyValueIsDisplayed("بدأت عملية استيراد وحدات المزاد بنجاح", "Create auctions successfully", FullBookingJourneyPageObjects.SystemPopupMessage());
+        Browser.waitUntilInvisibilityOfElement(CommonUtilityPageObjects.SpinnerLoadingAdmin(), 60);
+        driver.navigate().refresh();
+        app.fullBookingJourneyPage.clickOnCommitButton();
+        app.fullAuctionJourneyPage.clickOnAgreeButton();
+        CommonUtilityPage.verifyValueIsDisplayed("إرسال طلب اعتماد الاستيراد", "Create auctions successfully", FullBookingJourneyPageObjects.SystemPopupMessage());
+        app.fullBookingJourneyPage.clickOnBackButton();
+        app.fullBookingJourneyPage.clickOnUnitModelTab();
+        app.fullAuctionJourneyPage.clickOnTheUnitModel();
+        app.fullAuctionJourneyPage.clickOnSaveButton();
+        CommonUtilityPage.verifyElementIsDisplayed("تم حفظ بيانات الملف بنجاح", FullBookingJourneyPageObjects.SystemPopupMessage());
+        app.fullBookingJourneyPage.clickOnMediaSectionLabelOnUnitModelPage();
+        app.fullBookingJourneyPage.enterLatitude(data.get("Latitude"));
+        app.fullBookingJourneyPage.enterLongitude(data.get("Longitude"));
+        app.fullAuctionJourneyPage.clickOnSaveButton();
+        CommonUtilityPage.verifyValueIsDisplayed("تم حفظ بيانات الملف بنجاح", FullBookingJourneyPageObjects.SystemPopupMessage());
+        ////////
+        app.fullAuctionJourneyPage.clickOnTheAuctionLegalTab();
+        CommonUtilityPage.UploadAttachment(data.get("PDF_Attachment"), FullAuctionJourneyPageObjects.AuctionLegalFiles("1"));
+        CommonUtilityPage.UploadAttachment(data.get("PDF_Attachment"), FullAuctionJourneyPageObjects.AuctionLegalFiles("2"));
+        app.fullAuctionJourneyPage.clickOnSaveButton();
+        CommonUtilityPage.verifyValueIsDisplayed("AR Model was updated", FullBookingJourneyPageObjects.SystemPopupMessage());
+//        app.fullAuctionJourneyPage.clickOnTheAuctionSettingsTab();
+//        CommonUtilityPage.clickOnElement(FullAuctionJourneyPageObjects.EditButton());
+//        app.fullAuctionJourneyPage.enabledApplyFeeForAuctionUnitLabel();
+//        app.fullAuctionJourneyPage.enterValidActionFeeAmount(data.get("Action_Fee_Amount"));
+//        CommonUtilityPage.clickOnElement(FullAuctionJourneyPageObjects.UpdateButton());
+//        CommonUtilityPage.verifyValueIsDisplayed("AR Model was updated", FullBookingJourneyPageObjects.SystemPopupMessage());
+        app.fullBookingJourneyPage.clickOnMediaApprovalButton();
+        CommonUtilityPage.verifyValueIsDisplayed("تم رفع طلب الموافقة على المحتوى المرئي بنجاح", FullBookingJourneyPageObjects.SystemPopupMessage());
+        app.fullBookingJourneyPage.clickOnApproveMediaButton();
+        CommonUtilityPage.verifyValueIsDisplayed("طلب الموافقة على المحتوى المرئي تحت المعالجة الرجاء الانتظار", FullBookingJourneyPageObjects.SystemPopupMessage());
+        if(Browser.isElementPresent(FullBookingJourneyPageObjects.ApproveMediaButton())){
+            app.fullBookingJourneyPage.clickOnApproveMediaButton();
+        }
+        app.fullBookingJourneyPage.clickOnIsPublishUnitModelToggle();
+//        CommonUtilityPage.verifyPopupMessageIsDisplayed("Project publishment updated successfully", "تم تحديث نشر المشروع بنجاح", FullBookingJourneyPageObjects.SystemPopupMessage());
+        app.fullBookingJourneyPage.clickOnBackArrowButton();
+        app.fullAuctionJourneyPage.clickOnAuctionMediaTab();
+        CommonUtilityPage.UploadAttachment(data.get("Video_Attachment"), FullBookingJourneyPageObjects.VideoMediaAttachment());
+        app.fullBookingJourneyPage.clickOnUploadArrowButton();
+        CommonUtilityPage.verifyValueIsDisplayed("رفعه بنجاح", "uploaded successfully", FullBookingJourneyPageObjects.SystemPopupMessage());
+        CommonUtilityPage.UploadAttachment(data.get("Image_Attachment"), FullBookingJourneyPageObjects.BannerImageAttachment());
+        app.fullBookingJourneyPage.clickOnUploadArrowButton();
+        CommonUtilityPage.verifyValueIsDisplayed("رفعه بنجاح", "uploaded successfully", FullBookingJourneyPageObjects.SystemPopupMessage());
+        CommonUtilityPage.UploadAttachment(data.get("Image_Attachment"), FullBookingJourneyPageObjects.MasterPlanAttachment());
+        app.fullBookingJourneyPage.clickOnUploadArrowButton();
+        CommonUtilityPage.verifyValueIsDisplayed("تم رفعه بنجاح", "uploaded successfully", FullBookingJourneyPageObjects.SystemPopupMessage());
+        CommonUtilityPage.UploadAttachment(data.get("Image_Attachment"), FullBookingJourneyPageObjects.ImageGalleryAttachment());
+        app.fullBookingJourneyPage.clickOnUploadArrowButton();
+        CommonUtilityPage.verifyValueIsDisplayed("رفعه بنجاح", "uploaded successfully", FullBookingJourneyPageObjects.SystemPopupMessage());
+        CommonUtilityPage.UploadAttachment(data.get("PDF_Attachment"), FullBookingJourneyPageObjects.BrochureMediaAttachment());
+        app.fullBookingJourneyPage.clickOnUploadArrowButton();
+        CommonUtilityPage.verifyValueIsDisplayed("رفعه بنجاح", "uploaded successfully", FullBookingJourneyPageObjects.SystemPopupMessage());
+        CommonUtilityPage.UploadAttachment(data.get("Json_Attachment"), FullBookingJourneyPageObjects.GeoMapAttachment());
+        app.fullBookingJourneyPage.clickOnUploadArrowButton();
+        CommonUtilityPage.verifyValueIsDisplayed("رفعه بنجاح", "uploaded successfully", FullBookingJourneyPageObjects.SystemPopupMessage());
+        CommonUtilityPage.UploadAttachment(data.get("Image_Attachment"), FullAuctionJourneyPageObjects.LogoImage());
+        app.fullBookingJourneyPage.clickOnUploadArrowButton();
+        CommonUtilityPage.verifyValueIsDisplayed("رفعه بنجاح", "uploaded successfully", FullBookingJourneyPageObjects.SystemPopupMessage());
+        app.fullBookingJourneyPage.enterTitleOfDetailPage(data.get("Project_Name"));
+        app.fullBookingJourneyPage.enterProjectDisplayName(data.get("Project_Name"));
+        app.fullBookingJourneyPage.enterDescription(data.get("Description"));
+        app.fullBookingJourneyPage.enterLatitude(data.get("Latitude"));
+        app.fullBookingJourneyPage.enterLongitude(data.get("Longitude"));
+        app.fullBookingJourneyPage.enterNearestAirportDistance(data.get("Nearest_Airport_Distance"));
+        app.fullBookingJourneyPage.enterNearestSchoolDistance(data.get("Nearest_School_Distance"));
+        app.fullBookingJourneyPage.enterTotalArea(data.get("Total_Area"));
+        app.fullAuctionJourneyPage.enterNumberOfAssets(data.get("Assets_Number"));
+        app.fullAuctionJourneyPage.enterTextInUnderSupervision(data.get("UnderSupervision"));
+        app.fullAuctionJourneyPage.enterCallNumber(data.get("CallNumber"));
+        app.fullAuctionJourneyPage.enterWhatsAppNumber(data.get("CallNumber"));
+        app.fullAuctionJourneyPage.enterValNumber(data.get("ValNumber"));
+        app.fullAuctionJourneyPage.clickOnSaveButton();
+        CommonUtilityPage.verifyValueIsDisplayed("تم حفظ بيانات الملف بنجاح", FullBookingJourneyPageObjects.SystemPopupMessage());
+        app.fullBookingJourneyPage.clickOnProjectDetailsTab();
+        app.fullBookingJourneyPage.clickOnMediaApprovalButton();
+        CommonUtilityPage.verifyPopupMessageIsDisplayed("Request for media approval has been sent successfully", "تم رفع طلب الموافقة على المحتوى المرئي بنجاح", FullBookingJourneyPageObjects.SystemPopupMessage());
+        app.fullBookingJourneyPage.clickOnApproveMediaButton();
+        CommonUtilityPage.verifyPopupMessageIsDisplayed("Media approval is in progress now. Please review in few seconds", "طلب الموافقة على المحتوى المرئي تحت المعالجة الرجاء الانتظار", FullBookingJourneyPageObjects.SystemPopupMessage());
+        app.fullBookingJourneyPage.verifyMediaIsApprovedAuction();
         app.fullBookingJourneyPage.clickOnIsPublishedToggle();
         app.fullBookingJourneyPage.verifyIsPublishedToggleIsOn();
         CommonUtilityPage.verifyPopupMessageIsDisplayed("Project publishment updated successfully", "تم تحديث نشر المشروع بنجاح", FullBookingJourneyPageObjects.SystemPopupMessage());

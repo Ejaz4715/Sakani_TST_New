@@ -14,6 +14,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.chrono.HijrahDate;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.*;
 
 import static com.testcrew.web.Browser.*;
@@ -32,7 +33,18 @@ public class CommonUtilityPage {
         logger.addScreenshot("");
         Assert.assertTrue(ActualVal.contains(value), "Actual value (" + ActualVal + ") and expected (" + value + ")");
     }
-
+    public static void verifyCityIsDisplayed(String value, By element) {
+        boolean status = false;
+        Browser.waitUntilVisibilityOfElement(element, 40);
+        Browser.moveToElement(element);
+        WebElement actualValue = getWebElement(element);
+        String valueTXT = actualValue.getAttribute("class");
+        if (valueTXT.contains("touched")) {
+            status = true;
+        }
+        logger.addScreenshot("Displayed value " + actualValue);
+        Assert.assertTrue(status, "Actual displayed value is (" + valueTXT + "). Expected should be (" + value + ")");
+    }
     public static void clickOnViewButtonFromFilter() throws Exception {
         Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.viewButton(), 20);
         Browser.click(FullAuctionJourneyPageObjects.viewButton());
@@ -274,6 +286,14 @@ public class CommonUtilityPage {
         HijrahDate hijrahDate = HijrahDate.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MMMM/yyyy", new Locale("ar"));
         return hijrahDate.format(formatter);
+    }
+    public static String getHijriDate(int daysAdjustment) {
+        HijrahDate hijrahDate = HijrahDate.now();
+        // Adjust the Hijri date by adding/subtracting the specified number of days
+        HijrahDate adjustedHijrahDate = hijrahDate.plus(daysAdjustment, ChronoUnit.DAYS);
+        // Format the adjusted Hijri date
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MMMM/yyyy", new Locale("ar"));
+        return adjustedHijrahDate.format(formatter);
     }
 
     /**

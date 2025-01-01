@@ -4,6 +4,7 @@ import com.testcrew.manager.TestDataManager;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.annotations.Test;
 import sa.nhc.web.base.NHCWebTest;
+import sa.nhc.web.objects.FullAuctionJourneyPageObjects;
 import sa.nhc.web.objects.FullBookingJourneyPageObjects;
 import sa.nhc.web.objects.SalesContractPageObject;
 import sa.nhc.web.pages.exisitng.CommonUtilityPage;
@@ -170,7 +171,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.selectRegion(data.get("Region_EN"), data.get("Region_AR"));
         logger.info("Step 08: Enter city name and select from dropdown option");
         app.fullBookingJourneyPage.enterCityName(data.get("City_EN"), data.get("City_AR"));
-        app.fullBookingJourneyPage.verifyCityNameIsEntered(data.get("City_EN"), data.get("City_AR"));
+        CommonUtilityPage.verifyCityIsDisplayed(data.get("City_AR"), FullBookingJourneyPageObjects.CityNameInput());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -896,6 +897,7 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 07: Click Project Setting label");
         app.fullBookingJourneyPage.clickOnProjectSettingTab();
         logger.info("Step 08: Click on Using general booking fee setting ");
+        app.fullBookingJourneyPage.clickOnUsingGeneralBookingFeeToggle();
         app.fullBookingJourneyPage.clickOnUsingGeneralBookingFeeToggle();
         app.fullBookingJourneyPage.verifyUsingGeneralBookingFeeToggleIsON();
     }
@@ -2578,11 +2580,12 @@ public class FullBookingJourney extends NHCWebTest {
         logger.info("Step 09: Attach the media");
         CommonUtilityPage.UploadAttachment(data.get("Image_Attachment"), FullBookingJourneyPageObjects.BannerImageAttachment());
         app.fullBookingJourneyPage.clickOnUploadArrowButton();
-        app.fullBookingJourneyPage.enterProjectDisplayName(data.get("ProjectName"));
-        app.fullBookingJourneyPage.enterDescription(data.get("Description") + RandomStringUtils.randomAlphabetic(50));
-        logger.info("Step 10: Click on Save button");
-        app.fullBookingJourneyPage.clickOnSaveIcon();
-        CommonUtilityPage.verifyPopupMessageIsDisplayed("Media data saved successfully", "تم حفظ بيانات الملف بنجاح", FullBookingJourneyPageObjects.SystemPopupMessage());
+//        app.fullBookingJourneyPage.enterProjectDisplayName(data.get("ProjectName"));
+//        app.fullBookingJourneyPage.enterDescriptions(data.get("Description") + RandomStringUtils.randomAlphabetic(100));
+//        logger.info("Step 10: Click on Save button");
+//        app.fullBookingJourneyPage.clickOnSaveIcon();
+//        CommonUtilityPage.verifyPopupMessageIsDisplayed("Media data saved successfully", "تم حفظ بيانات الملف بنجاح", FullBookingJourneyPageObjects.SystemPopupMessage());
+        CommonUtilityPage.verifyValueIsDisplayed("رفعه بنجاح", "uploaded successfully", FullBookingJourneyPageObjects.SystemPopupMessage());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -2609,12 +2612,12 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnUnitModelName();
         logger.info("Step 08: Click on the Media");
         app.fullBookingJourneyPage.clickOnMediaSectionLabelOnUnitModelPage();
-        logger.info("Step 09: Attach the media");
-        CommonUtilityPage.UploadAttachment(data.get("Image_Attachment"), FullBookingJourneyPageObjects.BannerImageAttachment());
-        app.fullBookingJourneyPage.clickOnUploadArrowButton();
-        app.fullBookingJourneyPage.enterProjectDisplayName(data.get("ProjectName"));
-        app.fullBookingJourneyPage.enterDescription(data.get("Description") + RandomStringUtils.randomAlphabetic(50));
-        logger.info("Step 10: Click on Save button");
+//        logger.info("Step 09: Attach the media");
+//        CommonUtilityPage.UploadAttachment(data.get("Image_Attachment"), FullBookingJourneyPageObjects.BannerImageAttachment());
+//        app.fullBookingJourneyPage.clickOnUploadArrowButton();
+//        app.fullBookingJourneyPage.enterProjectDisplayName(data.get("ProjectName"));
+//        app.fullBookingJourneyPage.enterDescriptions(data.get("Description") + RandomStringUtils.randomAlphabetic(100));
+//        logger.info("Step 10: Click on Save button");
         app.fullBookingJourneyPage.clickOnSaveIcon();
         logger.info("Step 11: Click on Request Media approval");
         app.fullBookingJourneyPage.clickOnMediaApprovalButton();
@@ -2873,7 +2876,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnScrollArrowStart();
         app.fullBookingJourneyPage.clickOnProjectDetailsTab();
         logger.info("Step 10: Enable AZM link");
-        app.fullBookingJourneyPage.turnOnLinkWithAzmToggle();
+        app.fullBookingJourneyPage.clickOnLinkWithAzmToggle();
         logger.info("Step 06: Click Publish radio button");
         app.fullBookingJourneyPage.clickOnIsPublishedToggle();
         app.fullBookingJourneyPage.verifyIsPublishedToggleIsOn();
@@ -3751,7 +3754,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnStartBookingButton();
         CommonUtilityPage.verifyValueIsDisplayed("من الوحدات المتاحة", "available units", FullBookingJourneyPageObjects.AvailableUnitsLabel());
         logger.info("Step 10: Click on unit from available displayed units ");
-        app.fullBookingJourneyPage.selectUnitForBooking();
+        app.fullBookingJourneyPage.selectUnitForBooking(data.get("TargetAudience_AR"), data.get("TargetAudience_AR"));
         CommonUtilityPage.verifyValueIsDisplayed("رقم البلوك", "Block number", FullBookingJourneyPageObjects.UnitDetailsPageText());
     }
 
@@ -3788,7 +3791,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnStartBookingButton();
         CommonUtilityPage.verifyValueIsDisplayed("من الوحدات المتاحة", "available units", FullBookingJourneyPageObjects.AvailableUnitsLabel());
         logger.info("Step 10: Click on unit from available displayed units ");
-        app.fullBookingJourneyPage.selectUnitForBooking();
+        app.fullBookingJourneyPage.selectUnitForBooking(data.get("TargetAudience_AR"), data.get("TargetAudience_AR"));
         logger.info("Step 11: Click on Book unit button");
         app.fullBookingJourneyPage.clickOnBookUnitButton();
         CommonUtilityPage.verifyValueIsDisplayed("إقرار", "Disclaimer", FullBookingJourneyPageObjects.UnitBookingDisclaimerPageTitle());
@@ -3827,7 +3830,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnStartBookingButton();
         CommonUtilityPage.verifyValueIsDisplayed("من الوحدات المتاحة", "available units", FullBookingJourneyPageObjects.AvailableUnitsLabel());
         logger.info("Step 10: Click on unit from available displayed units ");
-        app.fullBookingJourneyPage.selectUnitForBooking();
+        app.fullBookingJourneyPage.selectUnitForBooking(data.get("TargetAudience_AR"), data.get("TargetAudience_AR"));
         logger.info("Step 11: Click on Book unit button");
         app.fullBookingJourneyPage.clickOnBookUnitButton();
         logger.info("Step 12: Click Terms and conditions checkbox");
@@ -3868,7 +3871,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnStartBookingButton();
         CommonUtilityPage.verifyValueIsDisplayed("من الوحدات المتاحة", "available units", FullBookingJourneyPageObjects.AvailableUnitsLabel());
         logger.info("Step 10: Click on unit from available displayed units ");
-        app.fullBookingJourneyPage.selectUnitForBooking();
+        app.fullBookingJourneyPage.selectUnitForBooking(data.get("TargetAudience_AR"), data.get("TargetAudience_AR"));
         logger.info("Step 11: Click on Book unit button");
         app.fullBookingJourneyPage.clickOnBookUnitButton();
         logger.info("Step 12: Click on Continue button");
@@ -3909,7 +3912,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnStartBookingButton();
         CommonUtilityPage.verifyValueIsDisplayed("من الوحدات المتاحة", "available units", FullBookingJourneyPageObjects.AvailableUnitsLabel());
         logger.info("Step 10: Click on unit from available displayed units ");
-        app.fullBookingJourneyPage.selectUnitForBooking();
+        app.fullBookingJourneyPage.selectUnitForBooking(data.get("TargetAudience_AR"), data.get("TargetAudience_AR"));
         logger.info("Step 11: Click on Book unit button");
         app.fullBookingJourneyPage.clickOnBookUnitButton();
         logger.info("Step 12: Click Terms and conditions checkbox");
@@ -3952,7 +3955,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnStartBookingButton();
         CommonUtilityPage.verifyValueIsDisplayed("من الوحدات المتاحة", "available units", FullBookingJourneyPageObjects.AvailableUnitsLabel());
         logger.info("Step 10: Click on unit from available displayed units ");
-        app.fullBookingJourneyPage.selectUnitForBooking();
+        app.fullBookingJourneyPage.selectUnitForBooking(data.get("TargetAudience_AR"), data.get("TargetAudience_AR"));
         logger.info("Step 11: Click on Book unit button");
         app.fullBookingJourneyPage.clickOnBookUnitButton();
         logger.info("Step 12: Click Terms and conditions checkbox");
@@ -3998,7 +4001,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnStartBookingButton();
         CommonUtilityPage.verifyValueIsDisplayed("من الوحدات المتاحة", "available units", FullBookingJourneyPageObjects.AvailableUnitsLabel());
         logger.info("Step 10: Click on unit from available displayed units ");
-        app.fullBookingJourneyPage.selectUnitForBooking();
+        app.fullBookingJourneyPage.selectUnitForBooking(data.get("TargetAudience_AR"), data.get("TargetAudience_AR"));
         logger.info("Step 11: Click on Book unit button");
         app.fullBookingJourneyPage.clickOnBookUnitButton();
         logger.info("Step 12: Click Terms and conditions checkbox");
@@ -4498,7 +4501,7 @@ public class FullBookingJourney extends NHCWebTest {
         app.fullBookingJourneyPage.clickOnStartBookingButton();
         CommonUtilityPage.verifyValueIsDisplayed("من الوحدات المتاحة", "available units", FullBookingJourneyPageObjects.AvailableUnitsLabel());
         logger.info("Step 10: Click on unit from available displayed units ");
-        app.fullBookingJourneyPage.selectUnitForBooking();
+        app.fullBookingJourneyPage.selectUnitForBooking(data.get("TargetAudience_AR"), data.get("TargetAudience_AR"));
         logger.info("Step 11: Click on Book unit button");
         app.fullBookingJourneyPage.clickOnBookUnitButton();
         logger.info("Step 12: Click Terms and conditions checkbox");

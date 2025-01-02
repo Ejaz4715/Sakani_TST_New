@@ -30,8 +30,8 @@ public class MOHLandBookingJourneyPageObjects {
                 put("ar", "//button[contains(text(),'عرض')]");
             }});
             put("Searched_Project_Details_Page", new HashMap<>() {{
-                put("en", "//app-project-title | //app-offplan-detail-page");
-                put("ar", "//app-project-title | //app-offplan-detail-page");
+                put("en", "//app-project-title | //app-offplan-detail-page/descendant::h2");
+                put("ar", "//app-project-title | //app-offplan-detail-page/descendant::h2");
             }});
             put("Project_Details_Tab_Button", new HashMap<>() {{
                 put("en", "//div[contains(@class,'details-tab')]");

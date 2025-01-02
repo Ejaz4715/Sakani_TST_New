@@ -10,7 +10,6 @@ import sa.nhc.web.objects.MOHLandBookingJourneyPageObjects;
 import sa.nhc.web.objects.exisitng.BookingPageObjects;
 import sa.nhc.web.objects.exisitng.CommonUtilityPageObjects;
 import sa.nhc.web.objects.*;
-import sa.nhc.web.pages.exisitng.CommonUtilityPage;
 
 import java.util.List;
 import java.util.Map;

@@ -970,6 +970,22 @@ public class FullBookingJourneyPageObjects {
                 put("en", "//mat-slide-toggle[@formcontrolname='use_booking_fee_flag']/descendant::button[@role='switch']");
                 put("ar", "//mat-slide-toggle[@formcontrolname='use_booking_fee_flag']/descendant::button[@role='switch']");
             }});
+            put("User_Profile_Title", new HashMap<>() {{
+                put("ar", "//app-dashboard-overview/child::h2");
+                put("en", "//app-dashboard-overview/child::h2");
+            }});
+            put("Check_Financial_Recommendation_Link", new HashMap<>() {{
+                put("ar", "//app-purchasing-power/descendant::h5");
+                put("en", "//app-purchasing-power/descendant::h5");
+            }});
+            put("Success_Tick_Mark", new HashMap<>() {{
+                put("ar", "//span[contains (@class, 'checked')]");
+                put("en", "//span[contains (@class, 'checked')]");
+            }});
+            put("Eligibility_Text", new HashMap<>() {{
+                put("ar", "//app-eligibility-ejar-attention/preceding-sibling::p");
+                put("en", "//app-eligibility-ejar-attention/preceding-sibling::p");
+            }});
         }
     };
 
@@ -1936,5 +1952,22 @@ public class FullBookingJourneyPageObjects {
 
     public static By ErrorMessageMediaPage() throws Exception {
         return By.xpath(("(//mat-error[contains (@id, 'error')])[2]"));
+    }
+
+
+    public static By UserProfileTitle() throws Exception {
+        return By.xpath(get("User_Profile_Title"));
+    }
+
+    public static By CheckFinancialRecommendationLink() throws Exception {
+        return By.xpath(get("Check_Financial_Recommendation_Link"));
+    }
+
+    public static By SuccessTickMark() throws Exception {
+        return By.xpath(get("Success_Tick_Mark"));
+    }
+
+    public static By EligibilityText() throws Exception {
+        return By.xpath(get("Eligibility_Text"));
     }
 }

@@ -52,8 +52,8 @@ public class FullAuctionJourneyNew extends NHCWebTest {
         logger.info("Step 05: Click on add new auction project");
         app.fullAuctionJourneyPage.clickOnAddNewAuctionProject();
         logger.info("Step 06: Verify user is able to enter project name");
-        app.fullAuctionJourneyPage.enterProjectName(data.get("Project_Name"));
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), FullAuctionJourneyPageObjects.ProjectNameInputField());
+        app.fullAuctionJourneyPage.enterProjectName(data.get("ProjectName"));
+        CommonUtilityPage.verifyValueIsEntered(data.get("ProjectName"), FullAuctionJourneyPageObjects.ProjectNameInputField());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -242,7 +242,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
         logger.info("Step 05: Click on add new auction project");
         app.fullAuctionJourneyPage.clickOnAddNewAuctionProject();
         logger.info("Step 06: Fill all required data");
-        String projectName = data.get("Project_Name") + RandomStringUtils.randomNumeric(5);
+        String projectName = data.get("ProjectName") + RandomStringUtils.randomNumeric(5);
         app.fullAuctionJourneyPage.enterProjectName(projectName);
         TestDataManager.addDependantGlobalTestData("Auctions", "Project_Name", projectName);
         TestDataManager.writeDependantGlobalTestData("Auctions");
@@ -2020,7 +2020,7 @@ public class FullAuctionJourneyNew extends NHCWebTest {
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void Full_Auction_Journey_New_With_Fee(Map<String, String> data) throws Exception {
+    public void Full_Auction_Journey_New_Without_Fee(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to the portal with admin credentials");

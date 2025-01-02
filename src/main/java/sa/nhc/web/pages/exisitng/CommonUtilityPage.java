@@ -132,6 +132,21 @@ public class CommonUtilityPage {
     public static void selectFromList(String option, By element) {
         Browser.waitUntilVisibilityOfElement(element, 40);
         Browser.moveToElement(element);
+        Browser.waitUntilElementToBeClickable(element,50);
+        List<WebElement> selectList = Browser.getWebElements(element);
+        for (WebElement listName : selectList) {
+            String getListName = listName.getText();
+            if (getListName.contains(option)) {
+                listName.click();
+                break;
+            }
+        }
+    }    public static void selectProject(String option, By element) {
+        Browser.waitUntilVisibilityOfElement(element, 40);
+        Browser.executeJSScroll(500);
+        Browser.waitForSeconds(2);
+        Browser.moveToElement(element);
+        Browser.waitUntilElementToBeClickable(element,50);
         List<WebElement> selectList = Browser.getWebElements(element);
         for (WebElement listName : selectList) {
             String getListName = listName.getText();

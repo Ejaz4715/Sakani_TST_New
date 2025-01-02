@@ -1028,6 +1028,7 @@ public class FullBookingJourneyPage {
         Browser.waitUntilVisibilityOfElement(FullBookingJourneyPageObjects.UnitsTabLabel(), 40);
         Browser.moveToElement(FullBookingJourneyPageObjects.UnitsTabLabel());
         Browser.waitUntilElementToBeClickable(FullBookingJourneyPageObjects.UnitsTabLabel(), 50);
+        Browser.waitForSeconds(3);
         Browser.click(FullBookingJourneyPageObjects.UnitsTabLabel());
     }
 

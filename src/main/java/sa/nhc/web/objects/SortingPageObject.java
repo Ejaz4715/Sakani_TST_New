@@ -18,8 +18,8 @@ public class SortingPageObject {
                 put("ar", "//h3[contains(text(),'ترتيب حسب')]");
             }});
             put("close_sort_btn", new HashMap<>() {{
-                put("en", ".cursor-pointer.d-lg-block.d-none.icon-cross.mx-2.svg-icon.svg-icon--medium");
-                put("ar", ".cursor-pointer.d-lg-block.d-none.icon-cross.mx-2.svg-icon.svg-icon--medium");
+                put("en", "//span[contains(@class,'cursor-pointer')]");
+                put("ar", "//span[contains(@class,'cursor-pointer')]");
             }});
             put("recommended_sort_option", new HashMap<>() {{
                 put("en", "//app-marketplace-sort[1]/div[2]/div[1]");
@@ -149,7 +149,7 @@ public class SortingPageObject {
     }
 
     public static By close_sort_btn() throws Exception {
-        return By.cssSelector(get("close_sort_btn"));
+        return By.xpath(get("close_sort_btn"));
     }
 
     public static By recommended_sort_option() throws Exception {

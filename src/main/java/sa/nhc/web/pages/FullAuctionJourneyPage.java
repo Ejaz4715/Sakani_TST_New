@@ -584,7 +584,8 @@ public class FullAuctionJourneyPage {
 
     public void clickOnCancelButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.cancelBTN(), 40);
-        CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.cancelBTN());
+        Browser.moveToElement(FullAuctionJourneyPageObjects.cancelBTN());
+        Browser.waitUntilElementToBeClickable(FullAuctionJourneyPageObjects.cancelBTN(),50);
         Browser.click(FullAuctionJourneyPageObjects.cancelBTN());
     }
 
@@ -617,10 +618,11 @@ public class FullAuctionJourneyPage {
     }
 
     public void verifyAuctionTabIsDisplayed() throws Exception {
-        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.auctionTab(), 25);
-        boolean status = Browser.isElementPresent(FullAuctionJourneyPageObjects.auctionTab());
-        logger.addScreenshot("Visibility of Auction tab: " + status);
-        Assert.assertTrue(status, "Auction tab is not visible");
+        Browser.waitUntilVisibilityOfElement(CommonUtilityPageObjects.MarketplacePurposeList(), 25);
+        Browser.click(CommonUtilityPageObjects.MarketplacePurposeList());
+        boolean status = Browser.isElementPresent(CommonUtilityPageObjects.MarketplacePurposeList());
+        logger.addScreenshot("Visibility of Auction option: " + status);
+        Assert.assertTrue(status, "Auction option is not visible");
     }
 
     public void clickOnAuctionTab() throws Exception {
@@ -642,15 +644,10 @@ public class FullAuctionJourneyPage {
         Browser.setText(MOHLandBookingJourneyPageObjects.projectInputFiled(), projectName);
     }
 
-    public void navigateToAuctionProjectPage() throws Exception {
-        Browser.waitUntilVisibilityOfElement(FiltersPageObjects.applyResultForProject(), 50);
-        Browser.waitUntilElementToBeClickable(FiltersPageObjects.applyResultForProject(), 50);
-        Browser.moveToElement(FiltersPageObjects.applyResultForProject());
-        Browser.click(FiltersPageObjects.applyResultForProject());
-//        while (Browser.isElementNotPresent(FullAuctionJourneyPageObjects.availableUnitLabel())) {
-//            Browser.click(FiltersPageObjects.applyResultForProject());
-//            Browser.waitForSeconds(2);
-//        }
+    public void navigateToAuctionProjectPage(String projectName) throws Exception {
+        Browser.waitUntilInvisibilityOfElement(By.xpath("//span[contains (@class, 'loader')]"), 40);
+        CommonUtilityPage.selectFromList(projectName, CommonUtilityPageObjects.SelectedProjectName());
+        CommonUtilityPage.verifyNewTabIsOpenedAndSwitch();
     }
 
     public void verifyAvailableUnitsAreDisplayed() throws Exception {
@@ -994,7 +991,8 @@ public class FullAuctionJourneyPage {
 
     public void clickOnSubmitBidButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.SubmitBidButton(), 40);
-        CommonUtilityPage.moveToObject(FullAuctionJourneyPageObjects.SubmitBidButton());
+        Browser.moveToElement(FullAuctionJourneyPageObjects.SubmitBidButton());
+        Browser.waitUntilElementToBeClickable(FullAuctionJourneyPageObjects.SubmitBidButton(), 40);
         Browser.click(FullAuctionJourneyPageObjects.SubmitBidButton());
     }
 
@@ -1024,6 +1022,8 @@ public class FullAuctionJourneyPage {
         }
         Browser.waitUntilInvisibilityOfElement(FullBookingJourneyPageObjects.LoadingIconForHousing(), 40);
         Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.ContinueButton(), 40);
+        Browser.moveToElement(FullAuctionJourneyPageObjects.ContinueButton());
+        Browser.waitUntilElementToBeClickable(FullAuctionJourneyPageObjects.ContinueButton(),50);
         Browser.click(FullAuctionJourneyPageObjects.ContinueButton());
     }
 
@@ -1048,6 +1048,7 @@ public class FullAuctionJourneyPage {
     public void clickOnApproveButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.ApproveButton(), 40);
         Browser.moveToElement(FullAuctionJourneyPageObjects.ApproveButton());
+        Browser.waitUntilElementToBeClickable(FullAuctionJourneyPageObjects.ApproveButton(), 40);
         Browser.click(FullAuctionJourneyPageObjects.ApproveButton());
     }
 
@@ -1057,6 +1058,7 @@ public class FullAuctionJourneyPage {
     }
 
     public void verifySuccessfullyRejectedMessageIsDisplayed() throws Exception {
+        Browser.waitForSeconds(2);
         logger.addScreenshot("");
         Assert.assertTrue(Browser.isElementPresent(FullAuctionJourneyPageObjects.RejectSuccessMessage()), "Successfully rejected message is not displayed");
     }
@@ -1085,6 +1087,7 @@ public class FullAuctionJourneyPage {
     }
 
     public void verifyImageViewerPopupIsDisplayed() throws Exception {
+        Browser.waitUntilVisibilityOfElement(FullAuctionJourneyPageObjects.CloseBtnOnPopup(),50);
         logger.addScreenshot("");
         Assert.assertTrue(Browser.isElementPresent(FullAuctionJourneyPageObjects.CloseBtnOnPopup()), "Image viewer pop is not displayed");
     }

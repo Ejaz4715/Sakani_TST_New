@@ -23,8 +23,7 @@ public class EligibilityPage {
      */
     public void hoverToUserIconProfile() throws Exception {
         Browser.waitUntilVisibilityOfElement(CommonUtilityPageObjects.ErrorToastMessage(), 40);
-        Browser.moveToElement(CommonUtilityPageObjects.ErrorToastMessage());
-        Browser.click(CommonUtilityPageObjects.ErrorToastMessage());
+        Browser.waitUntilInvisibilityOfElement(CommonUtilityPageObjects.ErrorToastMessage(), 40);
         Browser.waitUntilInvisibilityOfElement(By.xpath("//span[contains (@class, 'loader')]"), 40);
         Browser.waitUntilVisibilityOfElement(EligibilityPageObject.iconProfile(), 40);
         logger.addScreenshot("");

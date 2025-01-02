@@ -246,8 +246,8 @@ public class FullAuctionJourneyPageObjects {
                 put("ar", "//div//h3[contains(text(),'تفاصيل')]");
             }});
             put("View-Master-Plan-Image", new HashMap<>() {{
-                put("en", "//h5[contains(text(),'Brochure & Masterplan')]/parent::div/descendant::button");
-                put("ar", "//h5[contains(text(),'عرض الكتيب')]/parent::div/descendant::button");
+                put("en", "");
+                put("ar", "//span[contains(text(),'المخطط الرئيسي')]/parent::div/following-sibling::button");
             }});
             put("Click-On-Project-Tab", new HashMap<>() {{
                 put("en", "//div[contains(text(),'Project')]");
@@ -262,8 +262,8 @@ public class FullAuctionJourneyPageObjects {
                 put("ar", "//app-project-unit-card/descendant::h5[1]");
             }});
             put("Unit_Auction_End_Time_Text", new HashMap<>() {{
-                put("en", "//span[contains (text(), 'Ends')]");
-                put("ar", "//span[contains (text(), 'ينتهي')]");
+                put("en", "//app-badge/descendant::span[4]");
+                put("ar", "//app-badge/descendant::span[4]");
             }});
             put("Apply_For_This_Auction_Button", new HashMap<>() {{
                 put("en", "//span[contains (text(), 'Apply for this auction')]");

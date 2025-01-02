@@ -59,6 +59,18 @@ public class CommonUtilityPageObjects {
             put("ar", "//i[contains(@class,'diamond')]");
             put("en", "//i[contains(@class,'diamond')]");
         }});
+        put("Marketplace_Purpose_List", new HashMap<>() {{
+            put("ar", "//ng-select[@formcontrolname=\"marketplace_purpose\"]");
+            put("en", "//ng-select[@formcontrolname=\"marketplace_purpose\"]");
+        }});
+        put("Selected_Marketplace_Purpose_List", new HashMap<>() {{
+            put("ar", "//div[@role=\"option\"]/descendant::span");
+            put("en", "//div[@role=\"option\"]/descendant::span");
+        }});
+        put("Selected_Project_Name", new HashMap<>() {{
+            put("ar", "//app-marketplace-project-card-template/descendant::div[contains(@class,'text-break ng-star-inserted')]");
+            put("en", "//app-marketplace-project-card-template/descendant::div[contains(@class,'text-break ng-star-inserted')]");
+        }});
     }};
 
     public static String get(String locator) throws Exception {
@@ -123,5 +135,13 @@ public class CommonUtilityPageObjects {
 
     public static By ErrorToastMessage() {
         return By.xpath("//div[contains (@class, 'close')]");
+    }
+    public static By MarketplacePurposeList() throws Exception {
+        return By.xpath(get("Marketplace_Purpose_List"));
+    }
+    public static By SelectedMarketplacePurposeList() throws Exception {
+        return By.xpath(get("Selected_Marketplace_Purpose_List"));
+    }   public static By SelectedProjectName() throws Exception {
+        return By.xpath(get("Selected_Project_Name"));
     }
 }

@@ -1,16 +1,18 @@
 package sa.nhc.web;
 
+import com.testcrew.manager.TestDataManager;
 import com.testcrew.web.Browser;
-import org.testng.Assert;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.annotations.Test;
 import sa.nhc.web.base.NHCWebTest;
-import sa.nhc.web.objects.FiltersPageObjects;
 import sa.nhc.web.objects.FullAuctionJourneyPageObjects;
 import sa.nhc.web.objects.FullBookingJourneyPageObjects;
-import sa.nhc.web.objects.MOHLandBookingJourneyPageObjects;
+import sa.nhc.web.objects.exisitng.CommonUtilityPageObjects;
 import sa.nhc.web.pages.exisitng.CommonUtilityPage;
 
 import java.util.Map;
+
+import static com.testcrew.web.Browser.driver;
 
 public class FullAuctionJourney extends NHCWebTest {
 
@@ -946,7 +948,7 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Check visibility of auction tab");
+        logger.info("Step 03: Check visibility of auction option");
         app.fullAuctionJourneyPage.verifyAuctionTabIsDisplayed();
     }
 
@@ -965,85 +967,86 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Verify auction tab is clickable");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.fullAuctionJourneyPage.verifyAuctionTabIsSelected();
+        logger.info("Step 03: Verify auction option is selectable");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        CommonUtilityPage.verifyOptionIsSelected("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList());
     }
 
-    @Test(dataProvider = "testDataProvider")
-    public void Full_Auction_Journey_TC_45(Map<String, String> data) throws Exception {
-        //Verify user is able to search for Auction project by enabled the filter
-        logger.info("Step 00: Test Data : " + data.toString());
-        app.openApplication(data);
-        logger.info("Step 01: Navigate to Sakani user site");
-        //app.loginPage.alertBoxLogin();
-        app.homePage.closeAllSakaniPopups();
-        app.loginPage.changeLanguageForUser();
-        app.homePage.clickOnLoginButtonInHomePage();
-        logger.info("Step 02: Login to the portal with user credentials");
-        app.loginPage.userLogin(data.get("Username"), data.get("Password"));
-        app.loginPage.enterOTPForUser(data.get("OTP"));
-        app.loginPage.clickOnVerifyOTPButton();
-        app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Verify user is able to search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Verify the text entered in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-    }
+//    @Test(dataProvider = "testDataProvider")
+//    public void Full_Auction_Journey_TC_45(Map<String, String> data) throws Exception {
+//        //Verify user is able to search for Auction project by enabled the filter
+//        logger.info("Step 00: Test Data : " + data.toString());
+//        app.openApplication(data);
+//        logger.info("Step 01: Navigate to Sakani user site");
+//        //app.loginPage.alertBoxLogin();
+//        app.homePage.closeAllSakaniPopups();
+//        app.loginPage.changeLanguageForUser();
+//        app.homePage.clickOnLoginButtonInHomePage();
+//        logger.info("Step 02: Login to the portal with user credentials");
+//        app.loginPage.userLogin(data.get("Username"), data.get("Password"));
+//        app.loginPage.enterOTPForUser(data.get("OTP"));
+//        app.loginPage.clickOnVerifyOTPButton();
+//        app.loginPage.clickOnCancelButtonOfPopup();
+//        logger.info("Step 03: Verify user is able to search for project from auction filter");
+//        app.fullAuctionJourneyPage.clickOnAuctionTab();
+//        app.mohLandBookingJourneyPage.clickOnFilterButton();
+//        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
+//        logger.info("Step 04: Verify the text entered in Project search field");
+//        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
+//    }
 
-    @Test(dataProvider = "testDataProvider")
-    public void Full_Auction_Journey_TC_46(Map<String, String> data) throws Exception {
-        //Verify user is able to search for not exists Auction project by enabled the filter
-        logger.info("Step 00: Test Data : " + data.toString());
-        app.openApplication(data);
-        logger.info("Step 01: Navigate to Sakani user site");
-        //app.loginPage.alertBoxLogin();
-        app.homePage.closeAllSakaniPopups();
-        app.loginPage.changeLanguageForUser();
-        app.homePage.clickOnLoginButtonInHomePage();
-        logger.info("Step 02: Login to the portal with user credentials");
-        app.loginPage.userLogin(data.get("Username"), data.get("Password"));
-        app.loginPage.enterOTPForUser(data.get("OTP"));
-        app.loginPage.clickOnVerifyOTPButton();
-        app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Verify user is able to search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject("aaa bbb ccc ddd eee");
-        logger.info("Step 04: Verify no result found");
-        CommonUtilityPage.verifyValueIsDisplayed("No items found", "No items found", FiltersPageObjects.notFoundOption());
-    }
+//    @Test(dataProvider = "testDataProvider")
+//    public void Full_Auction_Journey_TC_46(Map<String, String> data) throws Exception {
+//        //Verify user is able to search for not exists Auction project by enabled the filter
+//        logger.info("Step 00: Test Data : " + data.toString());
+//        app.openApplication(data);
+//        logger.info("Step 01: Navigate to Sakani user site");
+//        //app.loginPage.alertBoxLogin();
+//        app.homePage.closeAllSakaniPopups();
+//        app.loginPage.changeLanguageForUser();
+//        app.homePage.clickOnLoginButtonInHomePage();
+//        logger.info("Step 02: Login to the portal with user credentials");
+//        app.loginPage.userLogin(data.get("Username"), data.get("Password"));
+//        app.loginPage.enterOTPForUser(data.get("OTP"));
+//        app.loginPage.clickOnVerifyOTPButton();
+//        app.loginPage.clickOnCancelButtonOfPopup();
+//        logger.info("Step 03: Verify user is able to search for project from auction filter");
+//        app.fullAuctionJourneyPage.clickOnAuctionTab();
+//        app.mohLandBookingJourneyPage.clickOnFilterButton();
+//        app.fullAuctionJourneyPage.searchForAuctionProject("aaa bbb ccc ddd eee");
+//        logger.info("Step 04: Verify no result found");
+//        CommonUtilityPage.verifyValueIsDisplayed("No items found", "No items found", FiltersPageObjects.notFoundOption());
+//    }
 
-    @Test(dataProvider = "testDataProvider")
-    public void Full_Auction_Journey_TC_47(Map<String, String> data) throws Exception {
-        //Verify user is able to clear data from Auction filter
-        logger.info("Step 00: Test Data : " + data.toString());
-        app.openApplication(data);
-        logger.info("Step 01: Navigate to Sakani user site");
-        //app.loginPage.alertBoxLogin();
-        app.homePage.closeAllSakaniPopups();
-        app.loginPage.changeLanguageForUser();
-        app.homePage.clickOnLoginButtonInHomePage();
-        logger.info("Step 02: Login to the portal with user credentials");
-        app.loginPage.userLogin(data.get("Username"), data.get("Password"));
-        app.loginPage.enterOTPForUser(data.get("OTP"));
-        app.loginPage.clickOnVerifyOTPButton();
-        app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Verify user is able to search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Click on clear button");
-        app.mohLandBookingJourneyPage.clickOnClearButton();
-        logger.info("Step 05: Verify the text deleted from project search field");
-        CommonUtilityPage.verifyValueIsNotEntered(data.get("Project_Name"), data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-    }
+//    @Test(dataProvider = "testDataProvider")
+//    public void Full_Auction_Journey_TC_47(Map<String, String> data) throws Exception {
+//        //Verify user is able to clear data from Auction filter
+//        logger.info("Step 00: Test Data : " + data.toString());
+//        app.openApplication(data);
+//        logger.info("Step 01: Navigate to Sakani user site");
+//        //app.loginPage.alertBoxLogin();
+//        app.homePage.closeAllSakaniPopups();
+//        app.loginPage.changeLanguageForUser();
+//        app.homePage.clickOnLoginButtonInHomePage();
+//        logger.info("Step 02: Login to the portal with user credentials");
+//        app.loginPage.userLogin(data.get("Username"), data.get("Password"));
+//        app.loginPage.enterOTPForUser(data.get("OTP"));
+//        app.loginPage.clickOnVerifyOTPButton();
+//        app.loginPage.clickOnCancelButtonOfPopup();
+//        logger.info("Step 03: Verify user is able to search for project from auction filter");
+//        app.fullAuctionJourneyPage.clickOnAuctionTab();
+//        app.mohLandBookingJourneyPage.clickOnFilterButton();
+//        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
+//        logger.info("Step 04: Click on clear button");
+//        app.mohLandBookingJourneyPage.clickOnClearButton();
+//        logger.info("Step 05: Verify the text deleted from project search field");
+//        CommonUtilityPage.verifyValueIsNotEntered(data.get("Project_Name"), data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
+//    }
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_48(Map<String, String> data) throws Exception {
         //Verify user is able to navigate to searched Auction project page
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -1056,21 +1059,18 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Verify user is able to search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 04: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 05: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         CommonUtilityPage.verifyValueIsDisplayed("الوحدات المتاحة", "Available units", FullAuctionJourneyPageObjects.availableUnitLabel());
     }
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_49(Map<String, String> data) throws Exception {
         //Verify user is able to see Available units
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -1083,22 +1083,19 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Verify user is able to search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 04: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 05: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
-        logger.info("Step 06: Verify user is able to view available unit");
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
+        logger.info("Step 04: Verify user is able to view available unit");
         app.fullAuctionJourneyPage.verifyAvailableUnitsAreDisplayed();
     }
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_50(Map<String, String> data) throws Exception {
         //Verify user is able to see Auction Status
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -1111,23 +1108,20 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Verify user is able to search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 04: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 05: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 06: Verify user is able to view auction status");
         app.fullAuctionJourneyPage.verifyAvailableUnitsAreDisplayed();
-        CommonUtilityPage.verifyElementIsDisplayed("Auction status",FullAuctionJourneyPageObjects.getCurrentAuctionStatus());
+        CommonUtilityPage.verifyElementIsDisplayed("Auction status", FullAuctionJourneyPageObjects.getCurrentAuctionStatus());
     }
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_51(Map<String, String> data) throws Exception {
         //Verify user is able to click on Available unit
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -1140,15 +1134,11 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Verify user is able to search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 04: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 05: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 06: Verify user is able to click on available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         app.fullAuctionJourneyPage.verifyCountDownIsDisplayed();
@@ -1157,6 +1147,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_52(Map<String, String> data) throws Exception {
         //Verify user is able to see Auction location on map
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -1169,15 +1160,11 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Verify user is able to search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 04: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 05: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 06: Verify user is able to see Auction location on map");
         app.fullAuctionJourneyPage.viewAuctionLocation();
         CommonUtilityPage.verifyNewTabIsOpenedAndSwitch();
@@ -1186,6 +1173,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_53(Map<String, String> data) throws Exception {
         //Verify user is able to search for not exists Unit by enabled the filter
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -1198,15 +1186,11 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Verify user is able to search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 04: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 05: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 06: Click on unit filter");
         app.fullAuctionJourneyPage.clickOnAvailableUnitsFilter();
         app.fullAuctionJourneyPage.selectMaximumArea();
@@ -1219,6 +1203,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_54(Map<String, String> data) throws Exception {
         //Verify user is able to search for Unit by enabled the filter
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -1231,15 +1216,11 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Verify user is able to search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 04: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 05: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 06: Click on unit filter");
         app.fullAuctionJourneyPage.clickOnAvailableUnitsFilter();
         app.fullAuctionJourneyPage.selectMinimumArea();
@@ -1251,6 +1232,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_55(Map<String, String> data) throws Exception {
         //Verify user is able to clear data from unit filter
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -1263,15 +1245,11 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Verify user is able to search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 04: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 05: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 06: Click on unit filter");
         app.fullAuctionJourneyPage.clickOnAvailableUnitsFilter();
         app.fullAuctionJourneyPage.selectMaximumArea();
@@ -1285,6 +1263,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_56(Map<String, String> data) throws Exception {
         //Verify user is able to view Auction image
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -1297,15 +1276,11 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Verify user is able to search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 04: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 05: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 06: Verify user is able to maximize the image of auction");
         app.fullAuctionJourneyPage.clickOnMaximizeImageButtonOnAuctionPage();
         app.fullAuctionJourneyPage.verifyImageIsMaximized();
@@ -1314,6 +1289,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_57(Map<String, String> data) throws Exception {
         //Verify user is able to navigate to Project details section
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -1326,15 +1302,11 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Verify user is able to search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 04: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 05: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 06: Verify user is able to navigate to project details section");
         app.fullAuctionJourneyPage.clickOnProjectDetailsTab();
         CommonUtilityPage.verifyValueIsDisplayed("تفاصيل المشروع", "Project details", FullAuctionJourneyPageObjects.projectDetailsLabel());
@@ -1343,6 +1315,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_58(Map<String, String> data) throws Exception {
         //Verify user is able to view Master plan image of auction
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -1355,18 +1328,12 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Verify user is able to search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 04: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 05: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 06: Verify user is able to navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
-        logger.info("Step 07: Verify user is able to click on view Master plan image");
+        logger.info("Step 03: Verify user is able to select the project from auction filter");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
+        logger.info("Step 04: Verify user is able to click on view Master plan image");
         app.fullAuctionJourneyPage.clickOnProjectDetailsTab();
         app.fullAuctionJourneyPage.clickOnViewMasterPlanImage();
         app.fullAuctionJourneyPage.verifyImageViewerPopupIsDisplayed();
@@ -1375,6 +1342,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_59(Map<String, String> data) throws Exception {
         //Verify user is able to see duration of Auction end time
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -1387,21 +1355,15 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Verify user is able to search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 04: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 05: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 06: Verify user is able to navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
-        logger.info("Step 07: Select from Available unit");
+        logger.info("Step 03: Verify user is able to select the project from auction filter");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
+        logger.info("Step 04: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
-        logger.info("Step 08: Verify end time is visible");
-        CommonUtilityPage.verifyValueIsDisplayed("ينتهي", "Ends", FullAuctionJourneyPageObjects.UnitAuctionEndTimeText());
+        logger.info("Step 05: Verify end time is visible");
+        CommonUtilityPage.verifyValueIsDisplayed("يوم", "Day", FullAuctionJourneyPageObjects.UnitAuctionEndTimeText());
     }
 
     /**
@@ -1411,6 +1373,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_60(Map<String, String> data) throws Exception {
         //Verify user is able to click on Apply for this auction button
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -1423,20 +1386,14 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Verify user is able to search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 04: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 05: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 06: Verify user is able to navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
-        logger.info("Step 07: Select from Available unit");
+        logger.info("Step 03: Verify user is able to select the project from auction filter");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
+        logger.info("Step 04: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
-        logger.info("Step 08: Click on Apply for this auction button");
+        logger.info("Step 05: Click on Apply for this auction button");
         app.fullAuctionJourneyPage.clickOnApplyForThisAuctionButton();
         CommonUtilityPage.verifyValueIsDisplayed("تطبق الرسوم على هذا المزاد", "Fees apply for this bid", FullAuctionJourneyPageObjects.FeesApplyForTheBidPopupTitle());
     }
@@ -1444,6 +1401,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_61(Map<String, String> data) throws Exception {
         //Verify user is able to see Auction fees amount from 'Fees apply for this bid' popUp
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -1456,22 +1414,14 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Verify user is able to search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Verify the text entered in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 05: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 06: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 07: Verify user is able to navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
-        logger.info("Step 08: Select from Available unit");
+        logger.info("Step 03: Verify user is able to select the project from auction filter");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
+        logger.info("Step 04: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
-        logger.info("Step 09: Click on Apply for this auction button");
+        logger.info("Step 05: Click on Apply for this auction button");
         app.fullAuctionJourneyPage.clickOnApplyForThisAuctionButton();
         CommonUtilityPage.verifyValueIsDisplayed("رسوم المزاد", "Auction fees", FullAuctionJourneyPageObjects.AuctionFeesText());
     }
@@ -1479,6 +1429,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_62(Map<String, String> data) throws Exception {
         //Verify user is able to select payments method
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -1491,24 +1442,16 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Verify user is able to search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Verify the text entered in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 05: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 06: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 07: Verify user is able to navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
-        logger.info("Step 08: Select from Available unit");
+        logger.info("Step 03: Verify user is able to select the project from auction filter");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
+        logger.info("Step 04: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
-        logger.info("Step 09: Click on Apply for this auction button");
+        logger.info("Step 05: Click on Apply for this auction button");
         app.fullAuctionJourneyPage.clickOnApplyForThisAuctionButton();
-        logger.info("Step 10: Select mada payment method");
+        logger.info("Step 06: Select mada payment method");
         app.fullAuctionJourneyPage.clickOnMadaPayment();
         app.fullAuctionJourneyPage.verifyPaymentMadaPaymentMethodIsSelected();
         CommonUtilityPage.verifyValueIsDisplayed("رسوم المزاد", "Auction fees", FullAuctionJourneyPageObjects.AuctionFeesText());
@@ -1517,6 +1460,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_63(Map<String, String> data) throws Exception {
         //Verify user is not able to click on confirm button if agreeing checkbox is not selected
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -1529,30 +1473,23 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Verify user is able to search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Verify the text entered in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 05: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 06: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 07: Verify user is able to navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
-        logger.info("Step 08: Select from Available unit");
+        logger.info("Step 03: Verify user is able to select the project from auction filter");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
+        logger.info("Step 04: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
-        logger.info("Step 09: Click on Apply for this auction button");
+        logger.info("Step 05: Click on Apply for this auction button");
         app.fullAuctionJourneyPage.clickOnApplyForThisAuctionButton();
-        logger.info("Step 10: Verify confirm button is disabled/not clickable");
+        logger.info("Step 06: Verify confirm button is disabled/not clickable");
         app.fullAuctionJourneyPage.verifyConfirmButtonIsDisabled();
     }
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_64(Map<String, String> data) throws Exception {
         //Verify user is able to click on confirm button
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -1565,28 +1502,20 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Verify user is able to search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Verify the text entered in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 05: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 06: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 07: Verify user is able to navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
-        logger.info("Step 08: Select from Available unit");
+        logger.info("Step 03: Verify user is able to select the project from auction filter");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
+        logger.info("Step 04: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
-        logger.info("Step 09: Click on Apply for this auction button");
+        logger.info("Step 05: Click on Apply for this auction button");
         app.fullAuctionJourneyPage.clickOnApplyForThisAuctionButton();
-        logger.info("Step 10: Select mada payment method");
+        logger.info("Step 06: Select mada payment method");
         app.fullAuctionJourneyPage.clickOnMadaPayment();
-        logger.info("Step 11: Click on agreeing checkbox");
+        logger.info("Step 07: Click on agreeing checkbox");
         app.fullAuctionJourneyPage.clickOnAgreeCheckbox();
-        logger.info("Step 12: Click on Confirm button");
+        logger.info("Step 08: Click on Confirm button");
         app.fullAuctionJourneyPage.clickOnConfirmButton();
         CommonUtilityPage.verifyValueIsDisplayed("ملخص الفاتورة", "Invoice Summary", FullAuctionJourneyPageObjects.InvoiceSummaryTitle());
     }
@@ -1594,6 +1523,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_65(Map<String, String> data) throws Exception {
         //Verify user is able to click on confirm button
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -1618,6 +1548,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_66(Map<String, String> data) throws Exception {
         //Verify user is able to preview invoice
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -1644,6 +1575,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_67(Map<String, String> data) throws Exception {
         //Verify user is able to click on back button from payment page
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -1673,6 +1605,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_68(Map<String, String> data) throws Exception {
         //Verify user is able to pay the invoice
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -1710,42 +1643,42 @@ public class FullAuctionJourney extends NHCWebTest {
      * User booking Auction without fee and reject the sign contract
      * TC_69 - TC_94
      */
-    @Test(dataProvider = "testDataProvider")
-    public void Full_Auction_Journey_TC_69(Map<String, String> data) throws Exception {
-        //Verify admin is able to click on save button
-        logger.info("Step 00: Test Data : " + data.toString());
-        app.openApplication(data);
-        logger.info("Step 01: Navigate to sakani admin site");
-        //app.loginPage.alertBoxLogin();
-        logger.info("Step 02: Login to the portal with admin credentials");
-        app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
-        logger.info("Step 03: Enter OTP number");
-        app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
-        app.loginPage.changeLanguageAdmin(data);
-        logger.info("Step 04: Admin able to access auction (المزاد) page");
-        app.fullAuctionJourneyPage.navigateToAuctionPage();
-        logger.info("Step 05: Click on add new auctions ( أضافة مزاد جديد ) button");
-        app.fullAuctionJourneyPage.clickOnAddNewAuctionsButton();
-        logger.info("Step 06: Fill all input fields ");
-        app.fullAuctionJourneyPage.enterValidUnitCode(data.get("Unit_Code"));
-        app.fullAuctionJourneyPage.enterStartingBidPrice(data.get("Starting_Bid_Price"));
-        app.fullAuctionJourneyPage.enterTargetedPrice(data.get("Targeted_Price"));
-        app.fullAuctionJourneyPage.selectAuctionStartDateFromCalendar(0);
-        app.fullAuctionJourneyPage.enterStartTimeOfAuction(0, 1, 0);
-        app.fullAuctionJourneyPage.selectAuctionEndDateFromCalendar(0);
-        app.fullAuctionJourneyPage.enterEndTimeOfAuction(0, 16, 0);
-        logger.info("Step 07: Disable General Setting");
-        app.fullAuctionJourneyPage.disableApplyGeneralSettingToggle();
-        logger.info("Step 07: Disable Auction Fee");
-        app.fullAuctionJourneyPage.disableApplyAuctionFeeToggle();
-        logger.info("Step 21: Click on save button");
-        app.fullAuctionJourneyPage.clickOnSaveButton();
-        CommonUtilityPage.verifyValueIsDisplayed("تم إنشاء المزاد بنجاح", "Create auctions successfully", FullBookingJourneyPageObjects.SystemPopupMessage());
-    }
-
+//    @Test(dataProvider = "testDataProvider")
+//    public void Full_Auction_Journey_TC_69(Map<String, String> data) throws Exception {
+//        //Verify admin is able to click on save button
+//        logger.info("Step 00: Test Data : " + data.toString());
+//        app.openApplication(data);
+//        logger.info("Step 01: Navigate to sakani admin site");
+//        //app.loginPage.alertBoxLogin();
+//        logger.info("Step 02: Login to the portal with admin credentials");
+//        app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
+//        logger.info("Step 03: Enter OTP number");
+//        app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
+//        app.loginPage.changeLanguageAdmin(data);
+//        logger.info("Step 04: Admin able to access auction (المزاد) page");
+//        app.fullAuctionJourneyPage.navigateToAuctionPage();
+//        logger.info("Step 05: Click on add new auctions ( أضافة مزاد جديد ) button");
+//        app.fullAuctionJourneyPage.clickOnAddNewAuctionsButton();
+//        logger.info("Step 06: Fill all input fields ");
+//        app.fullAuctionJourneyPage.enterValidUnitCode(data.get("Unit_Code"));
+//        app.fullAuctionJourneyPage.enterStartingBidPrice(data.get("Starting_Bid_Price"));
+//        app.fullAuctionJourneyPage.enterTargetedPrice(data.get("Targeted_Price"));
+//        app.fullAuctionJourneyPage.selectAuctionStartDateFromCalendar(0);
+//        app.fullAuctionJourneyPage.enterStartTimeOfAuction(0, 1, 0);
+//        app.fullAuctionJourneyPage.selectAuctionEndDateFromCalendar(0);
+//        app.fullAuctionJourneyPage.enterEndTimeOfAuction(0, 16, 0);
+//        logger.info("Step 07: Disable General Setting");
+//        app.fullAuctionJourneyPage.disableApplyGeneralSettingToggle();
+//        logger.info("Step 07: Disable Auction Fee");
+//        app.fullAuctionJourneyPage.disableApplyAuctionFeeToggle();
+//        logger.info("Step 21: Click on save button");
+//        app.fullAuctionJourneyPage.clickOnSaveButton();
+//        CommonUtilityPage.verifyValueIsDisplayed("تم إنشاء المزاد بنجاح", "Create auctions successfully", FullBookingJourneyPageObjects.SystemPopupMessage());
+//    }
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_70(Map<String, String> data) throws Exception {
         //Verify user is able to click on Join this auction button
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -1758,19 +1691,11 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Enter in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 05: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 06: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 07: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 08: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Verify 'Join this auction' button is clickable");
@@ -1780,6 +1705,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_71(Map<String, String> data) throws Exception {
         //Verify user is able to select I confirm reading, understanding and agreeing to the terms and conditions checkbox from disclaimer popup
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -1792,19 +1718,11 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Enter in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 05: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 06: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 07: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 08: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on 'Join this auction' button");
@@ -1817,6 +1735,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_72(Map<String, String> data) throws Exception {
         //Verify user is able to click on cancel button
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -1829,19 +1748,11 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Enter in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 05: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 06: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 07: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 08: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on 'Join this auction' button");
@@ -1854,6 +1765,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_73(Map<String, String> data) throws Exception {
         //Verify user is not able to click on Start bidding button if  'I confirm reading, understanding and agreeing to the terms and conditions checkbox' is not selected
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -1866,19 +1778,11 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Enter in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 05: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 06: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 07: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 08: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on 'Join this auction' button");
@@ -1890,6 +1794,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_74(Map<String, String> data) throws Exception {
         //Verify user is able to click on Start bidding button
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -1902,19 +1807,11 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Enter in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 05: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 06: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 07: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 08: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on 'Join this auction' button");
@@ -1931,6 +1828,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_75(Map<String, String> data) throws Exception {
         //Verify user is able to increasing / decreasing price
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -1943,23 +1841,14 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Enter in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 05: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 06: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 07: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 08: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Verify Increase/decrease the price buttons are enabled");
-//        app.fullAuctionJourneyPage.clickOnStartBiddingButton();
         app.fullAuctionJourneyPage.verifyIncreaseBidPriceButtonIsEnabled();
         app.fullAuctionJourneyPage.verifyDecreaseBidPriceButtonIsEnabled();
     }
@@ -1967,6 +1856,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_76(Map<String, String> data) throws Exception {
         //Verify user is able to click to any of Fixed increase number button
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -1979,19 +1869,11 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Enter in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 05: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 06: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 07: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 08: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Verify Fixed increase number button is clickable");
@@ -2001,6 +1883,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_77(Map<String, String> data) throws Exception {
         //Verify user is able to click on Place bid button
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -2013,19 +1896,11 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Enter in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 05: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 06: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 07: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 08: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Verify Place bid button is clickable");
@@ -2035,6 +1910,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_78(Map<String, String> data) throws Exception {
         //Verify user is able to select I confirm reading, understanding and agreeing to the terms and conditions checkbox from Bid submission summary pop up
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -2047,19 +1923,11 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Enter in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 05: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 06: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 07: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 08: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on 'Place bid' button");
@@ -2072,6 +1940,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_79(Map<String, String> data) throws Exception {
         //Verify user is not able to click on Submit bid button if 'I confirm reading, understanding and agreeing to the terms and conditions' checkbox not selected
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -2084,19 +1953,11 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Enter in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 05: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 06: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 07: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 08: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on 'Place bid' button");
@@ -2108,6 +1969,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_80(Map<String, String> data) throws Exception {
         //Verify user is able to click on cancel button from Bid submission summary pop up
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -2120,19 +1982,11 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Enter in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 05: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 06: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 07: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 08: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on 'Place bid' button");
@@ -2145,6 +1999,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_81(Map<String, String> data) throws Exception {
         //Verify user is able to click on Submit bid button from Bid submission summary pop up
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -2157,19 +2012,11 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Enter in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 05: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 06: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 07: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 08: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on 'Place bid' button");
@@ -2184,6 +2031,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_82(Map<String, String> data) throws Exception {
         //Verify user able to see Congratulation message if user won the auction
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -2196,19 +2044,11 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Enter in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 05: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 06: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 07: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 08: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         CommonUtilityPage.verifyValueIsDisplayed("تهانينا", "Congratulation", FullAuctionJourneyPageObjects.CongratulationMessageForHighestBid());
@@ -2217,6 +2057,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_83(Map<String, String> data) throws Exception {
         //Verify place bid button is not displayed
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -2229,19 +2070,11 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Enter in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 05: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 06: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 07: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 08: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         app.fullAuctionJourneyPage.verifyPlaceBidButtonIsNotDisplayed();
@@ -2250,6 +2083,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_84(Map<String, String> data) throws Exception {
         //Verify user is able to view Closed Auction from profile page
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
@@ -2276,6 +2110,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_85(Map<String, String> data) throws Exception {
         //Verify user is able to view Active Auction from profile page
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
@@ -2302,6 +2137,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_86(Map<String, String> data) throws Exception {
         //Verify user is able to click on Continue link text from Congratulation message
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -2314,19 +2150,11 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Enter in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 05: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 06: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 07: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 08: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on Continue link text");
@@ -2337,6 +2165,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_87(Map<String, String> data) throws Exception {
         //Verify user is able to click on Download contract link text
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -2349,19 +2178,11 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Enter in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 05: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 06: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 07: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 08: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on Continue link text");
@@ -2375,6 +2196,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_88(Map<String, String> data) throws Exception {
         //Verify user is able to click on reject button from Sign contract page
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -2387,19 +2209,11 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Enter in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 05: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 06: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 07: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 08: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on Continue link text");
@@ -2412,6 +2226,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_89(Map<String, String> data) throws Exception {
         //Verify user is able to fill Reject reason text area from Reject contract page
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -2424,19 +2239,11 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Enter in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 05: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 06: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 07: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 08: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on Continue link text");
@@ -2451,6 +2258,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_90(Map<String, String> data) throws Exception {
         //Verify user is able to click on cancel button from Reject contract page
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -2463,19 +2271,11 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Enter in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 05: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 06: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 07: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 08: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on Continue link text");
@@ -2490,6 +2290,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_91(Map<String, String> data) throws Exception {
         //Verify user is NOT able to click Confirm Rejection button if reject reason is not entered from  Reject Contract page
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -2502,19 +2303,11 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Enter in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 05: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 06: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 07: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 08: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on Continue link text");
@@ -2528,6 +2321,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_92(Map<String, String> data) throws Exception {
         //Verify user is able to click on Confirm rejection button from Reject contract page
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -2540,19 +2334,11 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Enter in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 05: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 06: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 07: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 08: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on Continue link text");
@@ -2568,6 +2354,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_93(Map<String, String> data) throws Exception {
         //Verify user is able to see Rejected status from action section
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani housing site");
@@ -2596,12 +2383,128 @@ public class FullAuctionJourney extends NHCWebTest {
      */
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_94(Map<String, String> data) throws Exception {
-        //Verify admin is able to click on save button
+        //Admin creates a new auction without fee
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to the portal with admin credentials");
+        app.loginPage.loginAsAdmin(data.get("Username"), data.get("Password"));
+        logger.info("Step 02: Enter OTP Number");
+        app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
+        app.loginPage.changeLanguageAdmin(data);
+        logger.info("Step 03: Click on auctions");
+        app.fullAuctionJourneyPage.clickOnSideBarMenuInHomePage();
+        app.fullAuctionJourneyPage.clickOnAuction();
+        logger.info("Step 04: Verify admin is able to publish the auction (Message :تم تحديث نشر المشروع بنجاح)");
+        app.fullAuctionJourneyPage.clickOnAuctionProjects();
+        logger.info("Step 05: Click on add new auction project");
+        app.fullAuctionJourneyPage.clickOnAddNewAuctionProject();
+        logger.info("Step 06: Complete full auction journey with fee");
+        String projectName = data.get("ProjectName") + RandomStringUtils.randomNumeric(5);
+        app.fullAuctionJourneyPage.enterProjectName(projectName);
+        TestDataManager.addDependantGlobalTestData("Auctions", "Project_Name", projectName);
+        TestDataManager.writeDependantGlobalTestData("Auctions");
+        CommonUtilityPage.selectFromLists(data.get("Auction_Type"), FullAuctionJourneyPageObjects.AuctionTypeDropdownList(), FullAuctionJourneyPageObjects.SelectedAuctionType());
+        CommonUtilityPage.selectFromLists(data.get("Region"), FullAuctionJourneyPageObjects.RegionDropdownList(), FullAuctionJourneyPageObjects.SelectedRegion());
+        CommonUtilityPage.selectFromLists(data.get("City"), FullAuctionJourneyPageObjects.CityDropdownList(), FullAuctionJourneyPageObjects.SelectedCity());
+        app.fullAuctionJourneyPage.selectAuctionStartDateFromCalendar(0);
+        app.fullAuctionJourneyPage.enterStartTimeOfAuction(0, 2, 0);
+        app.fullAuctionJourneyPage.selectAuctionEndDateFromCalendar(0);
+        app.fullAuctionJourneyPage.enterEndTimeOfAuction(0, 5, 0);
+        app.fullAuctionJourneyPage.getAuctionDateAndTime();
+        app.fullAuctionJourneyPage.clickOnSaveButton();
+        app.fullAuctionJourneyPage.clickOnSaveButton();
+        CommonUtilityPage.verifyValueIsDisplayed("تم الحفظ بنجاح", "Create auctions successfully", FullBookingJourneyPageObjects.SystemPopupMessage());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
+        app.fullAuctionJourneyPage.editAuctionUnitFile(data.get("startDate"), data.get("endDate"), data.get("startTimeHr"), data.get("startTimeMin"), data.get("endTimeHr"), data.get("endTimeMin"));
+        app.fullBookingJourneyPage.clickOnUnitsTab();
+        app.fullAuctionJourneyPage.clickOnImportNewAuctionUnitButton();
+        CommonUtilityPage.selectFromLists(data.get("UnitType"), FullAuctionJourneyPageObjects.UnitTypeDropdown(), FullAuctionJourneyPageObjects.SelectedCity());
+        CommonUtilityPage.UploadAttachment(data.get("ImportUnitFile"), FullAuctionJourneyPageObjects.UploadFile());
+        app.fullAuctionJourneyPage.clickOnSaveButton();
+        CommonUtilityPage.verifyValueIsDisplayed("بدأت عملية استيراد وحدات المزاد بنجاح", "Create auctions successfully", FullBookingJourneyPageObjects.SystemPopupMessage());
+        Browser.waitUntilInvisibilityOfElement(CommonUtilityPageObjects.SpinnerLoadingAdmin(), 60);
+        driver.navigate().refresh();
+        app.fullBookingJourneyPage.clickOnCommitButton();
+        app.fullAuctionJourneyPage.clickOnAgreeButton();
+        CommonUtilityPage.verifyValueIsDisplayed("إرسال طلب اعتماد الاستيراد", "Create auctions successfully", FullBookingJourneyPageObjects.SystemPopupMessage());
+        app.fullBookingJourneyPage.clickOnBackButton();
+        app.fullBookingJourneyPage.clickOnUnitModelTab();
+        app.fullAuctionJourneyPage.clickOnTheUnitModel();
+        app.fullAuctionJourneyPage.clickOnSaveButton();
+        CommonUtilityPage.verifyElementIsDisplayed("تم حفظ بيانات الملف بنجاح", FullBookingJourneyPageObjects.SystemPopupMessage());
+        app.fullBookingJourneyPage.clickOnMediaSectionLabelOnUnitModelPage();
+        app.fullBookingJourneyPage.enterLatitude(data.get("Latitude"));
+        app.fullBookingJourneyPage.enterLongitude(data.get("Longitude"));
+        app.fullAuctionJourneyPage.clickOnSaveButton();
+        CommonUtilityPage.verifyValueIsDisplayed("تم حفظ بيانات الملف بنجاح", FullBookingJourneyPageObjects.SystemPopupMessage());
+        ////////
+        app.fullAuctionJourneyPage.clickOnTheAuctionLegalTab();
+        CommonUtilityPage.UploadAttachment(data.get("PDF_Attachment"), FullAuctionJourneyPageObjects.AuctionLegalFiles("1"));
+        CommonUtilityPage.UploadAttachment(data.get("PDF_Attachment"), FullAuctionJourneyPageObjects.AuctionLegalFiles("2"));
+        app.fullAuctionJourneyPage.clickOnSaveButton();
+        CommonUtilityPage.verifyValueIsDisplayed("AR Model was updated", FullBookingJourneyPageObjects.SystemPopupMessage());
+        app.fullBookingJourneyPage.clickOnMediaApprovalButton();
+        CommonUtilityPage.verifyValueIsDisplayed("تم رفع طلب الموافقة على المحتوى المرئي بنجاح", FullBookingJourneyPageObjects.SystemPopupMessage());
+        app.fullBookingJourneyPage.clickOnApproveMediaButton();
+        CommonUtilityPage.verifyValueIsDisplayed("طلب الموافقة على المحتوى المرئي تحت المعالجة الرجاء الانتظار", FullBookingJourneyPageObjects.SystemPopupMessage());
+        if (Browser.isElementPresent(FullBookingJourneyPageObjects.ApproveMediaButton())) {
+            app.fullBookingJourneyPage.clickOnApproveMediaButton();
+        }
+        app.fullBookingJourneyPage.clickOnIsPublishUnitModelToggle();
+//        CommonUtilityPage.verifyPopupMessageIsDisplayed("Project publishment updated successfully", "تم تحديث نشر المشروع بنجاح", FullBookingJourneyPageObjects.SystemPopupMessage());
+        app.fullBookingJourneyPage.clickOnBackArrowButton();
+        app.fullAuctionJourneyPage.clickOnAuctionMediaTab();
+        CommonUtilityPage.UploadAttachment(data.get("Video_Attachment"), FullBookingJourneyPageObjects.VideoMediaAttachment());
+        app.fullBookingJourneyPage.clickOnUploadArrowButton();
+        CommonUtilityPage.verifyValueIsDisplayed("رفعه بنجاح", "uploaded successfully", FullBookingJourneyPageObjects.SystemPopupMessage());
+        CommonUtilityPage.UploadAttachment(data.get("Image_Attachment"), FullBookingJourneyPageObjects.BannerImageAttachment());
+        app.fullBookingJourneyPage.clickOnUploadArrowButton();
+        CommonUtilityPage.verifyValueIsDisplayed("رفعه بنجاح", "uploaded successfully", FullBookingJourneyPageObjects.SystemPopupMessage());
+        CommonUtilityPage.UploadAttachment(data.get("Image_Attachment"), FullBookingJourneyPageObjects.MasterPlanAttachment());
+        app.fullBookingJourneyPage.clickOnUploadArrowButton();
+        CommonUtilityPage.verifyValueIsDisplayed("تم رفعه بنجاح", "uploaded successfully", FullBookingJourneyPageObjects.SystemPopupMessage());
+        CommonUtilityPage.UploadAttachment(data.get("Image_Attachment"), FullBookingJourneyPageObjects.ImageGalleryAttachment());
+        app.fullBookingJourneyPage.clickOnUploadArrowButton();
+        CommonUtilityPage.verifyValueIsDisplayed("رفعه بنجاح", "uploaded successfully", FullBookingJourneyPageObjects.SystemPopupMessage());
+        CommonUtilityPage.UploadAttachment(data.get("PDF_Attachment"), FullBookingJourneyPageObjects.BrochureMediaAttachment());
+        app.fullBookingJourneyPage.clickOnUploadArrowButton();
+        CommonUtilityPage.verifyValueIsDisplayed("رفعه بنجاح", "uploaded successfully", FullBookingJourneyPageObjects.SystemPopupMessage());
+        CommonUtilityPage.UploadAttachment(data.get("Json_Attachment"), FullBookingJourneyPageObjects.GeoMapAttachment());
+        app.fullBookingJourneyPage.clickOnUploadArrowButton();
+        CommonUtilityPage.verifyValueIsDisplayed("رفعه بنجاح", "uploaded successfully", FullBookingJourneyPageObjects.SystemPopupMessage());
+        CommonUtilityPage.UploadAttachment(data.get("Image_Attachment"), FullAuctionJourneyPageObjects.LogoImage());
+        app.fullBookingJourneyPage.clickOnUploadArrowButton();
+        CommonUtilityPage.verifyValueIsDisplayed("رفعه بنجاح", "uploaded successfully", FullBookingJourneyPageObjects.SystemPopupMessage());
+        app.fullBookingJourneyPage.enterTitleOfDetailPage(data.get("Project_Name"));
+        app.fullBookingJourneyPage.enterProjectDisplayName(data.get("Project_Name"));
+        app.fullBookingJourneyPage.enterDescription(data.get("Description"));
+        app.fullBookingJourneyPage.enterLatitude(data.get("Latitude"));
+        app.fullBookingJourneyPage.enterLongitude(data.get("Longitude"));
+        app.fullBookingJourneyPage.enterNearestAirportDistance(data.get("Nearest_Airport_Distance"));
+        app.fullBookingJourneyPage.enterNearestSchoolDistance(data.get("Nearest_School_Distance"));
+        app.fullBookingJourneyPage.enterTotalArea(data.get("Total_Area"));
+        app.fullAuctionJourneyPage.enterNumberOfAssets(data.get("Assets_Number"));
+        app.fullAuctionJourneyPage.enterTextInUnderSupervision(data.get("UnderSupervision"));
+        app.fullAuctionJourneyPage.enterCallNumber(data.get("CallNumber"));
+        app.fullAuctionJourneyPage.enterWhatsAppNumber(data.get("CallNumber"));
+        app.fullAuctionJourneyPage.enterValNumber(data.get("ValNumber"));
+        app.fullAuctionJourneyPage.clickOnSaveButton();
+        CommonUtilityPage.verifyValueIsDisplayed("تم حفظ بيانات الملف بنجاح", FullBookingJourneyPageObjects.SystemPopupMessage());
+        app.fullBookingJourneyPage.clickOnProjectDetailsTab();
+        app.fullBookingJourneyPage.clickOnMediaApprovalButton();
+        CommonUtilityPage.verifyPopupMessageIsDisplayed("Request for media approval has been sent successfully", "تم رفع طلب الموافقة على المحتوى المرئي بنجاح", FullBookingJourneyPageObjects.SystemPopupMessage());
+        app.fullBookingJourneyPage.clickOnApproveMediaButton();
+        CommonUtilityPage.verifyPopupMessageIsDisplayed("Media approval is in progress now. Please review in few seconds", "طلب الموافقة على المحتوى المرئي تحت المعالجة الرجاء الانتظار", FullBookingJourneyPageObjects.SystemPopupMessage());
+        app.fullBookingJourneyPage.verifyMediaIsApprovedAuction();
+        app.fullBookingJourneyPage.clickOnIsPublishedToggle();
+        app.fullBookingJourneyPage.verifyIsPublishedToggleIsOn();
+        CommonUtilityPage.verifyPopupMessageIsDisplayed("Project publishment updated successfully", "تم تحديث نشر المشروع بنجاح", FullBookingJourneyPageObjects.SystemPopupMessage());
     }
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_95(Map<String, String> data) throws Exception {
         //User bid the auction
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -2614,25 +2517,13 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Enter in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 05: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 06: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 07: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 08: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
-//        if (Browser.isElementPresent(FullAuctionJourneyPageObjects.JoinThisAuctionButton())){
-//            app.fullAuctionJourneyPage.clickOnJoinThisAuctionButton();
-//            app.fullAuctionJourneyPage.clickOnAgreeCheckbox();
-//        }
         logger.info("Step 09: Click on 'Join this auction' button");
         app.fullAuctionJourneyPage.clickOnJoinThisAuctionButton();
         logger.info("Step 10: Click on 'Agree to terms' checkbox");
@@ -2645,12 +2536,13 @@ public class FullAuctionJourney extends NHCWebTest {
         app.fullAuctionJourneyPage.clickOnAgreeCheckbox();
         logger.info("Step 14: Click on 'Submit bid' button");
         app.fullAuctionJourneyPage.clickOnSubmitBidButton();
-        CommonUtilityPage.verifyValueIsDisplayed("تهانينا", "Congratulation", FullAuctionJourneyPageObjects.AuctionBidSuccessPopupTitle());
+        CommonUtilityPage.verifyValueIsDisplayed("تمّت مشاركتك بنجاح", FullAuctionJourneyPageObjects.AuctionBidSuccessPopupTitle());
     }
 
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_96(Map<String, String> data) throws Exception {
         //Verify user is able to Approve the sign contract
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -2663,19 +2555,11 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Enter in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 05: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 06: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 07: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Project_Name"));
         logger.info("Step 08: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
         logger.info("Step 09: Click on Continue link text");
@@ -2689,6 +2573,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_97(Map<String, String> data) throws Exception {
         //Verify auction sign contract is approved
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -2713,6 +2598,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_98(Map<String, String> data) throws Exception {
         //Verify user is able to click on download invoice button
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -2740,6 +2626,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_99(Map<String, String> data) throws Exception {
         //Verify user is able to click on download invoice button
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -2767,6 +2654,7 @@ public class FullAuctionJourney extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void Full_Auction_Journey_TC_100(Map<String, String> data) throws Exception {
         //Verify user is able to click on download invoice button
+        data.putAll(TestDataManager.readDependantGlobalTestData("Auctions"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Navigate to Sakani user site");
@@ -2807,24 +2695,15 @@ public class FullAuctionJourney extends NHCWebTest {
         app.loginPage.enterOTPForUser(data.get("OTP"));
         app.loginPage.clickOnVerifyOTPButton();
         app.loginPage.clickOnCancelButtonOfPopup();
-        logger.info("Step 03: Search for project from auction filter");
-        app.fullAuctionJourneyPage.clickOnAuctionTab();
-        app.mohLandBookingJourneyPage.clickOnFilterButton();
-        app.fullAuctionJourneyPage.searchForAuctionProject(data.get("Project_Name"));
-        logger.info("Step 04: Enter in Project search field");
-        CommonUtilityPage.verifyValueIsEntered(data.get("Project_Name"), MOHLandBookingJourneyPageObjects.projectInputFiled());
-        app.mohLandBookingJourneyPage.selectTheEnteredProjectName();
-        logger.info("Step 05: Click on view button");
-        CommonUtilityPage.clickOnViewButtonFromFilter();
-        logger.info("Step 06: Verify the search result is displayed");
-        app.filtersPage.verifyTheApplyResultForProject(data.get("Project_Name"));
-        logger.info("Step 07: Navigate to searched Auction project page");
-        app.fullAuctionJourneyPage.navigateToAuctionProjectPage();
-        logger.info("Step 08: Select from Available unit");
+        logger.info("Step 03: Navigate to the auction project");
+        CommonUtilityPage.selectFromLists("للبيع بالمزاد", CommonUtilityPageObjects.MarketplacePurposeList(), CommonUtilityPageObjects.SelectedMarketplacePurposeList());
+        app.sortingPage.openSorting();
+        app.sortingPage.selectNewestSortOption();
+        app.fullAuctionJourneyPage.navigateToAuctionProjectPage(data.get("Expired_Auction"));
+        logger.info("Step 04: Select from Available unit");
         app.fullAuctionJourneyPage.clickOnUnitOpenForAuction();
-        logger.info("Step 09: Verify 'Join this auction' button is not displayed");
+        logger.info("Step 05: Verify 'Join this auction' button is not displayed");
         app.fullAuctionJourneyPage.verifyJoinThisAuctionButtonIsNotDisplayed();
-        app.fullAuctionJourneyPage.verifyApplyForThisAuctionButtonIsNotDisplayed();
     }
 
     /**
@@ -2844,9 +2723,12 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 03: Enter OTP number");
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
         app.loginPage.changeLanguageAdmin(data);
-        logger.info("Step 04: Admin able to access auction (المزاد) page");
-        app.fullAuctionJourneyPage.navigateToAuctionPage();
-        logger.info("Step 04: Click on Auction Status dropdown");
+        logger.info("Step 04: Click on auctions");
+        app.fullAuctionJourneyPage.clickOnSideBarMenuInHomePage();
+        app.fullAuctionJourneyPage.clickOnAuction();
+        logger.info("Step 05: Click on auction projects");
+        app.fullAuctionJourneyPage.clickOnAuctionProjects();
+        logger.info("Step 06: Click on Auction Status dropdown");
         app.fullAuctionJourneyPage.clickOnAuctionStatusDropdown();
         app.fullAuctionJourneyPage.verifyAuctionStatusDropdownIsDisplayed();
     }
@@ -2863,13 +2745,15 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 03: Enter OTP number");
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
         app.loginPage.changeLanguageAdmin(data);
-        logger.info("Step 04: Admin able to access auction (المزاد) page");
-        app.fullAuctionJourneyPage.navigateToAuctionPage();
+        logger.info("Step 04: Click on auctions");
+        app.fullAuctionJourneyPage.clickOnSideBarMenuInHomePage();
+        app.fullAuctionJourneyPage.clickOnAuction();
+        logger.info("Step 05: Click on auction projects");
+        app.fullAuctionJourneyPage.clickOnAuctionProjects();
         logger.info("Step 04: Click on Auction Status dropdown");
         app.fullAuctionJourneyPage.clickOnAuctionStatusDropdown();
         logger.info("Step 05: Select auction status");
         CommonUtilityPage.selectFromList("مفتوحة", "Open", FullAuctionJourneyPageObjects.AuctionStatusDropdownList());
-        app.fullAuctionJourneyPage.verifySearchButtonIsClickable();
     }
 
 
@@ -2885,13 +2769,16 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 03: Enter OTP number");
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
         app.loginPage.changeLanguageAdmin(data);
-        logger.info("Step 04: Admin able to access auction (المزاد) page");
-        app.fullAuctionJourneyPage.navigateToAuctionPage();
-        logger.info("Step 04: Click on Auction Status dropdown");
+        logger.info("Step 04: Click on auctions");
+        app.fullAuctionJourneyPage.clickOnSideBarMenuInHomePage();
+        app.fullAuctionJourneyPage.clickOnAuction();
+        logger.info("Step 05: Click on auction projects");
+        app.fullAuctionJourneyPage.clickOnAuctionProjects();
+        logger.info("Step 06: Click on Auction Status dropdown");
         app.fullAuctionJourneyPage.clickOnAuctionStatusDropdown();
-        logger.info("Step 05: Select auction status");
+        logger.info("Step 07: Select auction status");
         CommonUtilityPage.selectFromList("لم يبدأ", "Not started", FullAuctionJourneyPageObjects.AuctionStatusDropdownList());
-        logger.info("Step 06: Click Search button");
+        logger.info("Step 08: Click Search button");
         app.fullAuctionJourneyPage.clickOnSearchButtonOnAuctionPage();
         CommonUtilityPage.verifyValueIsDisplayed("لم يبدأ", "Not started", FullAuctionJourneyPageObjects.AuctionStatus());
     }
@@ -2908,15 +2795,18 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 03: Enter OTP number");
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
         app.loginPage.changeLanguageAdmin(data);
-        logger.info("Step 04: Admin able to access auction (المزاد) page");
-        app.fullAuctionJourneyPage.navigateToAuctionPage();
-        logger.info("Step 04: Click on Auction Status dropdown");
+        logger.info("Step 04: Click on auctions");
+        app.fullAuctionJourneyPage.clickOnSideBarMenuInHomePage();
+        app.fullAuctionJourneyPage.clickOnAuction();
+        logger.info("Step 05: Click on auction projects");
+        app.fullAuctionJourneyPage.clickOnAuctionProjects();
+        logger.info("Step 06: Click on Auction Status dropdown");
         app.fullAuctionJourneyPage.clickOnAuctionStatusDropdown();
-        logger.info("Step 05: Select auction status");
+        logger.info("Step 07: Select auction status");
         CommonUtilityPage.selectFromList("مفتوحة", "Open", FullAuctionJourneyPageObjects.AuctionStatusDropdownList());
-        logger.info("Step 06: Click Search button");
+        logger.info("Step 08: Click Search button");
         app.fullAuctionJourneyPage.clickOnSearchButtonOnAuctionPage();
-        CommonUtilityPage.verifyValueIsDisplayed("مفتوحة", "Open", FullAuctionJourneyPageObjects.AuctionStatus());
+        CommonUtilityPage.verifyValueIsDisplayed("المزاد مفتوح", "Open", FullAuctionJourneyPageObjects.AuctionStatus());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -2954,15 +2844,18 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 03: Enter OTP number");
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
         app.loginPage.changeLanguageAdmin(data);
-        logger.info("Step 04: Admin able to access auction (المزاد) page");
-        app.fullAuctionJourneyPage.navigateToAuctionPage();
-        logger.info("Step 04: Click on Auction Status dropdown");
+        logger.info("Step 04: Click on auctions");
+        app.fullAuctionJourneyPage.clickOnSideBarMenuInHomePage();
+        app.fullAuctionJourneyPage.clickOnAuction();
+        logger.info("Step 05: Click on auction projects");
+        app.fullAuctionJourneyPage.clickOnAuctionProjects();
+        logger.info("Step 06: Click on Auction Status dropdown");
         app.fullAuctionJourneyPage.clickOnAuctionStatusDropdown();
-        logger.info("Step 05: Select auction status");
+        logger.info("Step 07: Select auction status");
         CommonUtilityPage.selectFromList("انتهاء صلاحية الإعلان", "Expired", FullAuctionJourneyPageObjects.AuctionStatusDropdownList());
-        logger.info("Step 06: Click Search button");
+        logger.info("Step 08: Click Search button");
         app.fullAuctionJourneyPage.clickOnSearchButtonOnAuctionPage();
-        CommonUtilityPage.verifyValueIsDisplayed("انتهاء صلاحية الإعلان", "Expired", FullAuctionJourneyPageObjects.AuctionStatus());
+        CommonUtilityPage.verifyValueIsDisplayed("منتهية", "Expired", FullAuctionJourneyPageObjects.AuctionStatus());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -2977,15 +2870,18 @@ public class FullAuctionJourney extends NHCWebTest {
         logger.info("Step 03: Enter OTP number");
         app.loginPage.enterOTPForAdminLogin(data.get("OTP"));
         app.loginPage.changeLanguageAdmin(data);
-        logger.info("Step 04: Admin able to access auction (المزاد) page");
-        app.fullAuctionJourneyPage.navigateToAuctionPage();
-        logger.info("Step 04: Click on Auction Status dropdown");
+        logger.info("Step 04: Click on auctions");
+        app.fullAuctionJourneyPage.clickOnSideBarMenuInHomePage();
+        app.fullAuctionJourneyPage.clickOnAuction();
+        logger.info("Step 05: Click on auction projects");
+        app.fullAuctionJourneyPage.clickOnAuctionProjects();
+        logger.info("Step 06: Click on Auction Status dropdown");
         app.fullAuctionJourneyPage.clickOnAuctionStatusDropdown();
-        logger.info("Step 05: Select auction status");
+        logger.info("Step 07: Select auction status");
         CommonUtilityPage.selectFromList("مغلقة", "Closed", FullAuctionJourneyPageObjects.AuctionStatusDropdownList());
-        logger.info("Step 06: Click Search button");
+        logger.info("Step 08: Click Search button");
         app.fullAuctionJourneyPage.clickOnSearchButtonOnAuctionPage();
-        CommonUtilityPage.verifyValueIsDisplayed("مغلقة", "Closed", FullAuctionJourneyPageObjects.AuctionStatus());
+        CommonUtilityPage.verifyValueIsDisplayed("مغلق", "Closed", FullAuctionJourneyPageObjects.AuctionStatus());
     }
 
     @Test(dataProvider = "testDataProvider")
